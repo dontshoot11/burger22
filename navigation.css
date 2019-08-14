@@ -23,7 +23,11 @@
   padding: 13px 13px 13px 13px;
   text-transform: uppercase; }
 
-.navigation__link--button {
+.orderbutton {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 13px 13px 13px 13px;
+  text-transform: uppercase;
   border-radius: 5px;
   background-color: #e45028;
   color: #ffffff; }

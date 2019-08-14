@@ -1,0 +1,32 @@
+.motto {
+  display: flex;
+  align-items: center; }
+
+.slogan {
+  width: 406px;
+  margin-left: 11px;
+  text-align: left; }
+
+.section__title {
+  font-family: 'gagalin';
+  font-size: 72px;
+  color: #f9b43b;
+  font-weight: 200; }
+
+.slogan__what {
+  font-family: "lifehack";
+  font-size: 65px;
+  color: #ffffff;
+  font-weight: 200; }
+
+.burger {
+  background: url(img/page1/drops.png) no-repeat;
+  width: 453px;
+  text-align: center; }
+
+.burger__pic {
+  max-width: 100%;
+  margin-top: -65px;
+  margin-right: -25px; }
+
+/*# sourceMappingURL=motto.css.map */
