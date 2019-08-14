@@ -100,6 +100,9 @@
   color: #f9b43b;
   font-weight: 200; }
 
+.section__title--black {
+  color: #2f3234; }
+
 .slogan__what {
   font-family: "lifehack";
   font-size: 65px;
@@ -116,23 +119,66 @@
   margin-top: -65px;
   margin-right: -25px; }
 
+.features {
+  display: flex; }
+
+.features__card {
+  width: 33%;
+  text-align: center;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 55px; }
+
+.features__name {
+  font-family: "lifehack";
+  font-size: 24px;
+  color: #2f3234;
+  margin-top: 35px; }
+
+.features__description {
+  font-family: "ubuntu-light";
+  font-size: 14px;
+  color: rgba(47, 50, 52, 0.8);
+  margin-top: 20px;
+  line-height: 1.8em; }
+
+.features__logo {
+  background-position: center center; }
+
+.features__logo--meat {
+  background: url(img/we/meat.png);
+  height: 89px;
+  width: 97px; }
+
+.features__logo--hand {
+  background: url(img/we/hand.png);
+  height: 85px;
+  width: 73px; }
+
+.features__logo--grass {
+  background: url(img/we/grass.png);
+  height: 75px;
+  width: 88px; }
+
 @font-face {
-  font-family: 'ubuntu';
+  font-family: 'ubuntu-b';
   src: url("fonts/ubuntu-b.woff2") format("woff2"), url("fonts/ubuntu-b.woff") format("woff");
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'ubuntu';
+  font-family: 'ubuntu-light';
   src: url("fonts/ubuntu-light.woff2") format("woff2"), url("fonts/ubuntu-light.woff") format("woff");
-  font-weight: light;
+  font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'ubuntu';
+  font-family: 'ubuntu-medium';
   src: url("fonts/ubuntu-medium.woff2") format("woff2"), url("fonts/ubuntu-medium.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 @font-face {
-  font-family: 'ubuntu2';
+  font-family: 'ubuntu-regular';
   src: url("fonts/ubuntu-regular.woff2") format("woff2"), url("fonts/ubuntu-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
@@ -147,7 +193,7 @@
   font-weight: 300;
   font-style: normal; }
 body {
-  font-family: 'ubuntu';
+  font-family: 'ubuntu-medium';
   font-size: 13px;
   display: flex;
   margin: -3px;
@@ -179,19 +225,23 @@ a {
   text-decoration: none; }
 
 .screen--firstscreen {
-  background: url(img/page1/1pagebackground.png) no-repeat; }
-
-.screen--we {
-  background: url(img/we/bg.png) no-repeat; }
-
-.screen {
-  background-size: cover;
-  height: 100vh;
-  background-position: center center;
+  background: url(img/page1/1pagebackground.png) no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between; }
+
+.screen--we {
+  background: url(img/we/bg.png) no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.screen {
+  background-size: cover;
+  height: 100vh;
+  background-position: center center; }
 
 .wrapper {
   min-width: 100%;
@@ -205,11 +255,8 @@ a {
   align-items: center;
   justify-content: space-evenly; }
 
-.maincontent {
-  width: 960px;
-  margin: 0 auto;
-  margin-top: 63px;
-  text-align: center; }
+.container__we {
+  flex-direction: column; }
 
 .logo__link {
   display: block; }

@@ -1,0 +1,50 @@
+.features {
+    display: flex
+}
+
+.features__card {
+    width: 33%;
+    text-align: center;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 55px;
+}
+
+.features__name {
+    font-family: "lifehack";
+    font-size: 24px;
+    color: $black;
+    margin-top: 35px;
+}
+
+.features__description {
+    font-family: "ubuntu-light";
+    font-size: 14px;
+    color: rgba(47, 50, 52, 0.8);
+    margin-top: 20px;
+    line-height: 1.8em
+}
+
+.features__logo {
+    background-position: center center;
+}
+
+.features__logo--meat {
+    background: url(img/we/meat.png);
+    height: 89px;
+    width: 97px;
+}
+
+.features__logo--hand {
+    background: url(img/we/hand.png);
+    height: 85px;
+    width: 73px;
+}
+
+.features__logo--grass {
+    background: url(img/we/grass.png);
+    height: 75px;
+    width: 88px
+}

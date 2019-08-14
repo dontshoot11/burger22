@@ -2,30 +2,31 @@
 "navigation",
 "sidemenu",
 "nextscreen",
-"motto";
+"motto",
+"burger__features";
 @font-face {
-    font-family: 'ubuntu';
+    font-family: 'ubuntu-b';
     src: url('fonts/ubuntu-b.woff2') format('woff2'), url('fonts/ubuntu-b.woff') format('woff');
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntu';
+    font-family: 'ubuntu-light';
     src: url('fonts/ubuntu-light.woff2') format('woff2'), url('fonts/ubuntu-light.woff') format('woff');
-    font-weight: light;
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntu';
+    font-family: 'ubuntu-medium';
     src: url('fonts/ubuntu-medium.woff2') format('woff2'), url('fonts/ubuntu-medium.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntu2';
+    font-family: 'ubuntu-regular';
     src: url('fonts/ubuntu-regular.woff2') format('woff2'), url('fonts/ubuntu-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -46,7 +47,7 @@
 }
 
 body {
-    font-family: 'ubuntu';
+    font-family: 'ubuntu-medium';
     font-size: 13px;
     display: flex;
     margin: -3px;
@@ -85,20 +86,24 @@ a {
 
 .screen--firstscreen {
     background: url(img/page1/1pagebackground.png) no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .screen--we {
     background: url(img/we/bg.png) no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .screen {
     background-size: cover;
     height: 100vh;
     background-position: center center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .wrapper {
@@ -115,11 +120,8 @@ a {
     justify-content: space-evenly;
 }
 
-.maincontent {
-    width: 960px;
-    margin: 0 auto;
-    margin-top: 63px;
-    text-align: center
+.container__we {
+    flex-direction: column;
 }
 
 .logo__link {

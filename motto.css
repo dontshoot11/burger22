@@ -13,6 +13,9 @@
   color: #f9b43b;
   font-weight: 200; }
 
+.section__title--black {
+  color: #2f3234; }
+
 .slogan__what {
   font-family: "lifehack";
   font-size: 65px;
