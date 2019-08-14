@@ -1,0 +1,110 @@
+@import "header",
+"navigation",
+"sidemenu",
+"nextscreen",
+"motto";
+@font-face {
+    font-family: 'ubuntu';
+    src: url('fonts/ubuntu-b.woff2') format('woff2'), url('fonts/ubuntu-b.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url('fonts/ubuntu-light.woff2') format('woff2'), url('fonts/ubuntu-light.woff') format('woff');
+    font-weight: light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url('fonts/ubuntu-medium.woff2') format('woff2'), url('fonts/ubuntu-medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu2';
+    src: url('fonts/ubuntu-regular.woff2') format('woff2'), url('fonts/ubuntu-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gagalin';
+    src: url('fonts/gagalin-regular.woff2') format('woff2'), url('fonts/gagalin-regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lifehack';
+    src: url('fonts/lifehack_medium.woff2') format('woff2'), url('fonts/lifehack_medium.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    font-family: 'ubuntu';
+    font-size: 13px;
+    display: flex;
+    margin: -3px;
+    flex-direction: column
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-decoration: none;
+    margin: 0 0
+}
+
+li {
+    list-style: none
+}
+
+a {
+    text-decoration: none
+}
+
+.button {
+    text-decoration: none
+}
+
+.screen--firstscreen {
+    background: url(img/page1/1pagebackground.png) no-repeat;
+}
+
+.screen--we {
+    background: url(img/we/bg.png) no-repeat;
+}
+
+.screen {
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 1102px;
+    position: relative;
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.maincontent {
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 63px;
+    text-align: center
+}

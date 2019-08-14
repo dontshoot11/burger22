@@ -1,0 +1,31 @@
+@charset "UTF-8";
+.navigation {
+  display: flex;
+  align-items: center; }
+
+.navigation__list {
+  display: flex;
+  align-items: center; }
+
+.navigation__element {
+  text-align: center; }
+  .navigation__element::after {
+    content: "•";
+    margin-right: 5px;
+    color: #ffffff; }
+
+.navigation__element:last-child:after {
+  visibility: hidden; }
+
+.navigation__link {
+  color: #ffffff;
+  font-weight: 500;
+  padding: 13px 13px 13px 13px;
+  text-transform: uppercase; }
+
+.navigation__link--button {
+  border-radius: 5px;
+  background-color: #e45028;
+  color: #ffffff; }
+
+/*# sourceMappingURL=navigation.css.map */

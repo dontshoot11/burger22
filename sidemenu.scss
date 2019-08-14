@@ -1,0 +1,23 @@
+.sidemenu {
+    position: absolute;
+    right: 50px;
+    top: 96px;
+    text-align: center
+}
+
+.sidemenu__link {
+    background: url(img/page1/sidemenu_dot.png) no-repeat;
+    background-position: center center;
+    padding: 5px;
+}
+
+.sidemenu__button--active {
+    border: solid 1px #ffffff;
+    border-radius: 50%
+}
+
+.sidemenu__button {
+    margin-bottom: 5px;
+    height: 16px;
+    width: 16px;
+}
