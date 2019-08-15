@@ -1,0 +1,69 @@
+.reviews {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap; }
+
+.reviews__card {
+  width: 25%;
+  height: 50vh;
+  filter: grayscale(1);
+  overflow: hidden; }
+
+.reviews__card--girl1 {
+  background: url(img/feedback/1girl.png) no-repeat;
+  background-size: cover; }
+
+.reviews__card--girl2 {
+  background: url(img/feedback/2girl.png) no-repeat;
+  background-size: cover; }
+
+.reviews__card--hatguy {
+  background: url(img/feedback/hat_guy.png) no-repeat;
+  background-size: cover; }
+
+.reviews__card--glassesyoung {
+  background: url(img/feedback/glasses_young1.png) no-repeat;
+  background-size: cover; }
+
+.reviews__card--blondeguy {
+  background: url(img/feedback/blondeguy.png) no-repeat;
+  background-size: cover; }
+
+.reviews__card--girl3 {
+  background: url(img/feedback/3girl.png) no-repeat;
+  background-size: cover; }
+
+.reviews__card--glassesold {
+  background: url(img/feedback/glasses_old.png) no-repeat;
+  background-size: cover; }
+
+.reviews__card--beard {
+  background: url(img/feedback/beard.png) no-repeat;
+  background-size: cover; }
+
+.reviews__article {
+  opacity: 0;
+  transition: 0.3s;
+  height: 100%;
+  color: #fff;
+  padding: 50px 30px 0px 20px; }
+  .reviews__article:hover {
+    opacity: 1;
+    transition: 0.3s;
+    background-color: rgba(20, 20, 20, 0.7); }
+
+.reviews__name {
+  font-family: "Gagalin";
+  font-size: 14px; }
+
+.reviews__text {
+  font-family: "ubuntu-light";
+  font-size: 14px;
+  line-height: 1.8em;
+  margin-top: 30px;
+  margin-bottom: 17px; }
+
+.button--reviews {
+  background-color: #2f3234; }
+
+/*# sourceMappingURL=feedback.css.map */

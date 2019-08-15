@@ -3,7 +3,8 @@
 "sidemenu",
 "nextscreen",
 "motto",
-"burger__features";
+"burger__features",
+"feedback";
 @font-face {
     font-family: 'ubuntu-b';
     src: url('fonts/ubuntu-b.woff2') format('woff2'), url('fonts/ubuntu-b.woff') format('woff');
@@ -84,23 +85,29 @@ a {
     text-decoration: none
 }
 
-.screen--firstscreen {
-    background: url(img/page1/1pagebackground.png) no-repeat;
+.firstscreen {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 }
 
-.screen--we {
-    background: url(img/we/bg.png) no-repeat;
+.we {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.screen {
+.wallpaper--firstscreen {
+    background: url(img/page1/1pagebackground.png) no-repeat;
+}
+
+.wallpaper--we {
+    background: url(img/we/bg.png) no-repeat;
+}
+
+.wallpaper {
     background-size: cover;
     height: 100vh;
     background-position: center center;

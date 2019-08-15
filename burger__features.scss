@@ -2,6 +2,7 @@
     display: flex
 }
 
+$grayblack: #2f3234;
 .features__card {
     width: 33%;
     text-align: center;
@@ -15,7 +16,7 @@
 .features__name {
     font-family: "lifehack";
     font-size: 24px;
-    color: $black;
+    color: $grayblack;
     margin-top: 35px;
 }
 
