@@ -41,6 +41,9 @@
   top: 93px;
   text-align: center; }
 
+.sidemenu__button:last-child {
+  margin: 0; }
+
 .sidemenu__link {
   background: url(img/page1/sidemenu_dot.png) no-repeat;
   background-position: center center;
@@ -69,11 +72,10 @@
     border-radius: 50%;
     transition: 0.3s; }
 
-/*.sidemenu__button--active {
-    border: solid 1px #ffffff;
-    border-radius: 50%;
-}
-*/
+.sidemenu__link--active {
+  border: solid 1px #ffffff;
+  border-radius: 50%; }
+
 .sidemenu__button {
   margin-bottom: 12px; }
 
@@ -264,8 +266,15 @@ body {
   font-family: 'ubuntu-medium';
   font-size: 13px;
   display: flex;
-  margin: -3px;
   flex-direction: column; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
 
 h1,
 h2,

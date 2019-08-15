@@ -51,8 +51,17 @@ body {
     font-family: 'ubuntu-medium';
     font-size: 13px;
     display: flex;
-    margin: -3px;
     flex-direction: column
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 h1,

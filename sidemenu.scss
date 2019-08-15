@@ -5,6 +5,10 @@
     text-align: center
 }
 
+.sidemenu__button:last-child {
+    margin: 0
+}
+
 .sidemenu__link {
     background: url(img/page1/sidemenu_dot.png) no-repeat;
     background-position: center center;
@@ -35,12 +39,10 @@
     }
 }
 
-
-/*.sidemenu__button--active {
+.sidemenu__link--active {
     border: solid 1px #ffffff;
     border-radius: 50%;
 }
-*/
 
 .sidemenu__button {
     margin-bottom: 12px;
