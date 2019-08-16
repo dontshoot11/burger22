@@ -4,6 +4,9 @@
   top: 93px;
   text-align: center; }
 
+.sidemenu__button {
+  margin-bottom: 12px; }
+
 .sidemenu__button:last-child {
   margin: 0; }
 

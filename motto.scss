@@ -1,5 +1,4 @@
-$orange: #f9b43b;
-$black: #2f3234;
+@import "colors";
 .motto {
     display: flex;
     align-items: center;
@@ -14,12 +13,12 @@ $black: #2f3234;
 .section__title {
     font-family: 'gagalin';
     font-size: 72px;
-    color: $orange;
+    color: $orange-y;
     font-weight: 200
 }
 
 .section__title--black {
-    color: $black
+    color: $grayblack;
 }
 
 .slogan__what {

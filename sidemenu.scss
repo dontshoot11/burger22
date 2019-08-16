@@ -1,8 +1,13 @@
+@import "colors";
 .sidemenu {
     position: fixed;
     right: 50px;
     top: 93px;
     text-align: center
+}
+
+.sidemenu__button {
+    margin-bottom: 12px;
 }
 
 .sidemenu__button:last-child {

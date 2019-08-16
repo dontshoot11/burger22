@@ -1,4 +1,4 @@
-$orange :#e45028;
+@import "colors";
 .navigation {
     display: flex;
     align-items: center
@@ -27,14 +27,4 @@ $orange :#e45028;
     font-weight: 500;
     padding: 13px 13px 13px 13px;
     text-transform: uppercase;
-}
-
-.button {
-    color: #ffffff;
-    font-weight: 500;
-    padding: 13px 13px 13px 13px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    background-color: $orange;
-    color: #ffffff
 }
