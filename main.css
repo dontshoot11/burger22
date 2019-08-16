@@ -18,7 +18,7 @@
     color: #ffffff; }
 
 .navigation__element:last-child:after {
-  visibility: hidden; }
+  display: none; }
 
 .navigation__link {
   color: #ffffff;
@@ -276,6 +276,26 @@ html {
 *:after {
   box-sizing: inherit; }
 
+.button {
+  text-decoration: none;
+  border: 0;
+  font: inherit;
+  color: inherit;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 13px 13px 13px 13px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  background-color: #e45028;
+  color: #ffffff;
+  cursor: pointer; }
+
+.sidemenu__button {
+  margin-bottom: 12px; }
+
+.button--reviews {
+  background-color: #2f3234; }
+
 h1,
 h2,
 h3,
@@ -296,9 +316,6 @@ ul {
   margin-block-end: 0; }
 
 a {
-  text-decoration: none; }
-
-.button {
   text-decoration: none; }
 
 .firstscreen {

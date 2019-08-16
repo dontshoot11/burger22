@@ -54,6 +54,8 @@ body {
     flex-direction: column
 }
 
+$orange :#e45028;
+$grayblack: #2f3234;
 html {
     box-sizing: border-box;
 }
@@ -62,6 +64,29 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+}
+
+.button {
+    text-decoration: none;
+    border: 0;
+    font: inherit;
+    color: inherit;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 13px 13px 13px 13px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    background-color: $orange;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.sidemenu__button {
+    margin-bottom: 12px;
+}
+
+.button--reviews {
+    background-color: $grayblack
 }
 
 h1,
@@ -87,10 +112,6 @@ ul {
 }
 
 a {
-    text-decoration: none
-}
-
-.button {
     text-decoration: none
 }
 

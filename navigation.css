@@ -15,7 +15,7 @@
     color: #ffffff; }
 
 .navigation__element:last-child:after {
-  visibility: hidden; }
+  display: none; }
 
 .navigation__link {
   color: #ffffff;
