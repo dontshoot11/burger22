@@ -281,20 +281,30 @@ html {
   border: 0;
   font: inherit;
   color: inherit;
-  color: #ffffff;
   font-weight: 500;
   padding: 13px 13px 13px 13px;
   text-transform: uppercase;
   border-radius: 5px;
-  background-color: #e45028;
+  background-color: transparent;
   color: #ffffff;
   cursor: pointer; }
 
 .sidemenu__button {
   margin-bottom: 12px; }
 
+.button--navigation {
+  background-color: #e45028;
+  transition: 0.3s; }
+  .button--navigation:hover {
+    background-color: transparent;
+    transition: 0.3s; }
+
 .button--reviews {
+  transition: 0.3s;
   background-color: #2f3234; }
+  .button--reviews:hover {
+    transition: 0.3s;
+    background-color: #1f2122; }
 
 h1,
 h2,
