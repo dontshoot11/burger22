@@ -341,6 +341,41 @@ button {
 .container__column {
   flex-direction: column; }
 
+.form__elem {
+  display: flex; }
+
+.form__column {
+  flex: 1;
+  margin-right: 20px; }
+  .form__column:last-child {
+    margin-right: 0; }
+
+.form__row {
+  display: flex;
+  margin-top: 20px; }
+
+.form__block {
+  flex: 1;
+  margin-right: 20px; }
+  .form__block:last-child {
+    margin-right: 0; }
+
+.form__input {
+  background: #fff;
+  border-radius: 3px;
+  border: none;
+  padding: 8px 21px;
+  width: 100%; }
+  .form__input--textarea {
+    resize: none;
+    height: 110px; }
+
+.form__block-title {
+  color: #fff;
+  font-size: 14px;
+  font-family: "ubuntu-light";
+  margin-bottom: 7px; }
+
 @font-face {
   font-family: 'ubuntu-b';
   src: url("fonts/ubuntu-b.woff2") format("woff2"), url("fonts/ubuntu-b.woff") format("woff");

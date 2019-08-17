@@ -1,0 +1,45 @@
+@import "colors";
+.form__elem {
+    display: flex;
+    margin-top: 44px;
+}
+
+.form__column {
+    flex: 1;
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-top: 20px;
+}
+
+.form__block {
+    flex: 1;
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0
+    }
+}
+
+.form__input {
+    background: #fff;
+    border-radius: 3px;
+    border: none;
+    padding: 8px 21px;
+    width: 100%;
+    &--textarea {
+        resize: none;
+        height: 110px;
+    }
+}
+
+.form__block-title {
+    color: #fff;
+    font-size: 14px;
+    font-family: "ubuntu-light";
+    margin-bottom: 7px;
+}
