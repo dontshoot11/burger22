@@ -6,6 +6,9 @@ button {
     cursor: pointer;
     color: inherit;
     background-color: transparent;
+    &:focus {
+        outline: none
+    }
 }
 
 .button {
@@ -14,9 +17,6 @@ button {
     text-transform: uppercase;
     border-radius: 5px;
     color: #ffffff;
-    &:focus {
-        outline: none
-    }
 }
 
 .button--navigation {

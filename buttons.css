@@ -5,6 +5,8 @@ button {
   cursor: pointer;
   color: inherit;
   background-color: transparent; }
+  button:focus {
+    outline: none; }
 
 .button {
   font-weight: 500;
@@ -12,8 +14,6 @@ button {
   text-transform: uppercase;
   border-radius: 5px;
   color: #ffffff; }
-  .button:focus {
-    outline: none; }
 
 .button--navigation {
   background-color: #e45028;
