@@ -1,0 +1,38 @@
+button {
+  text-decoration: none;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent; }
+
+.button {
+  font-weight: 500;
+  padding: 13px 13px 13px 13px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #ffffff; }
+
+.button--navigation {
+  background-color: #e45028;
+  transition: 0.3s; }
+  .button--navigation:hover {
+    background-color: transparent;
+    transition: 0.3s; }
+
+.button--reviews {
+  transition: 0.3s;
+  background-color: #2f3234; }
+  .button--reviews:hover {
+    transition: 0.3s;
+    background-color: #1f2122; }
+
+.nextscreen {
+  background: url(img/page1/arrow-scroll.png) no-repeat;
+  background-position: center center;
+  height: 14px;
+  width: 29px;
+  margin-bottom: 40px;
+  display: inline-block; }
+
+/*# sourceMappingURL=buttons.css.map */

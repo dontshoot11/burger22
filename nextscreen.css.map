@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AACA,WAAY;EACR,UAAU,EAAE,yCAAyC;EACrD,mBAAmB,EAAE,aAAa;EAClC,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,YAAY",
-"sources": ["nextscreen.scss"],
-"names": [],
-"file": "nextscreen.css"
-}

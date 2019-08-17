@@ -13,19 +13,6 @@ html {
 *:after {
   box-sizing: inherit; }
 
-.button {
-  text-decoration: none;
-  border: 0;
-  font: inherit;
-  color: inherit;
-  font-weight: 500;
-  padding: 13px 13px 13px 13px;
-  text-transform: uppercase;
-  border-radius: 5px;
-  background-color: transparent;
-  color: #ffffff;
-  cursor: pointer; }
-
 h1,
 h2,
 h3,
@@ -136,14 +123,6 @@ a {
 
 .sidemenu__button {
   margin-bottom: 12px; }
-
-.nextscreen {
-  background: url(img/page1/arrow-scroll.png) no-repeat;
-  background-position: center center;
-  height: 14px;
-  width: 29px;
-  margin-bottom: 40px;
-  display: inline-block; }
 
 .motto {
   display: flex;
@@ -290,6 +269,21 @@ a {
 .button--reviews {
   background-color: #2f3234; }
 
+button {
+  text-decoration: none;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent; }
+
+.button {
+  font-weight: 500;
+  padding: 13px 13px 13px 13px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #ffffff; }
+
 .button--navigation {
   background-color: #e45028;
   transition: 0.3s; }
@@ -304,6 +298,14 @@ a {
     transition: 0.3s;
     background-color: #1f2122; }
 
+.nextscreen {
+  background: url(img/page1/arrow-scroll.png) no-repeat;
+  background-position: center center;
+  height: 14px;
+  width: 29px;
+  margin-bottom: 40px;
+  display: inline-block; }
+
 .firstscreen {
   display: flex;
   flex-direction: column;
@@ -316,18 +318,27 @@ a {
   align-items: center;
   justify-content: center; }
 
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
 .wallpaper--firstscreen {
   background: url(img/page1/1pagebackground.png) no-repeat; }
 
 .wallpaper--we {
   background: url(img/we/bg.png) no-repeat; }
 
+.wallpaper--order {
+  background: url(img/order/background.png) no-repeat; }
+
 .wallpaper {
   background-size: cover;
   height: 100vh;
   background-position: center center; }
 
-.container__we {
+.container__column {
   flex-direction: column; }
 
 @font-face {

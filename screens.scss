@@ -13,6 +13,13 @@
     justify-content: center;
 }
 
+.order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .wallpaper--firstscreen {
     background: url(img/page1/1pagebackground.png) no-repeat;
 }
@@ -21,12 +28,16 @@
     background: url(img/we/bg.png) no-repeat;
 }
 
+.wallpaper--order {
+    background: url(img/order/background.png) no-repeat
+}
+
 .wallpaper {
     background-size: cover;
     height: 100vh;
     background-position: center center;
 }
 
-.container__we {
+.container__column {
     flex-direction: column;
 }
