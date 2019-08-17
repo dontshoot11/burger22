@@ -19,10 +19,10 @@ button {
 .button--navigation {
     background-color: $orange;
     transition: 0.3s;
-    &:hover {
+    /* &:hover {
         background-color: transparent;
         transition: 0.3s
-    }
+    } */
 }
 
 .button--reviews {

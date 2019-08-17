@@ -15,10 +15,11 @@ button {
 
 .button--navigation {
   background-color: #e45028;
-  transition: 0.3s; }
-  .button--navigation:hover {
-    background-color: transparent;
-    transition: 0.3s; }
+  transition: 0.3s;
+  /* &:hover {
+      background-color: transparent;
+      transition: 0.3s
+  } */ }
 
 .button--reviews {
   transition: 0.3s;
