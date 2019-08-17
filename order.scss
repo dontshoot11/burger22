@@ -31,9 +31,16 @@
     border: none;
     padding: 8px 21px;
     width: 100%;
-    &--textarea {
+    font-family: "ubuntu-light";
+    font-size: 14px;
+    font-weight: 200;
+    color:$grayblack &--textarea {
         resize: none;
         height: 110px;
+    }
+    &:focus {
+        outline-color: $orange-y;
+        border-radius: 2px
     }
 }
 
@@ -42,4 +49,61 @@
     font-size: 14px;
     font-family: "ubuntu-light";
     margin-bottom: 7px;
+}
+
+.form__block--radiocheck {
+    display: flex
+}
+
+.form__radio {
+    position: relative;
+}
+
+.form__trueradio {
+    visibility: hidden;
+}
+
+.form__label--radio {
+    margin-left: 10px
+}
+
+.form__fakeradio {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    background: #ffffff;
+    display: block
+}
+
+.form__fakedot {
+    height: 7px;
+    width: 7px;
+    background-color: $orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto;
+    visibility: hidden;
+}
+
+.form__fakeradio--checkbox {
+    border-radius: 0%;
+    height: 16px;
+    width: 16px
+}
+
+.form__fakedot--checkbox {
+    background: url(img/order/check_mark.png) no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center center
+}
+
+.form__trueradio:checked~.form__fakeradio .form__fakedot {
+    visibility: visible
 }

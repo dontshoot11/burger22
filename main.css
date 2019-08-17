@@ -342,7 +342,8 @@ button {
   flex-direction: column; }
 
 .form__elem {
-  display: flex; }
+  display: flex;
+  margin-top: 44px; }
 
 .form__column {
   flex: 1;
@@ -365,16 +366,70 @@ button {
   border-radius: 3px;
   border: none;
   padding: 8px 21px;
-  width: 100%; }
-  .form__input--textarea {
-    resize: none;
-    height: 110px; }
+  width: 100%;
+  font-family: "ubuntu-light";
+  font-size: 14px;
+  font-weight: 200;
+  color: #2f3234 .form__input --textarea;
+    color-resize: none;
+    color-height: 110px; }
+  .form__input:focus {
+    outline-color: #f9b43b;
+    border-radius: 2px; }
 
 .form__block-title {
   color: #fff;
   font-size: 14px;
   font-family: "ubuntu-light";
   margin-bottom: 7px; }
+
+.form__block--radiocheck {
+  display: flex; }
+
+.form__radio {
+  position: relative; }
+
+.form__trueradio {
+  visibility: hidden; }
+
+.form__label--radio {
+  margin-left: 10px; }
+
+.form__fakeradio {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  background: #ffffff;
+  display: block; }
+
+.form__fakedot {
+  height: 7px;
+  width: 7px;
+  background-color: #e45028;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto auto;
+  visibility: hidden; }
+
+.form__fakeradio--checkbox {
+  border-radius: 0%;
+  height: 16px;
+  width: 16px; }
+
+.form__fakedot--checkbox {
+  background: url(img/order/check_mark.png) no-repeat;
+  height: 100%;
+  width: 100%;
+  background-position: center center; }
+
+.form__trueradio:checked ~ .form__fakeradio .form__fakedot {
+  visibility: visible; }
 
 @font-face {
   font-family: 'ubuntu-b';
