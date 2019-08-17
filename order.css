@@ -21,7 +21,7 @@
 .form__input {
   background: #fff;
   border-radius: 3px;
-  border: none;
+  border: 2px solid #fff;
   padding: 8px 21px;
   width: 100%;
   font-family: "ubuntu-light";
@@ -31,8 +31,9 @@
     color-resize: none;
     color-height: 110px; }
   .form__input:focus {
-    outline-color: #f9b43b;
-    border-radius: 2px; }
+    border-color: #f9b43b;
+    border-radius: 3px;
+    outline: none; }
 
 .form__block-title {
   color: #fff;
