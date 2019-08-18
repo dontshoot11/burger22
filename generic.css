@@ -1,0 +1,42 @@
+body {
+  font-family: 'ubuntu-medium';
+  font-size: 13px;
+  display: flex;
+  flex-direction: column; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  margin: 0 0; }
+
+li {
+  list-style: none; }
+
+ul {
+  margin: 0;
+  padding-inline-start: 0;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0; }
+
+a {
+  text-decoration: none; }
+
+.wrapper {
+  min-width: 100%;
+  min-height: 100%;
+  overflow: hidden; }
+
+/*# sourceMappingURL=generic.css.map */
