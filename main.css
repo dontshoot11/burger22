@@ -46,6 +46,11 @@ a {
 .logo__link {
   display: block; }
 
+.logo__pic {
+  max-width: 100px;
+  max-height: 100px;
+  margin-right: 69px; }
+
 .navigation {
   display: flex;
   align-items: center; }
@@ -142,14 +147,21 @@ a {
   font-weight: 200; }
 
 .burger {
-  background: url(img/page1/drops.png) no-repeat;
+  background: url(sprite.svg#drops) no-repeat;
   width: 453px;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
 
 .burger__pic {
   max-width: 100%;
   margin-top: -65px;
   margin-right: -25px; }
+
+.drops {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100%; }
 
 .features {
   display: flex; }
@@ -180,17 +192,17 @@ a {
   background-position: center center; }
 
 .features__logo--meat {
-  background: url(img/we/meat.png);
+  /* background: url(img/we/meat.png); */
   height: 89px;
   width: 97px; }
 
 .features__logo--hand {
-  background: url(img/we/hand.png);
+  /* background: url(img/we/hand.png); */
   height: 85px;
   width: 73px; }
 
 .features__logo--grass {
-  background: url(img/we/grass.png);
+  /* background: url(img/we/grass.png); */
   height: 75px;
   width: 88px; }
 
@@ -282,10 +294,10 @@ button {
 .button--navigation {
   background-color: #e45028;
   transition: 0.3s;
-  /* &:hover {
-      background-color: transparent;
-      transition: 0.3s
-  } */ }
+    /* &:hover {
+    background-color: transparent;
+    transition: 0.3s
+} */ }
 
 .button--reviews {
   transition: 0.3s;
@@ -295,12 +307,14 @@ button {
     background-color: #1f2122; }
 
 .nextscreen {
-  background: url(img/page1/arrow-scroll.png) no-repeat;
-  background-position: center center;
   height: 14px;
   width: 29px;
   margin-bottom: 40px;
   display: inline-block; }
+
+.nextscreen__sprite {
+  max-height: 20px;
+  max-width: 30px; }
 
 .firstscreen {
   display: flex;

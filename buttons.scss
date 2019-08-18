@@ -1,47 +1,50 @@
-@import "colors";
-button {
-    text-decoration: none;
-    border: 0;
-    font: inherit;
-    cursor: pointer;
-    color: inherit;
-    background-color: transparent;
-    &:focus {
-        outline: none
+    @import "colors";
+    button {
+        text-decoration: none;
+        border: 0;
+        font: inherit;
+        cursor: pointer;
+        color: inherit;
+        background-color: transparent;
+        &:focus {
+            outline: none
+        }
     }
-}
-
-.button {
-    font-weight: 500;
-    padding: 13px 13px 13px 13px;
-    text-transform: uppercase;
-    border-radius: 5px;
-    color: #ffffff;
-}
-
-.button--navigation {
-    background-color: $orange;
-    transition: 0.3s;
-    /* &:hover {
+    
+    .button {
+        font-weight: 500;
+        padding: 13px 13px 13px 13px;
+        text-transform: uppercase;
+        border-radius: 5px;
+        color: #ffffff;
+    }
+    
+    .button--navigation {
+        background-color: $orange;
+        transition: 0.3s;
+        /* &:hover {
         background-color: transparent;
         transition: 0.3s
     } */
-}
-
-.button--reviews {
-    transition: 0.3s;
-    background-color: $grayblack;
-    &:hover {
-        transition: 0.3s;
-        background-color: #1f2122
     }
-}
-
-.nextscreen {
-    background: url(img/page1/arrow-scroll.png) no-repeat;
-    background-position: center center;
-    height: 14px;
-    width: 29px;
-    margin-bottom: 40px;
-    display: inline-block;
-}
+    
+    .button--reviews {
+        transition: 0.3s;
+        background-color: $grayblack;
+        &:hover {
+            transition: 0.3s;
+            background-color: #1f2122
+        }
+    }
+    
+    .nextscreen {
+        height: 14px;
+        width: 29px;
+        margin-bottom: 40px;
+        display: inline-block;
+    }
+    
+    .nextscreen__sprite {
+        max-height: 20px;
+        max-width: 30px
+    }

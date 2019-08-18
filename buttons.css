@@ -18,10 +18,10 @@ button {
 .button--navigation {
   background-color: #e45028;
   transition: 0.3s;
-  /* &:hover {
-      background-color: transparent;
-      transition: 0.3s
-  } */ }
+    /* &:hover {
+    background-color: transparent;
+    transition: 0.3s
+} */ }
 
 .button--reviews {
   transition: 0.3s;
@@ -31,11 +31,13 @@ button {
     background-color: #1f2122; }
 
 .nextscreen {
-  background: url(img/page1/arrow-scroll.png) no-repeat;
-  background-position: center center;
   height: 14px;
   width: 29px;
   margin-bottom: 40px;
   display: inline-block; }
+
+.nextscreen__sprite {
+  max-height: 20px;
+  max-width: 30px; }
 
 /*# sourceMappingURL=buttons.css.map */
