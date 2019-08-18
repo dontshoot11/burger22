@@ -25,6 +25,9 @@
 .wallpaper--order {
   background: url(img/order/background.png) no-repeat; }
 
+.wallpaper--team {
+  background: url(img/team/bg.png) no-repeat; }
+
 .wallpaper {
   background-size: cover;
   height: 100vh;

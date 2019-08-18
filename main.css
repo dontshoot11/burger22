@@ -336,6 +336,9 @@ button {
 .wallpaper--order {
   background: url(img/order/background.png) no-repeat; }
 
+.wallpaper--team {
+  background: url(img/team/bg.png) no-repeat; }
+
 .wallpaper {
   background-size: cover;
   height: 100vh;
@@ -434,6 +437,76 @@ button {
 
 .form__trueradio:checked ~ .form__fakeradio .form__fakedot {
   visibility: visible; }
+
+.team-aside {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background: rgba(49, 52, 54, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+
+.team-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.accordeon__card {
+  margin-top: 35px; }
+
+.accordeon__about {
+  height: 0;
+  overflow: hidden;
+  font-family: "ubuntu";
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  margin-top: 17px;
+  margin-left: 17px; }
+
+.accordeon__about--active {
+  min-height: 110px; }
+
+.accordeon__name {
+  font-family: "gagalin";
+  color: #fff;
+  font-size: 14px;
+  text-transform: uppercase; }
+  .accordeon__name:before {
+    content: url(img/team/arrow_down.png);
+    height: 7px;
+    width: 9px;
+    margin-right: 9px; }
+  .accordeon__name--active {
+    color: #f9b43b; }
+  .accordeon__name--active::before {
+    content: url(img/team/arrow_up.png); }
+
+.accordeon__position {
+  font-weight: bold; }
+
+.accordeon__picture {
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative; }
+
+.accordeon__memberpic {
+  position: absolute;
+  left: -20px; }
+
+.accordeon__description {
+  max-width: 208px;
+  margin-left: 17px; }
+
+.accordeon__skill {
+  margin-top: 17px;
+  line-height: 1.6em; }
 
 @font-face {
   font-family: 'ubuntu-b';
