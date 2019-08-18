@@ -89,4 +89,7 @@
 .form__trueradio:checked ~ .form__fakeradio .form__fakedot {
   visibility: visible; }
 
+.form__row--buttons {
+  text-align: right; }
+
 /*# sourceMappingURL=order.css.map */
