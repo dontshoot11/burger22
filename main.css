@@ -477,16 +477,30 @@ button {
   font-family: "gagalin";
   color: #fff;
   font-size: 14px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  position: relative; }
   .accordeon__name:before {
-    content: url(img/team/arrow_down.png);
+    /* content: url(img/team/arrow_down.png);
     height: 7px;
     width: 9px;
-    margin-right: 9px; }
+    margin-right: 9px; */
+    content: ".";
+    color: transparent;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #f9b43b;
+    right: 100%;
+    top: 8px; }
   .accordeon__name--active {
     color: #f9b43b; }
   .accordeon__name--active::before {
-    content: url(img/team/arrow_up.png); }
+    /* content: url(img/team/arrow_up.png) */
+    border-bottom: 6px solid #f9b43b;
+    border-top: 0; }
 
 .accordeon__position {
   font-weight: bold; }
