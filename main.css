@@ -542,6 +542,11 @@ button {
   margin-top: 17px;
   line-height: 1.6em; }
 
+.section__title--menu {
+  color: #fff;
+  margin: 111px 0px 0px 102px;
+  position: absolute; }
+
 @font-face {
   font-family: 'ubuntu-b';
   src: url("fonts/ubuntu-b.woff2") format("woff2"), url("fonts/ubuntu-b.woff") format("woff");
