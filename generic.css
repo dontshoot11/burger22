@@ -39,4 +39,18 @@ a {
   min-height: 100%;
   overflow: hidden; }
 
+.section-title {
+  font-family: 'gagalin';
+  font-size: 72px;
+  color: #f9b43b;
+  font-weight: 200; }
+
+.section-title--black {
+  color: #2f3234; }
+
+.section-title--menu {
+  color: #fff;
+  margin: 111px 0px 0px 102px;
+  position: absolute; }
+
 /*# sourceMappingURL=generic.css.map */

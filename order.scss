@@ -1,7 +1,10 @@
 @import "colors";
+.form {
+    margin-top: 44px
+}
+
 .form__elem {
     display: flex;
-    margin-top: 44px;
 }
 
 .form__column {
@@ -15,6 +18,9 @@
 .form__row {
     display: flex;
     margin-top: 20px;
+    &:first-child {
+        margin-top: 0
+    }
 }
 
 .form__block {
@@ -34,7 +40,8 @@
     font-family: "ubuntu-light";
     font-size: 14px;
     font-weight: 200;
-    color:$grayblack &--textarea {
+    color: $grayblack;
+    &--textarea {
         resize: none;
         height: 110px;
     }
@@ -58,6 +65,7 @@
 
 .form__radio {
     position: relative;
+    margin-bottom: 0
 }
 
 .form__trueradio {
@@ -75,7 +83,21 @@
     position: absolute;
     top: 0;
     background: #ffffff;
-    display: block
+    display: block;
+    &:before {
+        content: "";
+        height: 7px;
+        width: 7px;
+        background-color: $orange;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto auto;
+        visibility: hidden;
+    }
 }
 
 .form__fakedot {
@@ -95,20 +117,15 @@
 .form__fakeradio--checkbox {
     border-radius: 0%;
     height: 16px;
-    width: 16px
+    width: 16px;
+    &:before {
+        background: url(img/order/check_mark.png) no-repeat;
+        height: 100%;
+        width: 100%;
+        background-position: center center
+    }
 }
 
-.form__fakedot--checkbox {
-    background: url(img/order/check_mark.png) no-repeat;
-    height: 100%;
-    width: 100%;
-    background-position: center center
-}
-
-.form__trueradio:checked~.form__fakeradio .form__fakedot {
+.form__trueradio:checked~.form__fakeradio:before {
     visibility: visible
-}
-
-.form__row--buttons {
-    text-align: right
 }

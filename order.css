@@ -1,6 +1,8 @@
-.form__elem {
-  display: flex;
+.form {
   margin-top: 44px; }
+
+.form__elem {
+  display: flex; }
 
 .form__column {
   flex: 1;
@@ -11,6 +13,8 @@
 .form__row {
   display: flex;
   margin-top: 20px; }
+  .form__row:first-child {
+    margin-top: 0; }
 
 .form__block {
   flex: 1;
@@ -27,9 +31,10 @@
   font-family: "ubuntu-light";
   font-size: 14px;
   font-weight: 200;
-  color: #2f3234 .form__input --textarea;
-    color-resize: none;
-    color-height: 110px; }
+  color: #2f3234; }
+  .form__input--textarea {
+    resize: none;
+    height: 110px; }
   .form__input:focus {
     border-color: #f9b43b;
     border-radius: 3px;
@@ -45,7 +50,8 @@
   display: flex; }
 
 .form__radio {
-  position: relative; }
+  position: relative;
+  margin-bottom: 0; }
 
 .form__trueradio {
   visibility: hidden; }
@@ -61,6 +67,19 @@
   top: 0;
   background: #ffffff;
   display: block; }
+  .form__fakeradio:before {
+    content: "";
+    height: 7px;
+    width: 7px;
+    background-color: #e45028;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto auto;
+    visibility: hidden; }
 
 .form__fakedot {
   height: 7px;
@@ -79,17 +98,13 @@
   border-radius: 0%;
   height: 16px;
   width: 16px; }
+  .form__fakeradio--checkbox:before {
+    background: url(img/order/check_mark.png) no-repeat;
+    height: 100%;
+    width: 100%;
+    background-position: center center; }
 
-.form__fakedot--checkbox {
-  background: url(img/order/check_mark.png) no-repeat;
-  height: 100%;
-  width: 100%;
-  background-position: center center; }
-
-.form__trueradio:checked ~ .form__fakeradio .form__fakedot {
+.form__trueradio:checked ~ .form__fakeradio:before {
   visibility: visible; }
-
-.form__row--buttons {
-  text-align: right; }
 
 /*# sourceMappingURL=order.css.map */
