@@ -346,6 +346,9 @@ button {
 .wallpaper--team {
   background: url(img/team/bg.png) no-repeat; }
 
+.wallpaper--menu {
+  background: url(img/menu/bg.png); }
+
 .wallpaper {
   background-size: cover;
   height: 100vh;
