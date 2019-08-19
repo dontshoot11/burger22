@@ -13,26 +13,23 @@
   display: flex; }
 
 .menu-accordeon__button {
-  /* transform: rotate(270deg); */
+  box-sizing: content-box;
   font-family: "gagalin";
   font-size: 36px;
   text-transform: uppercase;
   color: #ffffff;
-  width: 80px;
   display: flex;
-  justify-content: center;
-  position: relative; }
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0; }
 
 .menu-accordeon__about {
   width: 0px;
   font-family: "ubuntu-light";
   color: #fff;
-  /*  */
   line-height: 1.6em;
   font-size: 14px;
-  /* min-width: 540px; */
-  overflow: hidden;
-  /* transform: rotate(90deg); */ }
+  overflow: hidden; }
 
 .menu-accordeon__card--active .menu-accordeon__about {
   min-width: 540px;
@@ -45,10 +42,9 @@
   background-color: rgba(20, 20, 20, 0.7); }
 
 .menu-accordeon__name {
-  transform: rotate(270deg);
-  padding: 25px 0px 25px 40px;
+  transform: rotate(180deg);
+  padding: 40px 25px 0px 25px;
   white-space: nowrap;
-  position: absolute;
-  bottom: 90px; }
+  writing-mode: vertical-lr; }
 
 /*# sourceMappingURL=menu.css.map */
