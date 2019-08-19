@@ -1,0 +1,58 @@
+        @import "colors";
+        .menu-aside {
+            position: absolute;
+            right: 0px;
+            max-width: 100%;
+            height: 100%;
+        }
+        
+        .menu-accordeon {
+            display: flex;
+            height: 100%;
+        }
+        
+        .menu-accordeon__card {
+            /* transform: rotate(270deg); */
+            display: flex
+        }
+        
+        .menu-accordeon__button {
+            /* transform: rotate(270deg); */
+            font-family: "gagalin";
+            font-size: 36px;
+            text-transform: uppercase;
+            color: #ffffff;
+            max-width: 80px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .menu-accordeon__about {
+            width: 0px;
+            font-family: "ubuntu-light";
+            color: #fff;
+            /*  */
+            line-height: 1.6em;
+            font-size: 14px;
+            /* min-width: 540px; */
+            overflow: hidden;
+            /* transform: rotate(90deg); */
+        }
+        
+        .menu-accordeon__card--active .menu-accordeon__about {
+            min-width: 540px;
+            background-color: rgba($color: #2f3234, $alpha: 0.9);
+            height: 100%;
+            padding: 62px 37px 0px 33px;
+        }
+        
+        .menu-accordeon__card--active .menu-accordeon__button {
+            color: $orange-y;
+            background-color: rgba(20, 20, 20, 0.7)
+        }
+        
+        .menu-accordeon__name {
+            transform: rotate(270deg);
+            /* padding: 25px 0px 25px 40px; */
+        }

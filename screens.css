@@ -34,7 +34,8 @@
 .wallpaper {
   background-size: cover;
   height: 100vh;
-  background-position: center center; }
+  background-position: center center;
+  position: relative; }
 
 .container {
   max-width: 960px;
