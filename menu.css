@@ -18,7 +18,7 @@
   font-size: 36px;
   text-transform: uppercase;
   color: #ffffff;
-  max-width: 80px;
+  width: 80px;
   display: flex;
   justify-content: center;
   position: relative; }
@@ -46,6 +46,9 @@
 
 .menu-accordeon__name {
   transform: rotate(270deg);
-  /* padding: 25px 0px 25px 40px; */ }
+  padding: 25px 0px 25px 40px;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 90px; }
 
 /*# sourceMappingURL=menu.css.map */
