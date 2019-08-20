@@ -1,0 +1,51 @@
+@import "colors";
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: url(img/contacts/footer-bg.png)
+}
+
+.contacts {
+    width: 50%;
+    padding: 12px 0px;
+}
+
+.contacts__adress {
+    color: #fff;
+}
+
+.phone-logo {
+    height: 12px;
+    width: 11px;
+    margin-bottom: -2px;
+    margin-right: 7px;
+}
+
+.contacts__number {
+    color: #e45028;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.social {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end
+}
+
+.social__link {
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0
+    }
+}
+
+.social-logo {
+    max-height: 36px;
+    max-width: 36px;
+    fill: #585858;
+    &:hover {
+        fill: #fff
+    }
+}

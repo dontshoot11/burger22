@@ -354,6 +354,9 @@ button {
 .wallpaper--menu {
   background: url(img/menu/bg.png); }
 
+.wallpaper--map {
+  background: url(img/contacts/map.png) no-repeat; }
+
 .wallpaper {
   background-size: cover;
   height: 100vh;
@@ -617,6 +620,47 @@ button {
   padding: 40px 25px 0px 25px;
   white-space: nowrap;
   writing-mode: vertical-lr; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: url(img/contacts/footer-bg.png); }
+
+.contacts {
+  width: 50%;
+  padding: 12px 0px; }
+
+.contacts__adress {
+  color: #fff; }
+
+.phone-logo {
+  height: 12px;
+  width: 11px;
+  margin-bottom: -2px;
+  margin-right: 7px; }
+
+.contacts__number {
+  color: #e45028;
+  margin-top: 10px;
+  display: inline-block; }
+
+.social {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end; }
+
+.social__link {
+  margin-right: 20px; }
+  .social__link:last-child {
+    margin-right: 0; }
+
+.social-logo {
+  max-height: 36px;
+  max-width: 36px;
+  fill: #585858; }
+  .social-logo:hover {
+    fill: #fff; }
 
 @font-face {
   font-family: 'ubuntu-b';
