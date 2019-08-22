@@ -710,5 +710,8 @@ button {
   src: url("fonts/lifehack_medium.woff2") format("woff2"), url("fonts/lifehack_medium.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 0.7px; } }
 
 /*# sourceMappingURL=main.css.map */
