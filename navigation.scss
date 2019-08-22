@@ -13,7 +13,7 @@
     text-align: center;
     &::after {
         content: "•";
-        margin-right: 5px;
+        margin-right: 5rem;
         color: #ffffff
     }
 }
@@ -25,6 +25,6 @@
 .navigation__link {
     color: #ffffff;
     font-weight: 500;
-    padding: 13px 13px 13px 13px;
+    padding: 13rem;
     text-transform: uppercase;
 }

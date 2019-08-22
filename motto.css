@@ -3,26 +3,26 @@
   align-items: center; }
 
 .slogan {
-  width: 406px;
-  margin-left: 11px;
+  width: 406rem;
+  margin-left: 11rem;
   text-align: left; }
 
 .slogan__what {
   font-family: "lifehack";
-  font-size: 65px;
+  font-size: 65rem;
   color: #ffffff;
   font-weight: 200; }
 
 .burger {
   background: url(sprite.svg#drops) no-repeat;
-  width: 453px;
+  width: 453rem;
   text-align: center;
   position: relative; }
 
 .burger__pic {
   max-width: 100%;
-  margin-top: -65px;
-  margin-right: -25px; }
+  margin-top: -65rem;
+  margin-right: -25rem; }
 
 .drops {
   position: absolute;

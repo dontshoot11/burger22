@@ -1,50 +1,50 @@
 .form {
-  margin-top: 44px; }
+  margin-top: 44rem; }
 
 .form__elem {
   display: flex; }
 
 .form__column {
   flex: 1;
-  margin-right: 20px; }
+  margin-right: 20rem; }
   .form__column:last-child {
     margin-right: 0; }
 
 .form__row {
   display: flex;
-  margin-top: 20px; }
+  margin-top: 20rem; }
   .form__row:first-child {
     margin-top: 0; }
 
 .form__block {
   flex: 1;
-  margin-right: 20px; }
+  margin-right: 20rem; }
   .form__block:last-child {
     margin-right: 0; }
 
 .form__input {
   background: #fff;
-  border-radius: 3px;
-  border: 2px solid #fff;
-  padding: 8px 21px;
+  border-radius: 3rem;
+  border: 2rem solid #fff;
+  padding: 8rem 21rem;
   width: 100%;
   font-family: "ubuntu-light";
-  font-size: 14px;
+  font-size: 14rem;
   font-weight: 200;
   color: #2f3234; }
   .form__input--textarea {
     resize: none;
-    height: 110px; }
+    height: 110rem; }
   .form__input:focus {
     border-color: #f9b43b;
-    border-radius: 3px;
+    border-radius: 3rem;
     outline: none; }
 
 .form__block-title {
   color: #fff;
-  font-size: 14px;
+  font-size: 14rem;
   font-family: "ubuntu-light";
-  margin-bottom: 7px; }
+  margin-bottom: 7rem; }
 
 .form__block--radiocheck {
   display: flex; }
@@ -57,11 +57,11 @@
   visibility: hidden; }
 
 .form__label--radio {
-  margin-left: 10px; }
+  margin-left: 10rem; }
 
 .form__fakeradio {
-  height: 15px;
-  width: 15px;
+  height: 15rem;
+  width: 15rem;
   border-radius: 50%;
   position: absolute;
   top: 0;
@@ -69,8 +69,8 @@
   display: block; }
   .form__fakeradio:before {
     content: "";
-    height: 7px;
-    width: 7px;
+    height: 7rem;
+    width: 7rem;
     background-color: #e45028;
     border-radius: 50%;
     position: absolute;
@@ -82,8 +82,8 @@
     visibility: hidden; }
 
 .form__fakedot {
-  height: 7px;
-  width: 7px;
+  height: 7rem;
+  width: 7rem;
   background-color: #e45028;
   border-radius: 50%;
   position: absolute;
@@ -96,8 +96,8 @@
 
 .form__fakeradio--checkbox {
   border-radius: 0%;
-  height: 16px;
-  width: 16px; }
+  height: 16rem;
+  width: 16rem; }
   .form__fakeradio--checkbox:before {
     background: url(img/order/check_mark.png) no-repeat;
     height: 100%;

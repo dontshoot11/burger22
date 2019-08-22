@@ -1,7 +1,11 @@
 @import "colors";
+html {
+    font-size: 1px
+}
+
 body {
     font-family: 'ubuntu-medium';
-    font-size: 13px;
+    font-size: 13rem;
     display: flex;
     flex-direction: column
 }
@@ -50,7 +54,7 @@ a {
 
 .section-title {
     font-family: 'gagalin';
-    font-size: 72px;
+    font-size: 72rem;
     color: $orange-y;
     font-weight: 200
 }
@@ -61,6 +65,6 @@ a {
 
 .section-title--menu {
     color: #fff;
-    margin: 111px 0px 0px 102px;
+    margin: 111rem 0px 0px 102rem;
     position: absolute;
 }

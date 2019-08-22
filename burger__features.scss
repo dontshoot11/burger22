@@ -6,25 +6,25 @@ $grayblack: #2f3234;
 .features__card {
     width: 33%;
     text-align: center;
-    padding: 18px;
+    padding: 18rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 55px;
+    margin-top: 55rem;
 }
 
 .features__name {
     font-family: "lifehack";
-    font-size: 24px;
+    font-size: 24rem;
     color: $grayblack;
-    margin-top: 35px;
+    margin-top: 35rem;
 }
 
 .features__description {
     font-family: "ubuntu-light";
-    font-size: 14px;
+    font-size: 14rem;
     color: rgba(47, 50, 52, 0.8);
-    margin-top: 20px;
+    margin-top: 20rem;
     line-height: 1.8em
 }
 
@@ -34,18 +34,18 @@ $grayblack: #2f3234;
 
 .features__logo--meat {
     /* background: url(img/we/meat.png); */
-    height: 89px;
-    width: 97px;
+    height: 89rem;
+    width: 97rem;
 }
 
 .features__logo--hand {
     /* background: url(img/we/hand.png); */
-    height: 85px;
-    width: 73px;
+    height: 85rem;
+    width: 73rem;
 }
 
 .features__logo--grass {
     /* background: url(img/we/grass.png); */
-    height: 75px;
-    width: 88px
+    height: 75rem;
+    width: 88rem
 }
