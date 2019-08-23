@@ -88,4 +88,9 @@
   margin-top: 17rem;
   line-height: 1.6em; }
 
+@media screen and (max-width: 768px) {
+  .team-aside {
+    width: calc(100% - 13rem);
+    left: 4rem; } }
+
 /*# sourceMappingURL=team.css.map */

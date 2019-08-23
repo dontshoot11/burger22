@@ -57,15 +57,22 @@ a {
   margin: 111rem 0px 0px 102rem;
   position: absolute; }
 
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 0.87px; } }
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 0.7px; } }
 .header {
-  margin-top: 13rem; }
+  margin-top: 13rem;
+  width: 100%; }
 
 .logo__link {
   display: block; }
 
 .logo__pic {
-  max-width: 100rem;
-  max-height: 100rem;
+  width: 100rem;
+  height: 100rem;
   margin-right: 69rem; }
 
 .navigation {
@@ -92,6 +99,9 @@ a {
   padding: 13rem;
   text-transform: uppercase; }
 
+@media screen and (max-width: 768px) {
+  .navigation {
+    display: none; } }
 .sidemenu {
   position: fixed;
   right: 50rem;
@@ -139,9 +149,13 @@ a {
 .sidemenu__button {
   margin-bottom: 12rem; }
 
+@media screen and (max-width: 720px) {
+  .sidemenu {
+    display: none; } }
 .motto {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  width: 100%; }
 
 .slogan {
   width: 406rem;
@@ -180,7 +194,7 @@ a {
 .features__card {
   width: 33%;
   text-align: center;
-  padding: 18rem;
+  padding: 20rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -217,6 +231,19 @@ a {
   height: 75rem;
   width: 88rem; }
 
+@media screen and (max-width: 480px) {
+  .features {
+    flex-direction: column; }
+
+  .features__card {
+    width: 100%;
+    flex-direction: row;
+    text-align: left;
+    margin-top: 0; }
+
+  .features__logo {
+    margin-right: 25rem;
+    transform: scale(1.8); } }
 .reviews {
   display: flex;
   width: 100%;
@@ -265,7 +292,7 @@ a {
   transition: 0.3s;
   height: 100%;
   color: #fff;
-  padding: 50px 30px 0px 20px; }
+  padding: 50rem 30rem 0rem 20rem; }
   .reviews__article:hover {
     opacity: 1;
     transition: 0.3s;
@@ -273,14 +300,14 @@ a {
 
 .reviews__name {
   font-family: "Gagalin";
-  font-size: 14px; }
+  font-size: 14rem; }
 
 .reviews__text {
   font-family: "ubuntu-light";
-  font-size: 14px;
+  font-size: 14rem;
   line-height: 1.8em;
-  margin-top: 30px;
-  margin-bottom: 17px; }
+  margin-top: 30rem;
+  margin-bottom: 17rem; }
 
 .button--reviews {
   background-color: #2f3234; }
@@ -297,7 +324,7 @@ button {
 
 .button {
   font-weight: 500;
-  padding: 13px 13px 13px 13px;
+  padding: 13rem 13rem 13rem 13rem;
   text-transform: uppercase;
   border-radius: 5px;
   color: #ffffff; }
@@ -318,14 +345,14 @@ button {
     background-color: #1f2122; }
 
 .nextscreen {
-  height: 14px;
-  width: 29px;
-  margin-bottom: 40px;
+  height: 14rem;
+  width: 29rem;
+  margin-bottom: 40rem;
   display: inline-block; }
 
 .nextscreen__sprite {
-  max-height: 20px;
-  max-width: 30px; }
+  max-height: 20rem;
+  max-width: 30rem; }
 
 .firstscreen {
   display: flex;
@@ -370,11 +397,12 @@ button {
   position: relative; }
 
 .container {
+  width: calc(100% - 50rem);
   max-width: 960rem;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-evenly; }
+  justify-content: space-between; }
 
 .container__column {
   flex-direction: column; }
@@ -578,6 +606,10 @@ button {
   margin-top: 17rem;
   line-height: 1.6em; }
 
+@media screen and (max-width: 768px) {
+  .team-aside {
+    width: calc(100% - 13rem);
+    left: 4rem; } }
 .menu-aside {
   position: absolute;
   right: 0;
@@ -650,20 +682,20 @@ button {
 
 .contacts {
   width: 50%;
-  padding: 12px 0px; }
+  padding: 12rem 0px; }
 
 .contacts__adress {
   color: #fff; }
 
 .phone-logo {
-  height: 12px;
-  width: 11px;
-  margin-bottom: -2px;
-  margin-right: 7px; }
+  height: 12rem;
+  width: 11rem;
+  margin-bottom: -2rem;
+  margin-right: 7rem; }
 
 .contacts__number {
   color: #e45028;
-  margin-top: 10px;
+  margin-top: 10rem;
   display: inline-block; }
 
 .social {
@@ -672,13 +704,13 @@ button {
   justify-content: flex-end; }
 
 .social__link {
-  margin-right: 20px; }
+  margin-right: 20rem; }
   .social__link:last-child {
     margin-right: 0; }
 
 .social-logo {
-  max-height: 36px;
-  max-width: 36px;
+  max-height: 36rem;
+  max-width: 36rem;
   fill: #585858; }
   .social-logo:hover {
     fill: #fff; }
@@ -713,11 +745,5 @@ button {
   src: url("fonts/lifehack_medium.woff2") format("woff2"), url("fonts/lifehack_medium.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 0.7px; } }
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 0.5px; } }
 
 /*# sourceMappingURL=main.css.map */

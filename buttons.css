@@ -10,7 +10,7 @@ button {
 
 .button {
   font-weight: 500;
-  padding: 13px 13px 13px 13px;
+  padding: 13rem 13rem 13rem 13rem;
   text-transform: uppercase;
   border-radius: 5px;
   color: #ffffff; }
@@ -31,13 +31,13 @@ button {
     background-color: #1f2122; }
 
 .nextscreen {
-  height: 14px;
-  width: 29px;
-  margin-bottom: 40px;
+  height: 14rem;
+  width: 29rem;
+  margin-bottom: 40rem;
   display: inline-block; }
 
 .nextscreen__sprite {
-  max-height: 20px;
-  max-width: 30px; }
+  max-height: 20rem;
+  max-width: 30rem; }
 
 /*# sourceMappingURL=buttons.css.map */

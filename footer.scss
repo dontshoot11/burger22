@@ -8,7 +8,7 @@
 
 .contacts {
     width: 50%;
-    padding: 12px 0px;
+    padding: 12rem 0px;
 }
 
 .contacts__adress {
@@ -16,15 +16,15 @@
 }
 
 .phone-logo {
-    height: 12px;
-    width: 11px;
-    margin-bottom: -2px;
-    margin-right: 7px;
+    height: 12rem;
+    width: 11rem;
+    margin-bottom: -2rem;
+    margin-right: 7rem;
 }
 
 .contacts__number {
     color: #e45028;
-    margin-top: 10px;
+    margin-top: 10rem;
     display: inline-block;
 }
 
@@ -35,15 +35,15 @@
 }
 
 .social__link {
-    margin-right: 20px;
+    margin-right: 20rem;
     &:last-child {
         margin-right: 0
     }
 }
 
 .social-logo {
-    max-height: 36px;
-    max-width: 36px;
+    max-height: 36rem;
+    max-width: 36rem;
     fill: #585858;
     &:hover {
         fill: #fff

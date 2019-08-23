@@ -23,4 +23,8 @@
   padding: 13rem;
   text-transform: uppercase; }
 
+@media screen and (max-width: 768px) {
+  .navigation {
+    display: none; } }
+
 /*# sourceMappingURL=navigation.css.map */

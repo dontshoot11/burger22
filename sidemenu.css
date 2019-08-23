@@ -45,4 +45,8 @@
 .sidemenu__button {
   margin-bottom: 12rem; }
 
+@media screen and (max-width: 720px) {
+  .sidemenu {
+    display: none; } }
+
 /*# sourceMappingURL=sidemenu.css.map */

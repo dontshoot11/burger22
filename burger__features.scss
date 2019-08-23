@@ -6,7 +6,7 @@ $grayblack: #2f3234;
 .features__card {
     width: 33%;
     text-align: center;
-    padding: 18rem;
+    padding: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,4 +48,20 @@ $grayblack: #2f3234;
     /* background: url(img/we/grass.png); */
     height: 75rem;
     width: 88rem
+}
+
+@media screen and (max-width:480px) {
+    .features {
+        flex-direction: column
+    }
+    .features__card {
+        width: 100%;
+        flex-direction: row;
+        text-align: left;
+        margin-top: 0
+    }
+    .features__logo {
+        margin-right: 25rem;
+        transform: scale(1.8);
+    }
 }

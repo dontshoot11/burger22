@@ -1,12 +1,13 @@
 .header {
-  margin-top: 13rem; }
+  margin-top: 13rem;
+  width: 100%; }
 
 .logo__link {
   display: block; }
 
 .logo__pic {
-  max-width: 100rem;
-  max-height: 100rem;
+  width: 100rem;
+  height: 100rem;
   margin-right: 69rem; }
 
 /*# sourceMappingURL=header.css.map */

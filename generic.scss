@@ -68,3 +68,15 @@ a {
     margin: 111rem 0px 0px 102rem;
     position: absolute;
 }
+
+@media screen and (max-width:480px) {
+    html {
+        font-size: 0.87px
+    }
+}
+
+@media screen and (max-width:400px) {
+    html {
+        font-size: 0.7px
+    }
+}

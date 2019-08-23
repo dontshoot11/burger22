@@ -11,7 +11,7 @@
 "order",
 "team",
 "menu",
-"footer ";
+"footer";
 @font-face {
     font-family: 'ubuntu-b';
     src: url('fonts/ubuntu-b.woff2') format('woff2'), url('fonts/ubuntu-b.woff') format('woff');
@@ -52,16 +52,4 @@
     src: url('fonts/lifehack_medium.woff2') format('woff2'), url('fonts/lifehack_medium.woff') format('woff');
     font-weight: 300;
     font-style: normal;
-}
-
-@media screen and (max-width:768px) {
-    html {
-        font-size: 0.7px
-    }
-}
-
-@media screen and (max-width:480px) {
-    html {
-        font-size: 0.5px
-    }
 }

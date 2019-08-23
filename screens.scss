@@ -52,11 +52,12 @@
 }
 
 .container {
+    width: calc(100% - 50rem);
     max-width: 960rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .container__column {

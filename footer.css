@@ -1,0 +1,42 @@
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: url(img/contacts/footer-bg.png); }
+
+.contacts {
+  width: 50%;
+  padding: 12rem 0px; }
+
+.contacts__adress {
+  color: #fff; }
+
+.phone-logo {
+  height: 12rem;
+  width: 11rem;
+  margin-bottom: -2rem;
+  margin-right: 7rem; }
+
+.contacts__number {
+  color: #e45028;
+  margin-top: 10rem;
+  display: inline-block; }
+
+.social {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end; }
+
+.social__link {
+  margin-right: 20rem; }
+  .social__link:last-child {
+    margin-right: 0; }
+
+.social-logo {
+  max-height: 36rem;
+  max-width: 36rem;
+  fill: #585858; }
+  .social-logo:hover {
+    fill: #fff; }
+
+/*# sourceMappingURL=footer.css.map */
