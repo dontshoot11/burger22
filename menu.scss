@@ -9,11 +9,14 @@
         .menu-accordeon {
             display: flex;
             height: 100%;
+            justify-content: flex-end;
+            position: relative;
         }
         
         .menu-accordeon__card {
             /* transform: rotate(270deg); */
-            display: flex
+            display: flex;
+            height: 100vh;
         }
         
         .menu-accordeon__about {
@@ -41,7 +44,8 @@
             transform: rotate(180deg);
             padding: 40rem 25rem 0rem 25rem;
             background-color: rgba(20, 20, 20, 0.7);
-            height: 100%;
+            height: 100vh;
+            text-align: left;
             white-space: nowrap;
             writing-mode: vertical-lr;
         }
@@ -74,4 +78,30 @@
             background-size: cover;
             height: 100vh;
             background-position: center center;
+        }
+        
+        @media screen and (max-width:768px) {
+            .menu-aside {
+                width: 100%
+            }
+            .menu-accordeon__button {
+                width: 80rem
+            }
+            ;
+            .menu-accordeon__card--active .menu-accordeon__about {
+                width: calc(100% - 80rem);
+                min-width: 0
+            }
+        }
+        
+        @media screen and (max-width:480px) {
+            .menu-accordeon__card--active {
+                position: absolute;
+                left: 0rem;
+                z-index: 2;
+            }
+            .menu-accordeon__card--active .menu-accordeon__about {
+                width: calc(100% - 80rem);
+                min-width: 0
+            }
         }

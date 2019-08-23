@@ -38,7 +38,8 @@
   background-size: cover;
   height: 100vh;
   background-position: center center;
-  position: relative; }
+  position: relative;
+  overflow: auto; }
 
 .container {
   width: calc(100% - 50rem);
