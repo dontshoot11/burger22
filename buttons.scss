@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixin";
 button {
     text-decoration: none;
     border: 0;
@@ -32,9 +33,23 @@ button {
 .button--reviews {
     transition: 0.3s;
     background-color: $grayblack;
+    position: relative;
     &:hover {
         transition: 0.3s;
         background-color: #1f2122
+    }
+    &:after {
+        content: "читать отзыв";
+        position: absolute;
+        left: 3rem;
+        display: none
+    }
+    @include phone {
+        color: transparent;
+        &:after {
+            display: inline-block;
+            color: #fff
+        }
     }
 }
 

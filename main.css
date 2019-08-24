@@ -410,10 +410,22 @@ button {
 
 .button--reviews {
   transition: 0.3s;
-  background-color: #2f3234; }
+  background-color: #2f3234;
+  position: relative; }
   .button--reviews:hover {
     transition: 0.3s;
     background-color: #1f2122; }
+  .button--reviews:after {
+    content: "читать отзыв";
+    position: absolute;
+    left: 3rem;
+    display: none; }
+  @media screen and (max-width: 480px) {
+    .button--reviews {
+      color: transparent; }
+      .button--reviews:after {
+        display: inline-block;
+        color: #fff; } }
 
 .nextscreen {
   height: 14rem;
