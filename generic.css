@@ -37,6 +37,9 @@ ul {
 a {
   text-decoration: none; }
 
+button {
+  cursor: pointer; }
+
 .wrapper {
   min-width: 100%;
   min-height: 100%;

@@ -38,6 +38,9 @@ ul {
 a {
   text-decoration: none; }
 
+button {
+  cursor: pointer; }
+
 .wrapper {
   min-width: 100%;
   min-height: 100%;
@@ -194,7 +197,8 @@ a {
 
   .slogan {
     width: auto;
-    text-align: center; }
+    text-align: center;
+    margin: 0; }
 
   .motto {
     padding: 0 20%; } }
@@ -213,7 +217,7 @@ a {
 .features__card {
   width: 33%;
   text-align: center;
-  padding: 20rem;
+  padding: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,7 +226,9 @@ a {
 .features__name {
   font-family: "lifehack";
   font-size: 24rem;
-  color: #2f3234;
+  color: #2f3234; }
+
+.features__text {
   margin-top: 35rem; }
 
 .features__description {
@@ -233,22 +239,20 @@ a {
   line-height: 1.8em; }
 
 .features__logo {
-  background-position: center center; }
+  background-position: center center;
+  min-width: 97rem; }
 
 .features__logo--meat {
   /* background: url(img/we/meat.png); */
-  height: 89rem;
-  width: 97rem; }
+  height: 89rem; }
 
 .features__logo--hand {
   /* background: url(img/we/hand.png); */
-  height: 85rem;
-  width: 73rem; }
+  height: 85rem; }
 
 .features__logo--grass {
   /* background: url(img/we/grass.png); */
-  height: 75rem;
-  width: 88rem; }
+  height: 75rem; }
 
 @media screen and (max-width: 480px) {
   .features {
@@ -261,15 +265,14 @@ a {
     width: 100%;
     flex-direction: row;
     text-align: left;
-    margin-top: 0;
+    margin-top: 35rem;
     padding: 3%; }
 
   .features__logo {
-    margin-right: 25rem;
-    transform: scale(1.9); }
+    margin-right: 25rem; }
 
-  .features__logo--hand {
-    transform: scale(); } }
+  .features__text {
+    margin-top: 0rem; } }
 .reviews {
   display: flex;
   width: 100%;
@@ -326,7 +329,7 @@ a {
   transition: 0.3s;
   height: 100%;
   color: #fff;
-  padding: 17% 20% 0% 10%; }
+  padding: 13% 15% 0% 6%; }
   .reviews__article:hover {
     opacity: 1;
     transition: 0.3s;
@@ -339,7 +342,7 @@ a {
 .reviews__text {
   font-family: "ubuntu-light";
   font-size: 14rem;
-  line-height: 1.8em;
+  line-height: 1.7em;
   margin-top: 30rem;
   margin-bottom: 17rem; }
 
@@ -359,10 +362,12 @@ a {
 
   .reviews__article {
     text-align: center;
-    padding: 12% 10% 7% 10%; }
+    padding: 3% 2% 1% 2%; }
 
   .reviews__text {
-    margin-top: 20rem; } }
+    margin-top: 2%;
+    margin-bottom: 3%;
+    line-height: 1.5em; } }
 @media screen and (max-width: 480px) {
   .reviews__article {
     display: flex;
@@ -400,7 +405,7 @@ button {
   color: #ffffff;
   max-width: max-content; }
 
-.button--navigation {
+.button--orange {
   background-color: #e45028;
   transition: 0.3s;
   /* &:hover {
@@ -439,30 +444,44 @@ button {
 
 .button-burger {
   display: none;
-  position: relative;
+  position: fixed;
+  top: 48rem;
+  right: 20rem;
+  /*
   background-color: #fff;
   width: 24px;
   height: 4px;
   border-radius: 2rem;
-  margin-left: 30rem; }
-  .button-burger:before {
-    content: "";
-    width: 24px;
-    height: 4px;
-    border-radius: 2rem;
-    position: absolute;
-    background: #fff;
-    top: -10rem;
-    right: 0rem; }
-  .button-burger:after {
-    content: "";
-    width: 24px;
-    height: 4px;
-    border-radius: 2rem;
-    position: absolute;
-    background: #fff;
-    top: 10rem;
-    right: 0rem; }
+  margin-left: 30rem;
+  &:before {
+      content: "";
+      width: 24px;
+      height: 4px;
+      border-radius: 2rem;
+      position: absolute;
+      background: #fff;
+      top: -10rem;
+      right: 0rem;
+  }
+  &:after {
+      content: "";
+      width: 24px;
+      height: 4px;
+      border-radius: 2rem;
+      position: absolute;
+      background: #fff;
+      top: 10rem;
+      right: 0rem
+  } */ }
+
+.button-burger__element {
+  background-color: #fff;
+  width: 24px;
+  height: 4px;
+  border-radius: 2rem;
+  margin-left: 30rem;
+  margin: 4rem;
+  display: none; }
 
 .navigation__buttons-block {
   display: flex;
@@ -470,7 +489,13 @@ button {
 
 @media screen and (max-width: 768px) {
   .button-burger {
-    display: block; } }
+    display: block; }
+
+  .button-burger__element {
+    display: block; }
+
+  .button--order {
+    margin-right: 50rem; } }
 .firstscreen {
   display: flex;
   flex-direction: column;
@@ -667,7 +692,10 @@ button {
 
   .form__block--radiocheck {
     justify-content: center;
-    margin-bottom: 3%; } }
+    margin-bottom: 3%; }
+
+  .form__fakeradio {
+    top: 3rem; } }
 .team-aside {
   position: absolute;
   right: 0;
@@ -773,7 +801,8 @@ button {
     min-height: 239rem;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    padding-left: 0rem; }
 
   .accordeon__picture {
     overflow: hidden;
@@ -795,19 +824,21 @@ button {
 .menu-aside {
   position: absolute;
   right: 0;
-  max-width: 100%;
-  height: 100%; }
+  top: 0;
+  bottom: 0; }
 
 .menu-accordeon {
   display: flex;
   height: 100%;
-  justify-content: flex-end;
   position: relative; }
 
 .menu-accordeon__card {
   /* transform: rotate(270deg); */
   display: flex;
   height: 100vh; }
+
+.menu-accordeon__button {
+  background-color: rgba(20, 20, 20, 0.7); }
 
 .menu-accordeon__about {
   width: 0px;
@@ -818,14 +849,13 @@ button {
   overflow: hidden; }
 
 .menu-accordeon__card--active .menu-accordeon__about {
-  min-width: 540rem;
+  width: 540px;
   background-color: rgba(47, 50, 52, 0.9);
   height: 100%;
   padding: 62rem 37rem 0rem 33rem; }
 
 .menu-accordeon__card--active .menu-accordeon__button {
-  color: #f9b43b;
-  background-color: rgba(20, 20, 20, 0.7); }
+  color: #f9b43b; }
 
 .menu-accordeon__name {
   transform: rotate(180deg);
@@ -882,9 +912,11 @@ button {
   width: 100%;
   background: url(img/contacts/footer-bg.png); }
 
+.сontainer--contacts {
+  padding: 12rem 0; }
+
 .contacts {
-  width: 50%;
-  padding: 12rem 0px; }
+  width: 50%; }
 
 .contacts__adress {
   color: #fff; }
@@ -900,14 +932,19 @@ button {
   margin-top: 10rem;
   display: inline-block; }
 
+.social__link {
+  color: #e45028;
+  margin-top: 10rem;
+  display: inline-block; }
+
 .social {
   width: 50%;
   display: flex;
   justify-content: flex-end; }
 
-.social__link {
+.social__item {
   margin-right: 20rem; }
-  .social__link:last-child {
+  .social__item:last-child {
     margin-right: 0; }
 
 .social-logo {

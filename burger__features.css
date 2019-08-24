@@ -4,7 +4,7 @@
 .features__card {
   width: 33%;
   text-align: center;
-  padding: 20rem;
+  padding: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,9 @@
 .features__name {
   font-family: "lifehack";
   font-size: 24rem;
-  color: #2f3234;
+  color: #2f3234; }
+
+.features__text {
   margin-top: 35rem; }
 
 .features__description {
@@ -24,22 +26,20 @@
   line-height: 1.8em; }
 
 .features__logo {
-  background-position: center center; }
+  background-position: center center;
+  min-width: 97rem; }
 
 .features__logo--meat {
   /* background: url(img/we/meat.png); */
-  height: 89rem;
-  width: 97rem; }
+  height: 89rem; }
 
 .features__logo--hand {
   /* background: url(img/we/hand.png); */
-  height: 85rem;
-  width: 73rem; }
+  height: 85rem; }
 
 .features__logo--grass {
   /* background: url(img/we/grass.png); */
-  height: 75rem;
-  width: 88rem; }
+  height: 75rem; }
 
 @media screen and (max-width: 480px) {
   .features {
@@ -52,14 +52,13 @@
     width: 100%;
     flex-direction: row;
     text-align: left;
-    margin-top: 0;
+    margin-top: 35rem;
     padding: 3%; }
 
   .features__logo {
-    margin-right: 25rem;
-    transform: scale(1.9); }
+    margin-right: 25rem; }
 
-  .features__logo--hand {
-    transform: scale(); } }
+  .features__text {
+    margin-top: 0rem; } }
 
 /*# sourceMappingURL=burger__features.css.map */

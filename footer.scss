@@ -7,9 +7,12 @@
     background: url(img/contacts/footer-bg.png)
 }
 
+.сontainer--contacts {
+    padding: 12rem 0
+}
+
 .contacts {
     width: 50%;
-    padding: 12rem 0px;
 }
 
 .contacts__adress {
@@ -29,13 +32,19 @@
     display: inline-block;
 }
 
+.social__link {
+    color: #e45028;
+    margin-top: 10rem;
+    display: inline-block;
+}
+
 .social {
     width: 50%;
     display: flex;
     justify-content: flex-end
 }
 
-.social__link {
+.social__item {
     margin-right: 20rem;
     &:last-child {
         margin-right: 0

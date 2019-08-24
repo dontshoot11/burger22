@@ -5,9 +5,11 @@
   width: 100%;
   background: url(img/contacts/footer-bg.png); }
 
+.сontainer--contacts {
+  padding: 12rem 0; }
+
 .contacts {
-  width: 50%;
-  padding: 12rem 0px; }
+  width: 50%; }
 
 .contacts__adress {
   color: #fff; }
@@ -23,14 +25,19 @@
   margin-top: 10rem;
   display: inline-block; }
 
+.social__link {
+  color: #e45028;
+  margin-top: 10rem;
+  display: inline-block; }
+
 .social {
   width: 50%;
   display: flex;
   justify-content: flex-end; }
 
-.social__link {
+.social__item {
   margin-right: 20rem; }
-  .social__link:last-child {
+  .social__item:last-child {
     margin-right: 0; }
 
 .social-logo {

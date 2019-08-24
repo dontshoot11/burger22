@@ -103,7 +103,8 @@
     min-height: 239rem;
     flex-direction: column;
     align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    padding-left: 0rem; }
 
   .accordeon__picture {
     overflow: hidden;

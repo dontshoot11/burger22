@@ -21,7 +21,7 @@ button {
     max-width: max-content;
 }
 
-.button--navigation {
+.button--orange {
     background-color: $orange;
     transition: 0.3s;
     /* &:hover {
@@ -67,7 +67,10 @@ button {
 
 .button-burger {
     display: none;
-    position: relative;
+    position: fixed;
+    top: 48rem;
+    right: 20rem;
+    /*
     background-color: #fff;
     width: 24px;
     height: 4px;
@@ -92,7 +95,17 @@ button {
         background: #fff;
         top: 10rem;
         right: 0rem
-    }
+    } */
+}
+
+.button-burger__element {
+    background-color: #fff;
+    width: 24px;
+    height: 4px;
+    border-radius: 2rem;
+    margin-left: 30rem;
+    margin: 4rem;
+    display: none
 }
 
 .navigation__buttons-block {
@@ -103,5 +116,11 @@ button {
 @media screen and (max-width:768px) {
     .button-burger {
         display: block;
+    }
+    .button-burger__element {
+        display: block;
+    }
+    .button--order {
+        margin-right: 50rem
     }
 }

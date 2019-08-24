@@ -17,7 +17,7 @@ button {
   color: #ffffff;
   max-width: max-content; }
 
-.button--navigation {
+.button--orange {
   background-color: #e45028;
   transition: 0.3s;
   /* &:hover {
@@ -56,30 +56,44 @@ button {
 
 .button-burger {
   display: none;
-  position: relative;
+  position: fixed;
+  top: 48rem;
+  right: 20rem;
+  /*
   background-color: #fff;
   width: 24px;
   height: 4px;
   border-radius: 2rem;
-  margin-left: 30rem; }
-  .button-burger:before {
-    content: "";
-    width: 24px;
-    height: 4px;
-    border-radius: 2rem;
-    position: absolute;
-    background: #fff;
-    top: -10rem;
-    right: 0rem; }
-  .button-burger:after {
-    content: "";
-    width: 24px;
-    height: 4px;
-    border-radius: 2rem;
-    position: absolute;
-    background: #fff;
-    top: 10rem;
-    right: 0rem; }
+  margin-left: 30rem;
+  &:before {
+      content: "";
+      width: 24px;
+      height: 4px;
+      border-radius: 2rem;
+      position: absolute;
+      background: #fff;
+      top: -10rem;
+      right: 0rem;
+  }
+  &:after {
+      content: "";
+      width: 24px;
+      height: 4px;
+      border-radius: 2rem;
+      position: absolute;
+      background: #fff;
+      top: 10rem;
+      right: 0rem
+  } */ }
+
+.button-burger__element {
+  background-color: #fff;
+  width: 24px;
+  height: 4px;
+  border-radius: 2rem;
+  margin-left: 30rem;
+  margin: 4rem;
+  display: none; }
 
 .navigation__buttons-block {
   display: flex;
@@ -87,6 +101,12 @@ button {
 
 @media screen and (max-width: 768px) {
   .button-burger {
-    display: block; } }
+    display: block; }
+
+  .button-burger__element {
+    display: block; }
+
+  .button--order {
+    margin-right: 50rem; } }
 
 /*# sourceMappingURL=buttons.css.map */

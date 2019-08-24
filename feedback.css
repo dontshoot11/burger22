@@ -54,7 +54,7 @@
   transition: 0.3s;
   height: 100%;
   color: #fff;
-  padding: 17% 20% 0% 10%; }
+  padding: 13% 15% 0% 6%; }
   .reviews__article:hover {
     opacity: 1;
     transition: 0.3s;
@@ -67,7 +67,7 @@
 .reviews__text {
   font-family: "ubuntu-light";
   font-size: 14rem;
-  line-height: 1.8em;
+  line-height: 1.7em;
   margin-top: 30rem;
   margin-bottom: 17rem; }
 
@@ -87,10 +87,12 @@
 
   .reviews__article {
     text-align: center;
-    padding: 12% 10% 7% 10%; }
+    padding: 3% 2% 1% 2%; }
 
   .reviews__text {
-    margin-top: 20rem; } }
+    margin-top: 2%;
+    margin-bottom: 3%;
+    line-height: 1.5em; } }
 @media screen and (max-width: 480px) {
   .reviews__article {
     display: flex;
