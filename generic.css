@@ -58,9 +58,9 @@ a {
 
 @media screen and (max-width: 480px) {
   html {
-    font-size: 0.87px; } }
-@media screen and (max-width: 320px) {
+    font-size: 0.8px; } }
+@media screen and (max-width: 768px) {
   html {
-    font-size: 0.7px; } }
+    font-size: 0.9px; } }
 
 /*# sourceMappingURL=generic.css.map */

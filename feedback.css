@@ -54,7 +54,7 @@
   transition: 0.3s;
   height: 100%;
   color: #fff;
-  padding: 50rem 30rem 0rem 20rem; }
+  padding: 17% 20% 0% 10%; }
   .reviews__article:hover {
     opacity: 1;
     transition: 0.3s;
@@ -74,12 +74,16 @@
 .button--reviews {
   background-color: #2f3234; }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   .reviews__card {
     width: 50%;
-    text-align: center; }
+    height: 25vh; }
 
-  .reviews-text {
+  .reviews__article {
+    text-align: center;
+    padding: 12% 10% 7% 10%; }
+
+  .reviews__text {
     margin-top: 20rem; } }
 
 /*# sourceMappingURL=feedback.css.map */

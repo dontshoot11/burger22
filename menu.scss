@@ -84,13 +84,9 @@
             .menu-aside {
                 width: 100%
             }
-            .menu-accordeon__button {
-                width: 80rem
-            }
-            ;
             .menu-accordeon__card--active .menu-accordeon__about {
                 width: calc(100% - 80rem);
-                min-width: 0
+                min-width: 256rem
             }
         }
         
@@ -102,6 +98,5 @@
             }
             .menu-accordeon__card--active .menu-accordeon__about {
                 width: calc(100% - 80rem);
-                min-width: 0
             }
         }

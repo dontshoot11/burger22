@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixin";
 .motto {
     display: flex;
     align-items: center;
@@ -6,7 +7,7 @@
 }
 
 .slogan {
-    width: 406rem;
+    width: 50%;
     margin-left: 11rem;
     text-align: left
 }
@@ -20,7 +21,7 @@
 
 .burger {
     background: url(sprite.svg#drops) no-repeat;
-    width: 453rem;
+    width: 50%;
     text-align: center;
     position: relative;
 }
@@ -38,8 +39,18 @@
     height: 100%;
 }
 
-@media screen and (max-width:768px) {
+@include tablets {
     .motto {
         flex-direction: column
+    }
+    .burger {
+        width: auto
+    }
+    .slogan {
+        width: auto;
+        text-align: center
+    }
+    .motto {
+        padding: 0 20%
     }
 }

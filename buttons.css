@@ -18,10 +18,10 @@ button {
 .button--navigation {
   background-color: #e45028;
   transition: 0.3s;
-    /* &:hover {
-    background-color: transparent;
-    transition: 0.3s
-} */ }
+  /* &:hover {
+      background-color: transparent;
+      transition: 0.3s
+  } */ }
 
 .button--reviews {
   transition: 0.3s;
@@ -39,5 +39,40 @@ button {
 .nextscreen__sprite {
   max-height: 20rem;
   max-width: 30rem; }
+
+.button-burger {
+  display: none;
+  position: relative;
+  background-color: #fff;
+  width: 24px;
+  height: 4px;
+  border-radius: 2rem;
+  margin-left: 30rem; }
+  .button-burger:before {
+    content: "";
+    width: 24px;
+    height: 4px;
+    border-radius: 2rem;
+    position: absolute;
+    background: #fff;
+    top: -10rem;
+    right: 0rem; }
+  .button-burger:after {
+    content: "";
+    width: 24px;
+    height: 4px;
+    border-radius: 2rem;
+    position: absolute;
+    background: #fff;
+    top: 10rem;
+    right: 0rem; }
+
+.navigation__buttons-block {
+  display: flex;
+  align-items: center; }
+
+@media screen and (max-width: 768px) {
+  .button-burger {
+    display: block; } }
 
 /*# sourceMappingURL=buttons.css.map */

@@ -4,7 +4,7 @@
   width: 100%; }
 
 .slogan {
-  width: 406rem;
+  width: 50%;
   margin-left: 11rem;
   text-align: left; }
 
@@ -16,7 +16,7 @@
 
 .burger {
   background: url(sprite.svg#drops) no-repeat;
-  width: 453rem;
+  width: 50%;
   text-align: center;
   position: relative; }
 
@@ -33,6 +33,16 @@
 
 @media screen and (max-width: 768px) {
   .motto {
-    flex-direction: column; } }
+    flex-direction: column; }
+
+  .burger {
+    width: auto; }
+
+  .slogan {
+    width: auto;
+    text-align: center; }
+
+  .motto {
+    padding: 0 20%; } }
 
 /*# sourceMappingURL=motto.css.map */

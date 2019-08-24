@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixin";
 .form {
     margin-top: 44rem
 }
@@ -128,4 +129,15 @@
 
 .form__trueradio:checked~.form__fakeradio:before {
     visibility: visible
+}
+
+@include tablets {
+    .form__elem {
+        flex-direction: column;
+        padding: 0 17%
+    }
+    ;
+    .form__column {
+        margin: 0
+    }
 }

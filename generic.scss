@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixin";
 html {
     font-size: 1px
 }
@@ -71,12 +72,12 @@ a {
 
 @media screen and (max-width:480px) {
     html {
-        font-size: 0.87px
+        font-size: 0.8px
     }
 }
 
-@media screen and (max-width:400px) {
+@include tablets {
     html {
-        font-size: 0.7px
+        font-size: 0.9px
     }
 }

@@ -1,50 +1,91 @@
-    @import "colors";
-    button {
-        text-decoration: none;
-        border: 0;
-        font: inherit;
-        cursor: pointer;
-        color: inherit;
-        background-color: transparent;
-        &:focus {
-            outline: none
-        }
+@import "colors";
+button {
+    text-decoration: none;
+    border: 0;
+    font: inherit;
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+    &:focus {
+        outline: none
     }
-    
-    .button {
-        font-weight: 500;
-        padding: 13rem 13rem 13rem 13rem;
-        text-transform: uppercase;
-        border-radius: 5px;
-        color: #ffffff;
-    }
-    
-    .button--navigation {
-        background-color: $orange;
-        transition: 0.3s;
-        /* &:hover {
+}
+
+.button {
+    font-weight: 500;
+    padding: 13rem 13rem 13rem 13rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.button--navigation {
+    background-color: $orange;
+    transition: 0.3s;
+    /* &:hover {
         background-color: transparent;
         transition: 0.3s
     } */
-    }
-    
-    .button--reviews {
+}
+
+.button--reviews {
+    transition: 0.3s;
+    background-color: $grayblack;
+    &:hover {
         transition: 0.3s;
-        background-color: $grayblack;
-        &:hover {
-            transition: 0.3s;
-            background-color: #1f2122
-        }
+        background-color: #1f2122
     }
-    
-    .nextscreen {
-        height: 14rem;
-        width: 29rem;
-        margin-bottom: 40rem;
-        display: inline-block;
+}
+
+.nextscreen {
+    height: 14rem;
+    width: 29rem;
+    margin-bottom: 40rem;
+    display: inline-block;
+}
+
+.nextscreen__sprite {
+    max-height: 20rem;
+    max-width: 30rem
+}
+
+.button-burger {
+    display: none;
+    position: relative;
+    background-color: #fff;
+    width: 24px;
+    height: 4px;
+    border-radius: 2rem;
+    margin-left: 30rem;
+    &:before {
+        content: "";
+        width: 24px;
+        height: 4px;
+        border-radius: 2rem;
+        position: absolute;
+        background: #fff;
+        top: -10rem;
+        right: 0rem;
     }
-    
-    .nextscreen__sprite {
-        max-height: 20rem;
-        max-width: 30rem
+    &:after {
+        content: "";
+        width: 24px;
+        height: 4px;
+        border-radius: 2rem;
+        position: absolute;
+        background: #fff;
+        top: 10rem;
+        right: 0rem
     }
+}
+
+.navigation__buttons-block {
+    display: flex;
+    align-items: center
+}
+
+@media screen and (max-width:768px) {
+    .button-burger {
+        display: block;
+    }
+}

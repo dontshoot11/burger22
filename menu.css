@@ -70,12 +70,9 @@
   .menu-aside {
     width: 100%; }
 
-  .menu-accordeon__button {
-    width: 80rem; }
-
   .menu-accordeon__card--active .menu-accordeon__about {
     width: calc(100% - 80rem);
-    min-width: 0; } }
+    min-width: 256rem; } }
 @media screen and (max-width: 480px) {
   .menu-accordeon__card--active {
     position: absolute;
@@ -83,7 +80,6 @@
     z-index: 2; }
 
   .menu-accordeon__card--active .menu-accordeon__about {
-    width: calc(100% - 80rem);
-    min-width: 0; } }
+    width: calc(100% - 80rem); } }
 
 /*# sourceMappingURL=menu.css.map */

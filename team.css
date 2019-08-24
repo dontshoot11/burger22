@@ -28,9 +28,7 @@
   font-family: "ubuntu";
   font-size: 14rem;
   color: #fff;
-  display: flex;
-  padding-top: 17rem;
-  padding-left: 17rem; }
+  display: flex; }
 
 .accordeon__card--active .accordeon__name {
   color: #f9b43b; }
@@ -39,7 +37,9 @@
     border-top: 0; }
 
 .accordeon__card--active .accordeon__about {
-  min-height: 120rem; }
+  min-height: 120rem;
+  padding-top: 17rem;
+  padding-left: 17rem; }
 
 .accordeon__name {
   font-family: "gagalin";
@@ -90,7 +90,37 @@
 
 @media screen and (max-width: 768px) {
   .team-aside {
-    width: calc(100% - 13rem);
-    left: 4rem; } }
+    width: 100%; }
+
+  .accordeon {
+    text-align: center;
+    margin-top: 49rem; }
+
+  .accordeon__card {
+    margin-top: 30rem; }
+
+  .accordeon__card--active .accordeon__about {
+    min-height: 239rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+
+  .accordeon__picture {
+    overflow: hidden;
+    height: 100rem;
+    width: 100rem;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 22rem; }
+
+  .accordeon__name {
+    font-size: 25rem; }
+
+  .accordeon__about {
+    padding-left: 0; }
+
+  .accordeon__description {
+    margin-left: 0; } }
 
 /*# sourceMappingURL=team.css.map */
