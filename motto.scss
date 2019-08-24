@@ -54,3 +54,15 @@
         padding: 0 20%
     }
 }
+
+@include phone {
+    .motto {
+        padding: 0 20%
+    }
+    .slogan {
+        font-size: 63rem
+    }
+    .slogan__what {
+        font-size: 54rem
+    }
+}

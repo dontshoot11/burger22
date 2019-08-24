@@ -10,8 +10,8 @@
 }
 
 ;
-@mixin phones() {
-    @media screen and (max-width: 450px) {
+@mixin phone() {
+    @media screen and (max-width: 480px) {
         @content;
     }
 }

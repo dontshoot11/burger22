@@ -108,11 +108,38 @@
   visibility: visible; }
 
 @media screen and (max-width: 768px) {
+  .order {
+    text-align: center; }
+
   .form__elem {
     flex-direction: column;
-    padding: 0 17%; }
+    padding: 0 17%;
+    text-align: left; }
 
   .form__column {
-    margin: 0; } }
+    margin: 0; }
+    .form__column:last-child {
+      margin-top: 20rem; } }
+@media screen and (max-width: 480px) {
+  .form__elem {
+    padding: 0; }
+
+  .form__block:nth-child(4) {
+    display: none; }
+  .form__block:nth-child(3) {
+    margin-right: 0; }
+
+  .form__elem {
+    text-align: center; }
+
+  .form__block-title {
+    text-align: left; }
+
+  .form__input--textarea {
+    margin-bottom: 3%; }
+
+  .form__block--radiocheck {
+    justify-content: center;
+    margin-bottom: 3%; } }
 
 /*# sourceMappingURL=order.css.map */

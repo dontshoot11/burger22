@@ -74,6 +74,12 @@
 .button--reviews {
   background-color: #2f3234; }
 
+.button__text {
+  display: none; }
+
+.button__text--mobile {
+  display: none; }
+
 @media screen and (max-width: 768px) {
   .reviews__card {
     width: 50%;
@@ -85,5 +91,24 @@
 
   .reviews__text {
     margin-top: 20rem; } }
+@media screen and (max-width: 480px) {
+  .reviews__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+  .reviews__name {
+    margin-bottom: 14%;
+    font-size: 24rem; }
+
+  .reviews__text {
+    display: none; }
+
+  .button__text {
+    display: none; }
+
+  .button__text--mobile {
+    display: inline; } }
 
 /*# sourceMappingURL=feedback.css.map */

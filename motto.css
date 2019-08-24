@@ -44,5 +44,14 @@
 
   .motto {
     padding: 0 20%; } }
+@media screen and (max-width: 480px) {
+  .motto {
+    padding: 0 20%; }
+
+  .slogan {
+    font-size: 63rem; }
+
+  .slogan__what {
+    font-size: 54rem; } }
 
 /*# sourceMappingURL=motto.css.map */

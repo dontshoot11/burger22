@@ -56,11 +56,11 @@ a {
   margin: 111rem 0px 0px 102rem;
   position: absolute; }
 
-@media screen and (max-width: 480px) {
-  html {
-    font-size: 0.8px; } }
 @media screen and (max-width: 768px) {
   html {
     font-size: 0.9px; } }
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 0.8px; } }
 
 /*# sourceMappingURL=generic.css.map */

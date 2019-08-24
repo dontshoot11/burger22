@@ -45,14 +45,21 @@
   .features {
     flex-direction: column; }
 
+  .section-title {
+    font-size: 50rem; }
+
   .features__card {
     width: 100%;
     flex-direction: row;
     text-align: left;
-    margin-top: 0; }
+    margin-top: 0;
+    padding: 3%; }
 
   .features__logo {
     margin-right: 25rem;
-    transform: scale(1.9); } }
+    transform: scale(1.9); }
+
+  .features__logo--hand {
+    transform: scale(); } }
 
 /*# sourceMappingURL=burger__features.css.map */

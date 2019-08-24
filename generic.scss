@@ -70,14 +70,14 @@ a {
     position: absolute;
 }
 
-@media screen and (max-width:480px) {
-    html {
-        font-size: 0.8px
-    }
-}
-
 @include tablets {
     html {
         font-size: 0.9px
+    }
+}
+
+@include phone {
+    html {
+        font-size: 0.8px
     }
 }

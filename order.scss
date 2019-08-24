@@ -132,12 +132,47 @@
 }
 
 @include tablets {
+    .order {
+        text-align: center
+    }
     .form__elem {
         flex-direction: column;
-        padding: 0 17%
+        padding: 0 17%;
+        text-align: left
     }
     ;
     .form__column {
-        margin: 0
+        margin: 0;
+        &:last-child {
+            margin-top: 20rem;
+        }
+    }
+}
+
+@include phone {
+    .form__elem {
+        padding: 0
+    }
+    .form__block {
+        &:nth-child(4) {
+            display: none
+        }
+        &:nth-child(3) {
+            margin-right: 0
+        }
+    }
+    .form__elem {
+        text-align: center
+    }
+    ;
+    .form__block-title {
+        text-align: left
+    }
+    .form__input--textarea {
+        margin-bottom: 3%;
+    }
+    .form__block--radiocheck {
+        justify-content: center;
+        margin-bottom: 3%;
     }
 }
