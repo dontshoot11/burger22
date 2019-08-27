@@ -180,7 +180,7 @@
 @include tablets {
     .slider-card {
         flex-direction: column;
-        max-width: 100%;
+        max-width: 79%;
         height: 85%;
         padding: 0rem 0rem;
     }
@@ -209,6 +209,9 @@
 }
 
 @include phone {
+    .slider__card {
+        max-width: 100%
+    }
     .slider-card__picture-box {
         max-width: 100%
     }

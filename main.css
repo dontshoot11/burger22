@@ -1007,7 +1007,7 @@ button {
 @media screen and (max-width: 768px) {
   .slider-card {
     flex-direction: column;
-    max-width: 100%;
+    max-width: 79%;
     height: 85%;
     padding: 0rem 0rem; }
 
@@ -1033,6 +1033,9 @@ button {
     bottom: auto;
     left: auto; } }
 @media screen and (max-width: 480px) {
+  .slider__card {
+    max-width: 100%; }
+
   .slider-card__picture-box {
     max-width: 100%; }
 
