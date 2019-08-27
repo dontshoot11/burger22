@@ -72,7 +72,16 @@
     width: 90rem;
     height: 90rem;
     border-radius: 5rem;
-    background-color: #f08c33
+    background-color: #f08c33;
+    transition: 0.3s;
+    &:hover {
+        background-color: #e35028;
+        transition: 0.3s;
+        .popup {
+            opacity: 1;
+            transition: 0.3s
+        }
+    }
 }
 
 .dish-composition__sprite {
@@ -132,6 +141,40 @@
 
 .slider-card__picture {
     max-width: 100%;
+}
+
+.popup {
+    position: absolute;
+    background: rgba( #e8e9eb, 0.9);
+    border-radius: 5rem;
+    left: 90rem;
+    top: 0;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 15rem;
+}
+
+.popup__item {
+    display: flex;
+    align-items: center;
+    min-width: 250rem;
+    position: relative;
+}
+
+.popup__sprite {
+    height: 50rem;
+    width: 50rem;
+}
+
+.popup__name {
+    padding: 15rem
+}
+
+;
+.popup__count {
+    position: absolute;
+    right: 0rem;
+    font-family: 'ubuntu-light';
 }
 
 @include tablets {
