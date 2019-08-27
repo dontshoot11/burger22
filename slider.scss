@@ -1,0 +1,89 @@
+@import 'colors',
+'mixin';
+.container--slider {
+    height: 100%;
+}
+
+.slider-button__arrow--left {
+    transform: rotate(90deg);
+}
+
+.slider-button__arrow--right {
+    transform: rotate(270deg);
+}
+
+.slider-card {
+    display: flex
+}
+
+.slider-card__graphics {
+    width: 50%
+}
+
+;
+.slider-card__text {
+    width: 50%
+}
+
+.slider-card__name {
+    color: #fff
+}
+
+.slider-card__about {
+    font-family: "ubuntu-light";
+    font-size: 14rem;
+    margin-top: 20rem;
+    line-height: 1.8em;
+    color: #fff
+}
+
+.slider-card__price {
+    color: $orange;
+    font-family: 'gagalin'
+}
+
+.slider-card__price--big {
+    font-size: 72rem
+}
+
+.slider-card__price--small {
+    font-size: 30rem
+}
+
+.slider-card__graphics {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slider-card__composition {
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+    width: 90rem;
+    height: 90rem;
+    border-radius: 5rem;
+    background-color: #f08c33
+}
+
+.slider-card__calories {
+    position: absolute;
+    left: 0rem;
+    bottom: 0rem;
+}
+
+.slider-card__sprite-calories {
+    height: 60rem;
+    width: 60rem;
+    fill: #ffffff;
+    opacity: 0.6
+}
+
+.slider-card__picture-box {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.slider-card__picture {
+    max-width: 100%;
+}

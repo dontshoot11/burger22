@@ -99,6 +99,11 @@ button {
   display: flex;
   align-items: center; }
 
+.slider-button {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
 @media screen and (max-width: 768px) {
   .button-burger {
     display: block; }
@@ -108,5 +113,7 @@ button {
 
   .button--order {
     margin-right: 50rem; } }
+.button--slider {
+  font-family: "ubuntu-medium"; }
 
 /*# sourceMappingURL=buttons.css.map */

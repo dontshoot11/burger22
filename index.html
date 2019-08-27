@@ -84,7 +84,7 @@
 
 
             </div>
-            <button class="nextscreen"><svg class="nextscreen__sprite" viewbox="0 0 30 20" height="30" width="20"><use xlink href = "sprite.svg#arrow"></use></svg></button>
+            <button class="nextscreen"><svg class="arrow-sprite" viewbox="0 0 30 20" height="30" width="20"><use xlink href = "sprite.svg#arrow"></use></svg></button>
 
             </a>
 
@@ -151,50 +151,74 @@
 
         </section>
 
-        <section class="team wallpaper wallpaper--team">
-            <div class="team-aside">
+        <section class="slider wallpaper wallpaper--slider">
+            <div class="container container--slider">
+                <div class="slider-button"><button class="slider-button__arrow slider-button__arrow--left"><svg class="arrow-sprite" viewbox="0 0 30 20" height="30" width="20"><use xlink href = "sprite.svg#arrow"></use></svg></button></div>
+                <div class="slider-card">
+                    <div class="slider-card__graphics">
+                        <button class="slider-card__composition ">состав</button>
+                        <div class="slider-card__picture-box"><img class="slider-card__picture" src="img/slider/black_burger.png" alt="черный бургер"></div>
+                        <div class="slider-card__calories"><svg class="slider-card__sprite-calories" viewbox="0 0 60 60"><use xlink href = "sprite.svg#kkal"></use></svg></div>
+                    </div>
 
-                <div class="team-block">
-                    <h2 class="section-title">команда</h2>
-                    <ul class="accordeon">
-                        <li class="accordeon__card">
+
+                    <div class="slider-card__text">
+                        <div class="slider-card__name section-title">dark beef burger</div>
+                        <div class="slider-card__about">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                        <div class="slider-card__price"><span class="slider-card__price--big">500</span> <span class="slider-card__price--small">рублей</span><button class="button--orange button button--slider">заказать</button></div>
+                    </div>
+                </div>
+                <div class="slider-button"><button class="slider-button__arrow slider-button__arrow--right"><svg class="arrow-sprite" viewbox="0 0 30 20" height="30" width="20"><use xlink href = "sprite.svg#arrow"></use></svg></button></div>
+
+
+
+            </div>
+        </section>
+
+        <section class="team wallpaper wallpaper--team ">
+            <div class="team-aside ">
+
+                <div class="team-block ">
+                    <h2 class="section-title ">команда</h2>
+                    <ul class="accordeon ">
+                        <li class="accordeon__card ">
                             <button class="accordeon__name ">дэниэл рэдклифф</button>
-                            <div class="accordeon__about">
-                                <div class="accordeon__picture"><img src="img/team/member.png" alt="рыжий парень" class="accordeon__memberpic"></div>
-                                <div class="accordeon__description">
-                                    <div class="accordeon__position">Оператор</div>
-                                    <div class="accordeon__skill">С радостью поможет подобрать идеальный бургер и оформить заказ</div>
+                            <div class="accordeon__about ">
+                                <div class="accordeon__picture "><img src="img/team/member.png " alt="рыжий парень " class="accordeon__memberpic "></div>
+                                <div class="accordeon__description ">
+                                    <div class="accordeon__position ">Оператор</div>
+                                    <div class="accordeon__skill ">С радостью поможет подобрать идеальный бургер и оформить заказ</div>
                                 </div>
 
                         </li>
-                        <li class="accordeon__card accordeon__card--active">
+                        <li class="accordeon__card accordeon__card--active ">
                             <button class="accordeon__name ">ричард джеймс</button>
                             <div class="accordeon__about ">
-                                <div class="accordeon__picture"><img src="img/team/member.png" alt="рыжий парень" class="accordeon__memberpic"></div>
-                                <div class="accordeon__description">
-                                    <div class="accordeon__position">Оператор</div>
-                                    <div class="accordeon__skill">С радостью поможет подобрать идеальный бургер и оформить заказ</div>
+                                <div class="accordeon__picture "><img src="img/team/member.png " alt="рыжий парень " class="accordeon__memberpic "></div>
+                                <div class="accordeon__description ">
+                                    <div class="accordeon__position ">Оператор</div>
+                                    <div class="accordeon__skill ">С радостью поможет подобрать идеальный бургер и оформить заказ</div>
                                 </div>
                             </div>
 
                         </li>
-                        <li class="accordeon__card">
-                            <button class="accordeon__name">джейк финн</button>
-                            <div class="accordeon__about">
-                                <div class="accordeon__picture"><img src="img/team/member.png" alt="рыжий парень" class="accordeon__memberpic"></div>
-                                <div class="accordeon__description">
-                                    <div class="accordeon__position">Оператор</div>
-                                    <div class="accordeon__skill">С радостью поможет подобрать идеальный бургер и оформить заказ</div>
+                        <li class="accordeon__card ">
+                            <button class="accordeon__name ">джейк финн</button>
+                            <div class="accordeon__about ">
+                                <div class="accordeon__picture "><img src="img/team/member.png " alt="рыжий парень " class="accordeon__memberpic "></div>
+                                <div class="accordeon__description ">
+                                    <div class="accordeon__position ">Оператор</div>
+                                    <div class="accordeon__skill ">С радостью поможет подобрать идеальный бургер и оформить заказ</div>
                                 </div>
 
                         </li>
-                        <li class="accordeon__card">
-                            <button class="accordeon__name">николай иванов</button>
-                            <div class="accordeon__about">
-                                <div class="accordeon__picture"><img src="img/team/member.png" alt="рыжий парень" class="accordeon__memberpic"></div>
-                                <div class="accordeon__description">
-                                    <div class="accordeon__position">Оператор</div>
-                                    <div class="accordeon__skill">С радостью поможет подобрать идеальный бургер и оформить заказ</div>
+                        <li class="accordeon__card ">
+                            <button class="accordeon__name ">николай иванов</button>
+                            <div class="accordeon__about ">
+                                <div class="accordeon__picture "><img src="img/team/member.png " alt="рыжий парень " class="accordeon__memberpic "></div>
+                                <div class="accordeon__description ">
+                                    <div class="accordeon__position ">Оператор</div>
+                                    <div class="accordeon__skill ">С радостью поможет подобрать идеальный бургер и оформить заказ</div>
                                 </div>
 
                         </li>
@@ -236,31 +260,31 @@
 
 
         </section>
-        <section class="wallpaper wallpaper--menu menu">
+        <section class="wallpaper wallpaper--menu menu ">
 
-            <h2 class="section-title section-title--menu">меню</h2>
+            <h2 class="section-title section-title--menu ">меню</h2>
 
 
 
-            <div class="menu-aside">
-                <ul class="menu-accordeon">
-                    <li class="menu-accordeon__card menu-accordeon__card--active">
-                        <button class="menu-accordeon__button menu-accordeon__button--mysoet"><div class="menu-accordeon__name">для мясоедов</div></button>
-                        <div class="menu-accordeon__about">
+            <div class="menu-aside ">
+                <ul class="menu-accordeon ">
+                    <li class="menu-accordeon__card menu-accordeon__card--active ">
+                        <button class="menu-accordeon__button menu-accordeon__button--mysoet "><div class="menu-accordeon__name ">для мясоедов</div></button>
+                        <div class="menu-accordeon__about ">
                             Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм
                             сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный
                             механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
                         </div>
                     </li>
-                    <li class="menu-accordeon__card">
-                        <button class="menu-accordeon__button menu-accordeon__button--veg"><div class="menu-accordeon__name">вегетарианское</div></button>
-                        <div class="menu-accordeon__about"> Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться
+                    <li class="menu-accordeon__card ">
+                        <button class="menu-accordeon__button menu-accordeon__button--veg "><div class="menu-accordeon__name ">вегетарианское</div></button>
+                        <div class="menu-accordeon__about "> Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться
                             к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
                             редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову. </div>
                     </li>
-                    <li class="menu-accordeon__card">
-                        <button class="menu-accordeon__button menu-accordeon__button--diet"><div class="menu-accordeon__name">диетическое</div></button>
-                        <div class="menu-accordeon__about"> Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться
+                    <li class="menu-accordeon__card ">
+                        <button class="menu-accordeon__button menu-accordeon__button--diet "><div class="menu-accordeon__name ">диетическое</div></button>
+                        <div class="menu-accordeon__about "> Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться
                             к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование
                             редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову. </div>
                     </li>
@@ -293,149 +317,149 @@
 
 
         </section>
-        <section class="feedback wallpaper wallpaper--feedback">
-            <ul class="reviews">
-                <li class="reviews__card reviews__card--girl1">
+        <section class="feedback wallpaper wallpaper--feedback ">
+            <ul class="reviews ">
+                <li class="reviews__card reviews__card--girl1 ">
 
-                    <div class="reviews__article">
-                        <div class="reviews__name">Константин Спилберг</div>
-                        <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                        <button class="button button--reviews">Подробнее</button>
+                    <div class="reviews__article ">
+                        <div class="reviews__name ">Константин Спилберг</div>
+                        <div class="reviews__text ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                        <button class="button button--reviews ">Подробнее</button>
                     </div>
                 </li>
-                <li class="reviews__card reviews__card--glassesyoung">
+                <li class="reviews__card reviews__card--glassesyoung ">
 
-                    <div class="reviews__article">
-                        <div class="reviews__name">Константин Спилберг</div>
-                        <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                        <button class="button button--reviews">Подробнее</button>
+                    <div class="reviews__article ">
+                        <div class="reviews__name ">Константин Спилберг</div>
+                        <div class="reviews__text ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                        <button class="button button--reviews ">Подробнее</button>
                     </div>
                 </li>
-                <li class="reviews__card reviews__card--girl2">
+                <li class="reviews__card reviews__card--girl2 ">
 
-                    <div class="reviews__article">
-                        <div class="reviews__name">Константин Спилберг</div>
-                        <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                        <button class="button button--reviews">Подробнее</button>
+                    <div class="reviews__article ">
+                        <div class="reviews__name ">Константин Спилберг</div>
+                        <div class="reviews__text ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                        <button class="button button--reviews ">Подробнее</button>
                     </div>
                 </li>
-                <li class="reviews__card reviews__card--hatguy">
+                <li class="reviews__card reviews__card--hatguy ">
 
-                    <div class="reviews__article">
-                        <div class="reviews__name">Константин Спилберг</div>
-                        <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                        <button class="button button--reviews">Подробнее</button>
+                    <div class="reviews__article ">
+                        <div class="reviews__name ">Константин Спилберг</div>
+                        <div class="reviews__text ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                        <button class="button button--reviews ">Подробнее</button>
                     </div>
                 </li>
-                <li class="reviews__card reviews__card--blondeguy">
+                <li class="reviews__card reviews__card--blondeguy ">
 
-                    <div class="reviews__article">
-                        <div class="reviews__name">Константин Спилберг</div>
-                        <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                        <button class="button button--reviews">Подробнее</button>
+                    <div class="reviews__article ">
+                        <div class="reviews__name ">Константин Спилберг</div>
+                        <div class="reviews__text ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                        <button class="button button--reviews ">Подробнее</button>
                     </div>
                 </li>
-                <li class="reviews__card reviews__card--girl3">
+                <li class="reviews__card reviews__card--girl3 ">
 
-                    <div class="reviews__article">
-                        <div class="reviews__name">Константин Спилберг</div>
-                        <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                        <button class="button button--reviews">Подробнее</button>
+                    <div class="reviews__article ">
+                        <div class="reviews__name ">Константин Спилберг</div>
+                        <div class="reviews__text ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                        <button class="button button--reviews ">Подробнее</button>
                     </div>
                 </li>
-                <li class="reviews__card reviews__card--glassesold">
+                <li class="reviews__card reviews__card--glassesold ">
 
-                    <div class="reviews__article">
-                        <div class="reviews__name">Константин Спилберг</div>
-                        <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                        <button class="button button--reviews">Подробнее</button>
+                    <div class="reviews__article ">
+                        <div class="reviews__name ">Константин Спилберг</div>
+                        <div class="reviews__text ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                        <button class="button button--reviews ">Подробнее</button>
                     </div>
                 </li>
-                <li class="reviews__card reviews__card--beard">
+                <li class="reviews__card reviews__card--beard ">
 
-                    <div class="reviews__article">
-                        <div class="reviews__name">Константин Спилберг</div>
-                        <div class="reviews__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
-                        <button class="button button--reviews">Подробнее</button>
+                    <div class="reviews__article ">
+                        <div class="reviews__name ">Константин Спилберг</div>
+                        <div class="reviews__text ">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</div>
+                        <button class="button button--reviews ">Подробнее</button>
                     </div>
                 </li>
             </ul>
         </section>
 
-        <section class="order wallpaper wallpaper--order">
-            <div class="container container__column">
-                <h2 class="section-title">закажите доставку</h2>
-                <div class="form">
-                    <form action="action" class="form__elem">
-                        <div class="form__column">
-                            <div class="form__row">
-                                <label class="form__block">
-                            <div class="form__block-title">Имя</div>
-                            <input type="text" class="form__input">
+        <section class="order wallpaper wallpaper--order ">
+            <div class="container container__column ">
+                <h2 class="section-title ">закажите доставку</h2>
+                <div class="form ">
+                    <form action="action " class="form__elem ">
+                        <div class="form__column ">
+                            <div class="form__row ">
+                                <label class="form__block ">
+                            <div class="form__block-title ">Имя</div>
+                            <input type="text " class="form__input ">
                                 </label>
-                                <label class="form__block">
-                            <div class="form__block-title">Телефон</div>
-                            <input type="text" class="form__input">
+                                <label class="form__block ">
+                            <div class="form__block-title ">Телефон</div>
+                            <input type="text " class="form__input ">
                         </label>
                             </div>
                             <!--строка формы-->
-                            <div class="form__row">
-                                <label class="form__block">
-                                <div class="form__block-title">Улица</div>
-                                <input type="text" class="form__input">
+                            <div class="form__row ">
+                                <label class="form__block ">
+                                <div class="form__block-title ">Улица</div>
+                                <input type="text " class="form__input ">
                                 
                             </label>
                             </div>
                             <!--строка формы-->
-                            <div class="form__row">
-                                <label class="form__block">
-                                    <div class="form__block-title">Дом</div>
-                                    <input type="text" class="form__input">
+                            <div class="form__row ">
+                                <label class="form__block ">
+                                    <div class="form__block-title ">Дом</div>
+                                    <input type="text " class="form__input ">
                                 </label>
-                                <label class="form__block">
-                                    <div class="form__block-title">Корпус</div>
-                                    <input type="text" class="form__input">
+                                <label class="form__block ">
+                                    <div class="form__block-title ">Корпус</div>
+                                    <input type="text " class="form__input ">
                             </label>
-                                <label class="form__block">
-                                    <div class="form__block-title">Квартира</div>
-                                    <input type="text" class="form__input">
+                                <label class="form__block ">
+                                    <div class="form__block-title ">Квартира</div>
+                                    <input type="text " class="form__input ">
                         </label>
-                                <label class="form__block">
-                                    <div class="form__block-title">Этаж</div>
-                                    <input type="text" class="form__input">
+                                <label class="form__block ">
+                                    <div class="form__block-title ">Этаж</div>
+                                    <input type="text " class="form__input ">
                     </label>
 
                             </div>
                             <!--строка формы-->
                         </div>
-                        <div class="form__column">
-                            <div class="form__row">
-                                <label class="form__block">
-                                        <div class="form__block-title">Комментарий</div>
+                        <div class="form__column ">
+                            <div class="form__row ">
+                                <label class="form__block ">
+                                        <div class="form__block-title ">Комментарий</div>
                             
                             
-                            <textarea class="form__input form__input--textarea"></textarea></label>
+                            <textarea class="form__input form__input--textarea "></textarea></label>
                             </div>
                             <!--строка формы-->
                             <div class="form__row ">
-                                <label class="form__block form__block--radiocheck">
+                                <label class="form__block form__block--radiocheck ">
                                         
-                                        <label class=" form__block-title form__radio">
-                                            <input name="question" class="form__trueradio" type="radio">
-                                             <span class="form__fakeradio"></span>
-                                            </span><span class="form__label form__label--radio">Потребуется сдача</span></label>
+                                        <label class=" form__block-title form__radio ">
+                                            <input name="question " class="form__trueradio " type="radio ">
+                                             <span class="form__fakeradio "></span>
+                                            </span><span class="form__label form__label--radio ">Потребуется сдача</span></label>
                                 </label>
 
 
 
 
 
-                                <label class="form__block form__block--radiocheck">
+                                <label class="form__block form__block--radiocheck ">
                                         
-                                        <label class=" form__block-title form__radio">
-                                            <input name="question" class="form__trueradio" type="radio">
-                                             <span class="form__fakeradio"></span>
-                                            </span><span class="form__label form__label--radio">Оплата по карте</span></label>
+                                        <label class=" form__block-title form__radio ">
+                                            <input name="question " class="form__trueradio " type="radio ">
+                                             <span class="form__fakeradio "></span>
+                                            </span><span class="form__label form__label--radio ">Оплата по карте</span></label>
                                 </label>
 
 
@@ -443,14 +467,14 @@
                             </div>
                             <!--строка формы-->
 
-                            <div class="form__row">
+                            <div class="form__row ">
 
-                                <label class="form__block form__block--radiocheck">
+                                <label class="form__block form__block--radiocheck ">
                                         
-                                            <label class=" form__block-title form__radio">
-                                                <input name="question" class="form__trueradio" type="checkbox">
-                                                 <span class="form__fakeradio form__fakeradio--checkbox">
-                                                </span><span class="form__label form__label--radio">Не перезванивать</span>
+                                            <label class=" form__block-title form__radio ">
+                                                <input name="question " class="form__trueradio " type="checkbox ">
+                                                 <span class="form__fakeradio form__fakeradio--checkbox ">
+                                                </span><span class="form__label form__label--radio ">Не перезванивать</span>
                                             
                                             </label>
                                 </label>
@@ -460,11 +484,11 @@
 
 
                             <div class="form__row ">
-                                <label class="form__block">
-                                    <button class="button button--orange" type="submit">заказать</button>
+                                <label class="form__block ">
+                                    <button class="button button--orange " type="submit ">заказать</button>
 
 
-                                    <button class="button" type="reset">очистить</button>
+                                    <button class="button " type="reset ">очистить</button>
                                     </label>
 
 
@@ -487,26 +511,29 @@
             </div>
         </section>
 
-        <section class="wallpaper wallpaper--map map">
-            <footer class="footer">
-                <div class="container сontainer--contacts">
-                    <div class="contacts">
-                        <div class="contacts__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
-                        <a href="tel:+78123771377" class="contacts__number">
-                            <svg class="phone-logo"><use xlink href = "sprite.svg#phone"></use></svg>+7 (812) 377 13 77</a>
+        <section class="wallpaper wallpaper--map map ">
+            <footer class="footer ">
+                <div class="container сontainer--contacts ">
+                    <div class="contacts ">
+                        <div class="contacts__adress ">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+                        <a href="tel:+78123771377 " class="contacts__number ">
+                            <svg class="phone-logo "><use xlink href = "sprite.svg#phone "></use></svg>+7 (812) 377 13 77</a>
                     </div>
-                    <ul class="social">
-                        <li class="social__item">
-                            <a href="vk.com" class="social__link">
-                                <svg class="social-logo" viewbox="0 0 125 71" height="20" width="20"><use xlink href = "sprite.svg#vk"></use></svg></a>
+                    <ul class="social ">
+                        <li class="social__item ">
+                            <a href="vk.com " class="social__link ">
+                                <svg class="social-logo " viewbox="0 0 125 71 " height="20 " width="20 "><use xlink href = "sprite.svg#vk "></use></svg></a>
                         </li>
-                        <li class="social__item">
-                            <a href="fb.com" class="social__link">
-                                <svg class="social-logo" viewbox="0 0 36 36" height="20" width="20"><use xlink href = "sprite.svg#fb"></use></svg></a>
+                        <li class="social__item ">
+                            <a href="fb.com " class="social__link ">
+                                <svg class="social-logo " viewbox="0 0 36 36 " height="20 " width="20 "><use xlink href = "sprite.svg#fb "></use></svg></a>
                         </li>
-                        <li class="social__item">
-                            <a href="instagram.com" class="social__link">
-                                <svg class="social-logo" viewbox="0 0 36 36" height="20" width="20""><use xlink href = "sprite.svg#inst"></use></svg></a>
+                        <li class="social__item ">
+                            <a href="instagram.com " class="social__link ">
+                                <svg class="social-logo " viewbox="0 0 36 36 " height="20 " width="20 "">
+                    <use xlink href="sprite.svg#inst"></use>
+                    </svg>
+                    </a>
                         </li>
                         <li class="social__item">
                             <a href="twitter.com" class="social__link">

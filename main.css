@@ -387,115 +387,6 @@ button {
 
   .button__text--mobile {
     display: inline; } }
-button {
-  text-decoration: none;
-  border: 0;
-  font: inherit;
-  cursor: pointer;
-  color: inherit;
-  background-color: transparent; }
-  button:focus {
-    outline: none; }
-
-.button {
-  font-weight: 500;
-  padding: 13rem 13rem 13rem 13rem;
-  text-transform: uppercase;
-  border-radius: 5px;
-  color: #ffffff;
-  max-width: max-content; }
-
-.button--orange {
-  background-color: #e45028;
-  transition: 0.3s;
-  /* &:hover {
-      background-color: transparent;
-      transition: 0.3s
-  } */ }
-
-.button--reviews {
-  transition: 0.3s;
-  background-color: #2f3234;
-  position: relative; }
-  .button--reviews:hover {
-    transition: 0.3s;
-    background-color: #1f2122; }
-  .button--reviews:after {
-    content: "читать отзыв";
-    position: absolute;
-    left: 3rem;
-    display: none; }
-  @media screen and (max-width: 480px) {
-    .button--reviews {
-      color: transparent; }
-      .button--reviews:after {
-        display: inline-block;
-        color: #fff; } }
-
-.nextscreen {
-  height: 14rem;
-  width: 29rem;
-  margin-bottom: 40rem;
-  display: inline-block; }
-
-.nextscreen__sprite {
-  max-height: 20rem;
-  max-width: 30rem; }
-
-.button-burger {
-  display: none;
-  position: fixed;
-  top: 48rem;
-  right: 20rem;
-  /*
-  background-color: #fff;
-  width: 24px;
-  height: 4px;
-  border-radius: 2rem;
-  margin-left: 30rem;
-  &:before {
-      content: "";
-      width: 24px;
-      height: 4px;
-      border-radius: 2rem;
-      position: absolute;
-      background: #fff;
-      top: -10rem;
-      right: 0rem;
-  }
-  &:after {
-      content: "";
-      width: 24px;
-      height: 4px;
-      border-radius: 2rem;
-      position: absolute;
-      background: #fff;
-      top: 10rem;
-      right: 0rem
-  } */ }
-
-.button-burger__element {
-  background-color: #fff;
-  width: 24px;
-  height: 4px;
-  border-radius: 2rem;
-  margin-left: 30rem;
-  margin: 4rem;
-  display: none; }
-
-.navigation__buttons-block {
-  display: flex;
-  align-items: center; }
-
-@media screen and (max-width: 768px) {
-  .button-burger {
-    display: block; }
-
-  .button-burger__element {
-    display: block; }
-
-  .button--order {
-    margin-right: 50rem; } }
 .firstscreen {
   display: flex;
   flex-direction: column;
@@ -531,6 +422,9 @@ button {
 
 .wallpaper--map {
   background: url(img/contacts/map.png) no-repeat; }
+
+.wallpaper--slider {
+  background: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%); }
 
 .wallpaper {
   background-size: cover;
@@ -964,6 +858,193 @@ button {
 
   .social {
     margin-bottom: 3%; } }
+.container--slider {
+  height: 100%; }
+
+.slider-button__arrow--left {
+  transform: rotate(90deg); }
+
+.slider-button__arrow--right {
+  transform: rotate(270deg); }
+
+.slider-card {
+  display: flex; }
+
+.slider-card__graphics {
+  width: 50%; }
+
+.slider-card__text {
+  width: 50%; }
+
+.slider-card__name {
+  color: #fff; }
+
+.slider-card__about {
+  font-family: "ubuntu-light";
+  font-size: 14rem;
+  margin-top: 20rem;
+  line-height: 1.8em;
+  color: #fff; }
+
+.slider-card__price {
+  color: #e45028;
+  font-family: "gagalin"; }
+
+.slider-card__price--big {
+  font-size: 72rem; }
+
+.slider-card__price--small {
+  font-size: 30rem; }
+
+.slider-card__graphics {
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.slider-card__composition {
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  width: 90rem;
+  height: 90rem;
+  border-radius: 5rem;
+  background-color: #f08c33; }
+
+.slider-card__calories {
+  position: absolute;
+  left: 0rem;
+  bottom: 0rem; }
+
+.slider-card__sprite-calories {
+  height: 60rem;
+  width: 60rem;
+  fill: #ffffff;
+  opacity: 0.6; }
+
+.slider-card__picture-box {
+  max-height: 100%;
+  max-width: 100%; }
+
+.slider-card__picture {
+  max-width: 100%; }
+
+button {
+  text-decoration: none;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  background-color: transparent; }
+  button:focus {
+    outline: none; }
+
+.button {
+  font-weight: 500;
+  padding: 13rem 13rem 13rem 13rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: #ffffff;
+  max-width: max-content; }
+
+.button--orange {
+  background-color: #e45028;
+  transition: 0.3s;
+  /* &:hover {
+      background-color: transparent;
+      transition: 0.3s
+  } */ }
+
+.button--reviews {
+  transition: 0.3s;
+  background-color: #2f3234;
+  position: relative; }
+  .button--reviews:hover {
+    transition: 0.3s;
+    background-color: #1f2122; }
+  .button--reviews:after {
+    content: "читать отзыв";
+    position: absolute;
+    left: 3rem;
+    display: none; }
+  @media screen and (max-width: 480px) {
+    .button--reviews {
+      color: transparent; }
+      .button--reviews:after {
+        display: inline-block;
+        color: #fff; } }
+
+.nextscreen {
+  height: 14rem;
+  width: 29rem;
+  margin-bottom: 40rem;
+  display: inline-block; }
+
+.nextscreen__sprite {
+  max-height: 20rem;
+  max-width: 30rem; }
+
+.button-burger {
+  display: none;
+  position: fixed;
+  top: 48rem;
+  right: 20rem;
+  /*
+  background-color: #fff;
+  width: 24px;
+  height: 4px;
+  border-radius: 2rem;
+  margin-left: 30rem;
+  &:before {
+      content: "";
+      width: 24px;
+      height: 4px;
+      border-radius: 2rem;
+      position: absolute;
+      background: #fff;
+      top: -10rem;
+      right: 0rem;
+  }
+  &:after {
+      content: "";
+      width: 24px;
+      height: 4px;
+      border-radius: 2rem;
+      position: absolute;
+      background: #fff;
+      top: 10rem;
+      right: 0rem
+  } */ }
+
+.button-burger__element {
+  background-color: #fff;
+  width: 24px;
+  height: 4px;
+  border-radius: 2rem;
+  margin-left: 30rem;
+  margin: 4rem;
+  display: none; }
+
+.navigation__buttons-block {
+  display: flex;
+  align-items: center; }
+
+.slider-button {
+  height: 100%;
+  display: flex;
+  align-items: center; }
+
+@media screen and (max-width: 768px) {
+  .button-burger {
+    display: block; }
+
+  .button-burger__element {
+    display: block; }
+
+  .button--order {
+    margin-right: 50rem; } }
+.button--slider {
+  font-family: "ubuntu-medium"; }
+
 @font-face {
   font-family: 'ubuntu-b';
   src: url("fonts/ubuntu-b.woff2") format("woff2"), url("fonts/ubuntu-b.woff") format("woff");
