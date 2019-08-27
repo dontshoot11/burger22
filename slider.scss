@@ -125,8 +125,58 @@
 .slider-card__picture-box {
     max-height: 100%;
     max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 
 .slider-card__picture {
     max-width: 100%;
+}
+
+@include tablets {
+    .slider-card {
+        flex-direction: column;
+        max-width: 100%;
+        height: 85%;
+        padding: 0rem 0rem;
+    }
+    .slider-card__name {
+        line-height: 0.9em
+    }
+    .slider-card__graphics {
+        width: 100%;
+        justify-content: center
+    }
+    .slider-card__picture-box {
+        max-width: 70%;
+        margin-bottom: -10%;
+    }
+    .slider-card__text {
+        width: 90%;
+        text-align: center;
+        justify-content: flex-start;
+    }
+    .dish-calories {
+        right: 0rem;
+        top: 0rem;
+        bottom: auto;
+        left: auto;
+    }
+}
+
+@include phone {
+    .slider-card__picture-box {
+        max-width: 100%
+    }
+    .slider-card__name {
+        font-size: 50rem;
+    }
+    .slider-card__about {
+        line-height: 1.5em;
+        margin-top: 7rem;
+    }
+    .container--slider {
+        width: 95%
+    }
 }

@@ -1,0 +1,154 @@
+.container--slider {
+  height: 100%; }
+
+.slider-button__arrow--left {
+  transform: rotate(90deg); }
+
+.slider-button__arrow--right {
+  transform: rotate(270deg); }
+
+.slider-card {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 105rem 0rem; }
+
+.slider-card__graphics {
+  width: 50%;
+  height: 100%; }
+
+.slider-card__text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.slider-card__name {
+  color: #fff; }
+
+.slider-card__about {
+  font-family: "ubuntu-light";
+  font-size: 14rem;
+  margin-top: 20rem;
+  line-height: 1.8em;
+  color: #fff; }
+
+.slider-card__price {
+  color: #e45028;
+  font-family: "gagalin"; }
+
+.slider-card__price--big {
+  font-size: 72rem; }
+
+.slider-card__price--small {
+  font-size: 30rem;
+  margin-right: 29rem; }
+
+.slider-card__graphics {
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+.dish-composition {
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  width: 90rem;
+  height: 90rem;
+  border-radius: 5rem;
+  background-color: #f08c33; }
+
+.dish-composition__sprite {
+  height: 44rem;
+  width: 46rem;
+  position: absolute;
+  left: 22rem;
+  bottom: 32rem; }
+
+.dish-composition__text {
+  position: absolute;
+  font-family: 'gagalin';
+  font-size: 14rem;
+  color: #fff;
+  bottom: 13rem;
+  left: 23rem; }
+
+.dish-calories {
+  position: absolute;
+  left: 0rem;
+  bottom: 0rem;
+  opacity: 0.6; }
+
+.dish-calories__sprite {
+  height: 60rem;
+  width: 60rem;
+  fill: #ffffff; }
+
+.dish-calories__text {
+  position: absolute;
+  font-family: 'gagalin';
+  font-size: 14rem;
+  color: #fff; }
+
+.dish-calories__text--numbers {
+  top: 50%;
+  left: 18rem; }
+
+.dish-calories__text--letters {
+  left: 13rem;
+  top: 62rem; }
+
+.slider-card__picture-box {
+  max-height: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.slider-card__picture {
+  max-width: 100%; }
+
+@media screen and (max-width: 768px) {
+  .slider-card {
+    flex-direction: column;
+    max-width: 100%;
+    height: 85%;
+    padding: 0rem 0rem; }
+
+  .slider-card__name {
+    line-height: 0.9em; }
+
+  .slider-card__graphics {
+    width: 100%;
+    justify-content: center; }
+
+  .slider-card__picture-box {
+    max-width: 70%;
+    margin-bottom: -10%; }
+
+  .slider-card__text {
+    width: 90%;
+    text-align: center;
+    justify-content: flex-start; }
+
+  .dish-calories {
+    right: 0rem;
+    top: 0rem;
+    bottom: auto;
+    left: auto; } }
+@media screen and (max-width: 480px) {
+  .slider-card__picture-box {
+    max-width: 100%; }
+
+  .slider-card__name {
+    font-size: 50rem; }
+
+  .slider-card__about {
+    line-height: 1.5em;
+    margin-top: 7rem; }
+
+  .container--slider {
+    width: 95%; } }
+
+/*# sourceMappingURL=slider.css.map */

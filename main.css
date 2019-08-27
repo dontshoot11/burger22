@@ -265,7 +265,7 @@ button {
     width: 100%;
     flex-direction: row;
     text-align: left;
-    margin-top: 35rem;
+    margin-top: 23rem;
     padding: 3%; }
 
   .features__logo {
@@ -961,11 +961,55 @@ button {
 
 .slider-card__picture-box {
   max-height: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .slider-card__picture {
   max-width: 100%; }
 
+@media screen and (max-width: 768px) {
+  .slider-card {
+    flex-direction: column;
+    max-width: 100%;
+    height: 85%;
+    padding: 0rem 0rem; }
+
+  .slider-card__name {
+    line-height: 0.9em; }
+
+  .slider-card__graphics {
+    width: 100%;
+    justify-content: center; }
+
+  .slider-card__picture-box {
+    max-width: 70%;
+    margin-bottom: -10%; }
+
+  .slider-card__text {
+    width: 90%;
+    text-align: center;
+    justify-content: flex-start; }
+
+  .dish-calories {
+    right: 0rem;
+    top: 0rem;
+    bottom: auto;
+    left: auto; } }
+@media screen and (max-width: 480px) {
+  .slider-card__picture-box {
+    max-width: 100%; }
+
+  .slider-card__name {
+    font-size: 50rem; }
+
+  .slider-card__about {
+    line-height: 1.5em;
+    margin-top: 7rem; }
+
+  .container--slider {
+    width: 95%; } }
 button {
   text-decoration: none;
   border: 0;
