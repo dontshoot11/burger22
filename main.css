@@ -866,7 +866,21 @@ button {
     margin-bottom: 3%; } }
 .container--slider {
   height: 100%;
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden; }
+
+.sliders-list {
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  align-items: center; }
+
+.slider-buttons {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
 
 .slider-button__arrow--left {
   transform: rotate(90deg); }
@@ -975,6 +989,7 @@ button {
   top: 62rem; }
 
 .slider-card__picture-box {
+  min-width: 70%;
   max-height: 100%;
   max-width: 100%;
   display: flex;
@@ -1058,7 +1073,17 @@ button {
     right: 0rem;
     top: 0rem;
     bottom: auto;
-    left: auto; } }
+    left: auto; }
+
+  /* позже допилю
+  .dish-composition {
+      &:hover {
+          background-color: #f08c33;
+          .popup {
+              opacity: 0;
+          }
+      }
+  } */ }
 @media screen and (max-width: 480px) {
   .popup {
     min-width: 250%;
@@ -1070,9 +1095,6 @@ button {
   .slider-card {
     max-width: 100%; }
 
-  .slider-card__picture-box {
-    max-width: 100%; }
-
   .slider-card__name {
     font-size: 50rem; }
 
@@ -1081,16 +1103,7 @@ button {
     margin-top: 7rem; }
 
   .container--slider {
-    width: 95%; }
-
-  .slider-button {
-    position: absolute; }
-
-  .slider-button--left {
-    left: 0rem; }
-
-  .slider-button--right {
-    right: 0rem; } }
+    width: 95%; } }
 .wallpaper--fullscreen {
   background: rgba(47, 50, 52, 0.99);
   position: fixed;
