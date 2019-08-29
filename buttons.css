@@ -9,6 +9,9 @@ button {
   button:focus {
     outline: none; }
 
+.arrow-sprite {
+  width: 20rem; }
+
 .button {
   font-weight: 500;
   padding: 13rem 13rem 13rem 13rem;
@@ -115,5 +118,15 @@ button {
     margin-right: 50rem; } }
 .button--slider {
   font-family: "ubuntu-medium"; }
+
+.cross-pic {
+  height: 20rem;
+  width: 20rem; }
+
+.cross-pic--white {
+  fill: #c1c2c2; }
+
+.cross-pic--red {
+  fill: #eb8364; }
 
 /*# sourceMappingURL=buttons.css.map */

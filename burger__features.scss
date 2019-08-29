@@ -62,13 +62,14 @@ $grayblack: #2f3234;
         width: 100%;
         flex-direction: row;
         text-align: left;
-        margin-top: 23rem;
+        margin-top: 0rem;
         padding: 3%
     }
     .features__logo {
         margin-right: 25rem;
     }
     .features__text {
-        margin-top: 0rem
+        margin-top: 0rem;
+        line-height: 1.5em
     }
 }

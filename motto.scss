@@ -7,7 +7,6 @@
 }
 
 .slogan {
-    width: 50%;
     margin-left: 11rem;
     text-align: left
 }
@@ -21,20 +20,21 @@
 
 .burger {
     background: url(sprite.svg#drops) no-repeat;
-    width: 50%;
     text-align: center;
     position: relative;
+    max-width: 70%;
 }
 
 .burger__pic {
     max-width: 100%;
-    margin-top: -65rem;
-    margin-right: -25rem;
+    margin-top: -25rem;
+    position: relative;
 }
 
 .drops {
     position: absolute;
-    right: 0;
+    bottom: 0rem;
+    left: -10rem;
     width: 100%;
     height: 100%;
 }

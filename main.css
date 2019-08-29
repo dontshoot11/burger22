@@ -161,7 +161,6 @@ button {
   width: 100%; }
 
 .slogan {
-  width: 50%;
   margin-left: 11rem;
   text-align: left; }
 
@@ -173,18 +172,19 @@ button {
 
 .burger {
   background: url(sprite.svg#drops) no-repeat;
-  width: 50%;
   text-align: center;
-  position: relative; }
+  position: relative;
+  max-width: 70%; }
 
 .burger__pic {
   max-width: 100%;
-  margin-top: -65rem;
-  margin-right: -25rem; }
+  margin-top: -25rem;
+  position: relative; }
 
 .drops {
   position: absolute;
-  right: 0;
+  bottom: 0rem;
+  left: -10rem;
   width: 100%;
   height: 100%; }
 
@@ -265,14 +265,15 @@ button {
     width: 100%;
     flex-direction: row;
     text-align: left;
-    margin-top: 23rem;
+    margin-top: 0rem;
     padding: 3%; }
 
   .features__logo {
     margin-right: 25rem; }
 
   .features__text {
-    margin-top: 0rem; } }
+    margin-top: 0rem;
+    line-height: 1.5em; } }
 .reviews {
   display: flex;
   width: 100%;
@@ -724,7 +725,8 @@ button {
 .menu-accordeon {
   display: flex;
   height: 100%;
-  position: relative; }
+  position: relative;
+  justify-content: flex-end; }
 
 .menu-accordeon__card {
   /* transform: rotate(270deg); */
@@ -859,7 +861,8 @@ button {
   .social {
     margin-bottom: 3%; } }
 .container--slider {
-  height: 100%; }
+  height: 100%;
+  justify-content: center; }
 
 .slider-button__arrow--left {
   transform: rotate(90deg); }
@@ -918,7 +921,8 @@ button {
   height: 90rem;
   border-radius: 5rem;
   background-color: #f08c33;
-  transition: 0.3s; }
+  transition: 0.3s;
+  cursor: pointer; }
   .dish-composition:hover {
     background-color: #e35028;
     transition: 0.3s; }
@@ -984,13 +988,23 @@ button {
   top: 0;
   opacity: 0;
   transition: 0.3s;
-  padding: 20rem; }
+  padding: 20rem;
+  min-width: 300%;
+  display: flex; }
+
+.popup__exit {
+  height: 20rem;
+  margin-left: 30rem;
+  display: none; }
+
+.popup__list {
+  width: 100%; }
 
 .popup__item {
   display: flex;
   align-items: center;
-  min-width: 250rem;
-  position: relative; }
+  position: relative;
+  min-width: 155rem; }
 
 .popup__sprite {
   height: 50rem;
@@ -1004,7 +1018,16 @@ button {
   right: 0rem;
   font-family: 'ubuntu-light'; }
 
+.dish-composition .dish-composition__cross {
+  height: 20rem;
+  width: 20rem; }
+
 @media screen and (max-width: 768px) {
+  .popup__exit {
+    height: 20rem;
+    margin-left: 30rem;
+    display: block; }
+
   .slider-card {
     flex-direction: column;
     max-width: 79%;
@@ -1033,7 +1056,14 @@ button {
     bottom: auto;
     left: auto; } }
 @media screen and (max-width: 480px) {
-  .slider__card {
+  .popup {
+    min-width: 250%;
+    padding: 10rem; }
+
+  .popup__exit {
+    margin-left: 15rem; }
+
+  .slider-card {
     max-width: 100%; }
 
   .slider-card__picture-box {
@@ -1047,7 +1077,72 @@ button {
     margin-top: 7rem; }
 
   .container--slider {
-    width: 95%; } }
+    width: 95%; }
+
+  .slider-button {
+    position: absolute; }
+
+  .slider-button--left {
+    left: 0rem; }
+
+  .slider-button--right {
+    right: 0rem; } }
+.wallpaper--fullscreen {
+  background: rgba(47, 50, 52, 0.99);
+  position: fixed;
+  width: 100%;
+  display: none;
+  z-index: 2; }
+
+.container--fullscreen {
+  flex-direction: column;
+  height: 100%; }
+
+.fullscreen__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+
+.vertical-menu-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+
+.vertical-menu-list__link {
+  color: #fff;
+  font-family: 'ubuntu-regular';
+  font-size: 24rem;
+  text-transform: uppercase; }
+
+.vertical-menu-list__element {
+  position: relative;
+  margin-top: 40rem; }
+  .vertical-menu-list__element:last-child::after {
+    display: none; }
+  .vertical-menu-list__element::after {
+    position: absolute;
+    content: "•";
+    top: 40rem;
+    right: 50%;
+    color: #ffffff; }
+
+/*.cross  {
+    background: c1c2c2;
+    height: 100px; 
+    width: 20px;
+    position: relative; 
+    left: 40px;
+    }
+    .cross:after {
+    content: "";
+    height: 20px; 
+    width: 100px;
+    background: c1c2c2;
+    position: absolute; 
+    left: -40px; 
+    top: 40px;
+    } */
 button {
   text-decoration: none;
   border: 0;
@@ -1057,6 +1152,9 @@ button {
   background-color: transparent; }
   button:focus {
     outline: none; }
+
+.arrow-sprite {
+  width: 20rem; }
 
 .button {
   font-weight: 500;
@@ -1164,6 +1262,16 @@ button {
     margin-right: 50rem; } }
 .button--slider {
   font-family: "ubuntu-medium"; }
+
+.cross-pic {
+  height: 20rem;
+  width: 20rem; }
+
+.cross-pic--white {
+  fill: #c1c2c2; }
+
+.cross-pic--red {
+  fill: #eb8364; }
 
 @font-face {
   font-family: 'ubuntu-b';
