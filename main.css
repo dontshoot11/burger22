@@ -1101,7 +1101,8 @@ button {
 .fullscreen__header {
   display: flex;
   justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+  margin-top: 13rem; }
 
 .vertical-menu-list {
   height: 100%;
