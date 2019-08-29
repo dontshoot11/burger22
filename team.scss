@@ -9,7 +9,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-around
+            padding-top: 10%;
         }
         
         .team-block {
@@ -109,6 +109,7 @@
         @include tablets {
             .team-aside {
                 width: 100%;
+                padding-top: 20%;
             }
             .accordeon {
                 text-align: center;
@@ -142,5 +143,11 @@
             }
             .accordeon__description {
                 margin-left: 0
+            }
+        }
+        
+        @include phone {
+            .team-aside {
+                padding-top: 40%
             }
         }

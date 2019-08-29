@@ -600,7 +600,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around; }
+  padding-top: 10%; }
 
 .team-block {
   display: flex;
@@ -683,7 +683,8 @@ button {
 
 @media screen and (max-width: 768px) {
   .team-aside {
-    width: 100%; }
+    width: 100%;
+    padding-top: 20%; }
 
   .accordeon {
     text-align: center;
@@ -716,6 +717,9 @@ button {
 
   .accordeon__description {
     margin-left: 0; } }
+@media screen and (max-width: 480px) {
+  .team-aside {
+    padding-top: 40%; } }
 .menu-aside {
   position: absolute;
   right: 0;
