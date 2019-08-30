@@ -880,7 +880,8 @@ button {
   top: 50%;
   display: flex;
   justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+  max-width: 1100rem; }
 
 .slider-button__arrow--left {
   transform: rotate(90deg); }
@@ -1126,7 +1127,8 @@ button {
   height: 100%;
   display: flex;
   flex-direction: column;
-  text-align: center; }
+  text-align: center;
+  justify-content: center; }
 
 .vertical-menu-list__link {
   color: #fff;
@@ -1145,6 +1147,8 @@ button {
     top: 40rem;
     right: 50%;
     color: #ffffff; }
+  .vertical-menu-list__element:first-child {
+    margin-top: 0; }
 
 /*.cross  {
     background: c1c2c2;

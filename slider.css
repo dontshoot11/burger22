@@ -15,7 +15,8 @@
   top: 50%;
   display: flex;
   justify-content: space-between;
-  width: 100%; }
+  width: 100%;
+  max-width: 1100rem; }
 
 .slider-button__arrow--left {
   transform: rotate(90deg); }

@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
 }
 
 .vertical-menu-list__link {
@@ -48,6 +49,9 @@
         top: 40rem;
         right: 50%;
         color: #ffffff;
+    }
+    &:first-child {
+        margin-top: 0
     }
 }
 
