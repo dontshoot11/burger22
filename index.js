@@ -21,16 +21,21 @@ for (let i = 0; i < accordeonCard.length; i++) {
 
 let sideMenuLink = document.querySelectorAll('.sidemenu__link');
 for (let i = 0; i < sideMenuLink.length; i++) { sideMenuLink[i].addEventListener('focus', function() { sideMenuLink[i].classList.toggle('sidemenu__link--active') }) };
-/* позже допилю
+/*
 let popupExit = document.querySelector('.popup__exit');
 let popup = document.querySelector('.popup');
 let dishComposition = document.querySelector('.dish-composition')
 dishComposition.addEventListener('click', function() {
-    popup.style.opacity = '1';
-    dishComposition.style.backgroundColor = '#e35028'
+    popup.style.opacity = '1',
+        dishComposition.style.backgroundColor = '#e35028'
 });
 popupExit.addEventListener('click', function() {
-    popup.style.opacity = '0';
-    dishComposition.style.backgroundColor = '#f08c33'
-});
-*/
+    popup.style.opacity = '0',
+        dishComposition.style.backgroundColor = '#f08c33'
+});*/
+
+let arrowRight = document.querySelector('.slider-button__arrow--right');
+let slidersList = document.querySelector('.sliders-list');
+let arrowLeft = document.querySelector('.slider-button__arrow--left')
+arrowRight.addEventListener('click', function() { slidersList.appendChild(slidersList.firstElementChild) })
+arrowLeft.addEventListener('click', function() { slidersList.insertBefore(slidersList.lastElementChild, slidersList.firstElementChild) })

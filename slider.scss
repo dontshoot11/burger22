@@ -7,10 +7,7 @@
 }
 
 .sliders-list {
-    justify-content: center;
-    display: flex;
     height: 100%;
-    align-items: center;
 }
 
 .slider-buttons {
@@ -35,6 +32,7 @@
     align-items: center;
     height: 100%;
     padding: 105rem 0rem;
+    margin: 0 auto;
 }
 
 .slider-card__graphics {
@@ -223,8 +221,7 @@
     .slider-card {
         flex-direction: column;
         max-width: 79%;
-        height: 85%;
-        padding: 0rem 0rem;
+        padding: 7% 0;
     }
     .slider-card__name {
         line-height: 0.9em
@@ -268,7 +265,8 @@
         margin-left: 15rem
     }
     .slider-card {
-        max-width: 100%
+        max-width: 100%;
+        padding: 20% 0;
     }
     .slider-card__name {
         font-size: 50rem;
