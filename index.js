@@ -25,7 +25,7 @@ for (let i = 0; i < menuAccordeonCard.length; i++) {
 let accordeonCard = document.querySelectorAll('.accordeon__card');
 console.log(accordeonCard[0].childNodes[3].firstElementChild);
 
-console.log(accordeonCard[0].childNodes[3].firstElementChild.contentHeight);
+console.log(accordeonCard[0].childNodes[3].firstElementChild.clientHeight);
 
 for (let i = 0; i < accordeonCard.length; i++) {
 
