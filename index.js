@@ -23,9 +23,7 @@ for (let i = 0; i < menuAccordeonCard.length; i++) {
 //это меню с бургерами
 
 let accordeonCard = document.querySelectorAll('.accordeon__card');
-console.log(accordeonCard[0].childNodes[3].firstElementChild);
 
-console.log(accordeonCard[0].childNodes[3].firstElementChild.clientHeight);
 
 for (let i = 0; i < accordeonCard.length; i++) {
 
@@ -39,6 +37,7 @@ for (let i = 0; i < accordeonCard.length; i++) {
 
             activeCard.childNodes[3].style.height = 0;
             console.log(accordeonCard[0].childNodes[3].firstElementChild.clientHeight);
+            console.log(accordeonCard[0].childNodes[3].firstElementChild);
 
             activeCard.classList.remove('accordeon__card--active');
             //accordeonCard[i].classList.add('accordeon__card--active');
