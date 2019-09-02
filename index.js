@@ -22,7 +22,9 @@ for (let i = 0; i < menuAccordeonCard.length; i++) {
 
 //это меню с бургерами
 
-let accordeonCard = document.querySelectorAll('.accordeon__card');
+let cardHeight =
+
+    let accordeonCard = document.querySelectorAll('.accordeon__card');
 
 for (let i = 0; i < accordeonCard.length; i++) {
 

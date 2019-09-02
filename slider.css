@@ -5,7 +5,10 @@
   overflow: hidden; }
 
 .sliders-list {
-  height: 100%; }
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
 
 .slider-buttons {
   position: absolute;
@@ -26,7 +29,7 @@
   align-items: center;
   height: 100%;
   padding: 105rem 0rem;
-  margin: 0 auto; }
+  min-width: 100%; }
 
 .slider-card__graphics {
   width: 50%;
