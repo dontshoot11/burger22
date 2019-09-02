@@ -22,12 +22,8 @@ for (let i = 0; i < menuAccordeonCard.length; i++) {
 
 //это меню с бургерами
 
-
-
-
-
-
 let accordeonCard = document.querySelectorAll('.accordeon__card');
+console.log(accordeonCard[0].childNodes[3].firstElementChild);
 
 console.log(accordeonCard[0].childNodes[3].firstElementChild.contentHeight);
 
@@ -37,7 +33,7 @@ for (let i = 0; i < accordeonCard.length; i++) {
 
     accordeonCard[i].addEventListener('click', function() {
         let activeCard = document.querySelector('.accordeon__card--active');
-        let contentHeight = accordeonCard[i].childNodes[3].firstElementChild.clientHeight + "rem";
+        let contentHeight = accordeonCard[i].childNodes[3].firstElementChild.clientHeight + "px";
 
         if (activeCard) {
 
@@ -78,5 +74,5 @@ let arrowRight = document.querySelector('.slider-button__arrow--right');
 let slidersList = document.querySelector('.sliders-list');
 let arrowLeft = document.querySelector('.slider-button__arrow--left');
 
-arrowRight.addEventListener('click', function(e) { e.preventDefault, slidersList.appendChild(slidersList.firstElementChild) })
+arrowRight.addEventListener('click', function(e) { e.preventDefault, slidersList.appendChild(slidersList.firstElementChild) });
 arrowLeft.addEventListener('click', function(e) { e.preventDefault, slidersList.insertBefore(slidersList.lastElementChild, slidersList.firstElementChild) })
