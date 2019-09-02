@@ -9,15 +9,33 @@ for (let i = 0; i < a.length; i++) { a[i].addEventListener('click', function() {
 
 
 let menuAccordeonCard = document.querySelectorAll('.menu-accordeon__card');
-for (let i = 0; i < menuAccordeonCard.length; i++) { menuAccordeonCard[i].addEventListener('click', function() { menuAccordeonCard[i].classList.toggle('menu-accordeon__card--active') }) };
+
+for (let i = 0; i < menuAccordeonCard.length; i++) {
 
 
-let accordeonCard = document.querySelectorAll('.accordeon__card');
-for (let i = 0; i < accordeonCard.length; i++) {
-    accordeonCard[i].addEventListener('click', function() {
-        accordeonCard[i].classList.toggle('accordeon__card--active')
+
+    menuAccordeonCard[i].addEventListener('click', function() {
+        let activeCard = document.querySelector('.menu-accordeon__card--active');
+        if (activeCard) { activeCard.classList.remove('menu-accordeon__card--active', menuAccordeonCard[i].classList.add('menu-accordeon__card--active')) } else { menuAccordeonCard[i].classList.add('menu-accordeon__card--active') };
     })
 };
+
+//это меню с бургерами
+
+let accordeonCard = document.querySelectorAll('.accordeon__card');
+
+for (let i = 0; i < accordeonCard.length; i++) {
+
+
+
+    accordeonCard[i].addEventListener('click', function() {
+        let activeCard = document.querySelector('.accordeon__card--active');
+        if (activeCard) { activeCard.classList.remove('accordeon__card--active', accordeonCard[i].classList.add('accordeon__card--active')) } else { accordeonCard[i].classList.add('accordeon__card--active') };
+    })
+};
+
+
+//это меню с командой
 
 let sideMenuLink = document.querySelectorAll('.sidemenu__link');
 for (let i = 0; i < sideMenuLink.length; i++) { sideMenuLink[i].addEventListener('focus', function() { sideMenuLink[i].classList.toggle('sidemenu__link--active') }) };
@@ -36,6 +54,7 @@ popupExit.addEventListener('click', function() {
 
 let arrowRight = document.querySelector('.slider-button__arrow--right');
 let slidersList = document.querySelector('.sliders-list');
-let arrowLeft = document.querySelector('.slider-button__arrow--left')
-arrowRight.addEventListener('click', function() { slidersList.appendChild(slidersList.firstElementChild) })
-arrowLeft.addEventListener('click', function() { slidersList.insertBefore(slidersList.lastElementChild, slidersList.firstElementChild) })
+let arrowLeft = document.querySelector('.slider-button__arrow--left');
+
+arrowRight.addEventListener('click', function(e) { e.preventDefault, slidersList.appendChild(slidersList.firstElementChild) })
+arrowLeft.addEventListener('click', function(e) { e.preventDefault, slidersList.insertBefore(slidersList.lastElementChild, slidersList.firstElementChild) })
