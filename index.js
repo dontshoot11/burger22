@@ -46,7 +46,7 @@ for (let i = 0; i < accordeonCard.length; i++) {
 
             activeCard.classList.remove('accordeon__card--active');
             //accordeonCard[i].classList.add('accordeon__card--active');
-            // accordeonCard[i].childNodes[3].style.height = aboutHeight;
+            //accordeonCard[i].childNodes[3].style.height = aboutHeight;
 
         } else {
             accordeonCard[i].classList.add('accordeon__card--active');
