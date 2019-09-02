@@ -22,9 +22,14 @@ for (let i = 0; i < menuAccordeonCard.length; i++) {
 
 //это меню с бургерами
 
-let cardHeight =
 
-    let accordeonCard = document.querySelectorAll('.accordeon__card');
+
+
+
+
+let accordeonCard = document.querySelectorAll('.accordeon__card');
+
+console.log(accordeonCard[0].childNodes[3].firstElementChild.contentHeight);
 
 for (let i = 0; i < accordeonCard.length; i++) {
 
@@ -32,7 +37,22 @@ for (let i = 0; i < accordeonCard.length; i++) {
 
     accordeonCard[i].addEventListener('click', function() {
         let activeCard = document.querySelector('.accordeon__card--active');
-        if (activeCard) { activeCard.classList.remove('accordeon__card--active', accordeonCard[i].classList.add('accordeon__card--active')) } else { accordeonCard[i].classList.add('accordeon__card--active') };
+        let contentHeight = accordeonCard[i].childNodes[3].firstElementChild.contentHeight + "rem";
+
+        if (activeCard) {
+
+            activeCard.childNodes[3].style.height = 0;
+            console.log(accordeonCard[0].childNodes[3].firstElementChild.contentHeight);
+
+            activeCard.classList.remove('accordeon__card--active');
+            //accordeonCard[i].classList.add('accordeon__card--active');
+            // accordeonCard[i].childNodes[3].style.height = aboutHeight;
+
+        } else {
+            accordeonCard[i].classList.add('accordeon__card--active');
+
+            accordeonCard[i].childNodes[3].style.height = contentHeight;
+        };
     })
 };
 

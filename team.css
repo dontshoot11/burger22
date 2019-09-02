@@ -17,29 +17,31 @@
 .accordeon {
   margin-top: 35rem; }
 
+.accordeon__content {
+  height: 0rem;
+  overflow: hidden;
+  transition: 0.3s; }
+
 .accordeon__card {
   margin-top: 35rem; }
   .accordeon__card:first-child {
     margin-top: 0; }
 
 .accordeon__about {
-  height: 0;
   overflow: hidden;
   font-family: "ubuntu";
   font-size: 14rem;
   color: #fff;
-  display: flex; }
+  display: flex;
+  transition: 0.3s;
+  padding-left: 17rem;
+  padding-top: 17rem; }
 
 .accordeon__card--active .accordeon__name {
   color: #f9b43b; }
   .accordeon__card--active .accordeon__name:before {
     border-bottom: 6rem solid #f9b43b;
     border-top: 0; }
-
-.accordeon__card--active .accordeon__about {
-  min-height: 120rem;
-  padding-top: 17rem;
-  padding-left: 17rem; }
 
 .accordeon__name {
   font-family: "gagalin";
@@ -98,14 +100,15 @@
     margin-top: 49rem; }
 
   .accordeon__card {
-    margin-top: 30rem; }
+    margin-top: 20rem; }
 
   .accordeon__card--active .accordeon__about {
-    min-height: 239rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-left: 0rem; }
+    padding-left: 0rem;
+    padding-top: 7rem;
+    transition: 0.3s; }
 
   .accordeon__picture {
     overflow: hidden;
