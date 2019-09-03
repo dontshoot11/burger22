@@ -18,19 +18,21 @@
 .menu-accordeon__button {
   background-color: rgba(20, 20, 20, 0.7); }
 
+.menu-accordeon__content {
+  width: 0;
+  overflow: hidden;
+  transition: 0.3s; }
+
 .menu-accordeon__about {
-  width: 0px;
   font-family: "ubuntu-light";
   color: #fff;
   line-height: 1.6em;
   font-size: 14rem;
-  overflow: hidden; }
-
-.menu-accordeon__card--active .menu-accordeon__about {
-  width: 540px;
+  overflow: hidden;
   background-color: rgba(47, 50, 52, 0.9);
   height: 100%;
-  padding: 62rem 37rem 0rem 33rem; }
+  padding: 62rem 37rem 0rem 33rem;
+  min-width: 540rem; }
 
 .menu-accordeon__card--active .menu-accordeon__button {
   color: #f9b43b; }
@@ -73,16 +75,14 @@
   .menu-aside {
     width: 100%; }
 
-  .menu-accordeon__card--active .menu-accordeon__about {
-    width: calc(100% - 80rem);
-    min-width: 256rem; } }
+  .menu-accordeon__about {
+    min-width: 350rem; } }
 @media screen and (max-width: 480px) {
+  .menu-accordeon__about {
+    min-width: 85vw; }
+
   .menu-accordeon__card--active {
     position: absolute;
-    left: 0rem;
-    z-index: 2; }
-
-  .menu-accordeon__card--active .menu-accordeon__about {
-    width: calc(100% - 80rem); } }
+    z-index: 2; } }
 
 /*# sourceMappingURL=menu.css.map */

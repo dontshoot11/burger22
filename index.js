@@ -10,13 +10,42 @@ for (let i = 0; i < a.length; i++) { a[i].addEventListener('click', function() {
 
 let menuAccordeonCard = document.querySelectorAll('.menu-accordeon__card');
 
+
 for (let i = 0; i < menuAccordeonCard.length; i++) {
 
 
 
     menuAccordeonCard[i].addEventListener('click', function() {
+
         let activeCard = document.querySelector('.menu-accordeon__card--active');
-        if (activeCard) { activeCard.classList.remove('menu-accordeon__card--active', menuAccordeonCard[i].classList.add('menu-accordeon__card--active')) } else { menuAccordeonCard[i].classList.add('menu-accordeon__card--active') };
+        let menuAside = document.querySelector('.menu-aside');
+
+        let asideWidth = parseInt(menuAside.style.width);
+        console.log(asideWidth);
+        let menuAccordeonButton = document.querySelector('.menu-accordeon__button');
+        let contentWidth = menuAccordeonCard[i].childNodes[3].firstElementChild.scrollWidth + "px";
+
+        if (activeCard) {
+
+            activeCard.childNodes[3].style.width = 0;
+            console.log(menuAccordeonCard[0].childNodes[3].firstElementChild.offsetWidth);
+            console.log(menuAccordeonCard[0].childNodes[3].firstElementChild);
+            console.log(menuAccordeonCard[0].childNodes[3]);
+            console.log(menuAside.style.width + ' меню асайд');
+            console.log(contentWidth);
+
+            activeCard.classList.remove('menu-accordeon__card--active');
+            if (activeCard !== menuAccordeonCard[i]) {
+                menuAccordeonCard[i].classList.add('menu-accordeon__card--active'), menuAccordeonCard[i].childNodes[3].style.width = contentWidth;
+            };
+
+
+
+        } else {
+            menuAccordeonCard[i].classList.add('menu-accordeon__card--active');
+
+            menuAccordeonCard[i].childNodes[3].style.width = contentWidth;
+        };
     })
 };
 
@@ -40,8 +69,11 @@ for (let i = 0; i < accordeonCard.length; i++) {
             console.log(accordeonCard[0].childNodes[3].firstElementChild);
 
             activeCard.classList.remove('accordeon__card--active');
-            //accordeonCard[i].classList.add('accordeon__card--active');
-            //accordeonCard[i].childNodes[3].style.height = aboutHeight;
+            if (activeCard !== accordeonCard[i]) {
+                accordeonCard[i].classList.add('accordeon__card--active'), accordeonCard[i].childNodes[3].style.height = contentHeight;
+            };
+
+
 
         } else {
             accordeonCard[i].classList.add('accordeon__card--active');

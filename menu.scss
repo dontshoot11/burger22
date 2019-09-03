@@ -1,106 +1,107 @@
-        @import "colors";
+    @import "colors";
+    .menu-aside {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+    
+    .menu-accordeon {
+        display: flex;
+        height: 100%;
+        position: relative;
+        justify-content: flex-end;
+    }
+    
+    .menu-accordeon__card {
+        /* transform: rotate(270deg); */
+        display: flex;
+        height: 100vh;
+    }
+    
+    .menu-accordeon__button {
+        background-color: rgba(20, 20, 20, 0.7)
+    }
+    
+    .menu-accordeon__content {
+        width: 0;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    
+    .menu-accordeon__about {
+        font-family: "ubuntu-light";
+        color: #fff;
+        line-height: 1.6em;
+        font-size: 14rem;
+        overflow: hidden;
+        background-color: rgba($color: #2f3234, $alpha: 0.9);
+        height: 100%;
+        padding: 62rem 37rem 0rem 33rem;
+        min-width: 540rem;
+    }
+    
+    .menu-accordeon__card--active .menu-accordeon__button {
+        color: $orange-y;
+    }
+    
+    .menu-accordeon__name {
+        transform: rotate(180deg);
+        padding: 40rem 20rem 0rem 20rem;
+        background-color: rgba(20, 20, 20, 0.7);
+        height: 100vh;
+        text-align: left;
+        white-space: nowrap;
+        writing-mode: vertical-lr;
+        display: block
+    }
+    
+    .menu-accordeon__button--myasoet {
+        background: url(img/menu/myasoet.png) no-repeat
+    }
+    
+    ;
+    .menu-accordeon__button--veg {
+        background: url(img/menu/veg.png) no-repeat
+    }
+    
+    ;
+    .menu-accordeon__button--diet {
+        background: url(img/menu/diet.png) no-repeat
+    }
+    
+    .menu-accordeon__button {
+        box-sizing: content-box;
+        font-family: "gagalin";
+        font-size: 36rem;
+        text-transform: uppercase;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0;
+        background-size: cover;
+        background-size: cover;
+        height: 100vh;
+        background-position: center center;
+    }
+    
+    @media screen and (max-width:768px) {
         .menu-aside {
-            position: absolute;
-            right: 0;
-            top: 0;
-            bottom: 0;
+            width: 100%
         }
-        
-        .menu-accordeon {
-            display: flex;
-            height: 100%;
-            position: relative;
-            justify-content: flex-end;
-        }
-        
-        .menu-accordeon__card {
-            /* transform: rotate(270deg); */
-            display: flex;
-            height: 100vh;
-        }
-        
-        .menu-accordeon__button {
-            background-color: rgba(20, 20, 20, 0.7)
-        }
-        
         .menu-accordeon__about {
-            width: 0px;
-            font-family: "ubuntu-light";
-            color: #fff;
-            line-height: 1.6em;
-            font-size: 14rem;
-            overflow: hidden;
+            //  width: calc(100% - 80rem);
+            min-width: 350rem;
         }
-        
-        .menu-accordeon__card--active .menu-accordeon__about {
-            width: 540px;
-            background-color: rgba($color: #2f3234, $alpha: 0.9);
-            height: 100%;
-            padding: 62rem 37rem 0rem 33rem;
+    }
+    
+    @media screen and (max-width:480px) {
+        .menu-accordeon__about {
+            min-width: 85vw;
         }
-        
-        .menu-accordeon__card--active .menu-accordeon__button {
-            color: $orange-y;
+        .menu-accordeon__card--active {
+            position: absolute;
+            z-index: 2;
         }
-        
-        .menu-accordeon__name {
-            transform: rotate(180deg);
-            padding: 40rem 20rem 0rem 20rem;
-            background-color: rgba(20, 20, 20, 0.7);
-            height: 100vh;
-            text-align: left;
-            white-space: nowrap;
-            writing-mode: vertical-lr;
-            display: block
-        }
-        
-        .menu-accordeon__button--myasoet {
-            background: url(img/menu/myasoet.png) no-repeat
-        }
-        
-        ;
-        .menu-accordeon__button--veg {
-            background: url(img/menu/veg.png) no-repeat
-        }
-        
-        ;
-        .menu-accordeon__button--diet {
-            background: url(img/menu/diet.png) no-repeat
-        }
-        
-        .menu-accordeon__button {
-            box-sizing: content-box;
-            font-family: "gagalin";
-            font-size: 36rem;
-            text-transform: uppercase;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 0;
-            background-size: cover;
-            background-size: cover;
-            height: 100vh;
-            background-position: center center;
-        }
-        
-        @media screen and (max-width:768px) {
-            .menu-aside {
-                width: 100%
-            }
-            .menu-accordeon__card--active .menu-accordeon__about {
-                width: calc(100% - 80rem);
-                min-width: 256rem
-            }
-        }
-        
-        @media screen and (max-width:480px) {
-            .menu-accordeon__card--active {
-                position: absolute;
-                left: 0rem;
-                z-index: 2;
-            }
-            .menu-accordeon__card--active .menu-accordeon__about {
-                width: calc(100% - 80rem);
-            }
-        }
+    }
