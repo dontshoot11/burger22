@@ -105,5 +105,30 @@ let arrowRight = document.querySelector('.slider-button__arrow--right');
 let slidersList = document.querySelector('.sliders-list');
 let arrowLeft = document.querySelector('.slider-button__arrow--left');
 
-arrowRight.addEventListener('click', function(e) { e.preventDefault, slidersList.appendChild(slidersList.firstElementChild) });
-arrowLeft.addEventListener('click', function(e) { e.preventDefault, slidersList.insertBefore(slidersList.lastElementChild, slidersList.firstElementChild) })
+arrowRight.addEventListener('click', function(e) { e.preventDefault(), slidersList.appendChild(slidersList.firstElementChild) });
+arrowLeft.addEventListener('click', function(e) { e.preventDefault(), slidersList.insertBefore(slidersList.lastElementChild, slidersList.firstElementChild) })
+
+
+
+let form = document.querySelector('.form__elem');
+let formButton = document.querySelector('.button--form');
+formButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    const data = { name: form.elements.name.value, phone: form.elements.phone.value, comment: form.elements.comment.value };
+    const formData = new FormData(form);
+    formData.append("name", form.elements.name.value);
+    formData.append("phone", form.elements.phone.value);
+    formData.append("comment", form.elements.comment.value);
+    formData.append("to", "my@gmail.com");
+    console.log(formData);
+    console.log(data);
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+    xhr.send(formData);
+    xhr.responseType = "json";
+
+
+    xhr.addEventListener('load',
+        () => console.log(JSON.stringify(xhr.response) + ' статус ответа'))
+});

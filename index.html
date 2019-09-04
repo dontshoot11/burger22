@@ -815,7 +815,7 @@
             </ul>
         </section>
 
-        <section class="order wallpaper wallpaper--order " od="order">
+        <section class="order wallpaper wallpaper--order " id="order">
             <div class="container container__column ">
                 <h2 class="section-title ">закажите доставку</h2>
                 <div class="form ">
@@ -824,17 +824,17 @@
                             <div class="form__row ">
                                 <label class="form__block ">
                             <div class="form__block-title ">Имя</div>
-                            <input type="text " class="form__input ">
+                            <input type="text " class="form__input " name='name' required>
                                 </label>
                                 <label class="form__block ">
-                            <div class="form__block-title ">Телефон</div>
-                            <input type="text " class="form__input ">
+                            <div class="form__block-title " >Телефон</div>
+                            <input type="text " class="form__input " name = 'phone' required>
                         </label>
                             </div>
                             <!--строка формы-->
                             <div class="form__row ">
                                 <label class="form__block ">
-                                <div class="form__block-title ">Улица</div>
+                                <div class="form__block-title " name='street'>Улица</div>
                                 <input type="text " class="form__input ">
                                 
                             </label>
@@ -864,10 +864,10 @@
                         <div class="form__column">
                             <div class="form__row">
                                 <label class="form__block">
-                                        <div class="form__block-title">Комментарий</div>
+                                        <div class="form__block-title" >Комментарий</div>
                             
                             
-                            <textarea class="form__input form__input--textarea"></textarea></label>
+                            <textarea class="form__input form__input--textarea" name='comment' required></textarea></label>
                             </div>
                             <!--строка формы-->
                             <div class="form__row ">
@@ -914,7 +914,7 @@
 
                             <div class="form__row">
                                 <label class="form__block">
-                                    <button class="button button--orange" type="submit">заказать</button>
+                                    <button class="button button--orange button--form" type="submit">заказать</button>
 
 
                                     <button class="button" type="reset">очистить</button>
