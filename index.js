@@ -116,6 +116,7 @@ let fields = document.querySelectorAll('.form__input');
 let modal = document.querySelector('.modal');
 let modalText = document.querySelector('.modal-window--text');
 let modalButton = document.querySelector('.modal-window--button');
+let body = document.querySelector('body');
 modalButton.addEventListener('click', function() { modal.style.display = 'none' })
 
 
@@ -163,15 +164,18 @@ formButton.addEventListener('click', function(e) {
                 if (xhr.response.status) {
                     modal.style.display = 'flex';
                     modalText.textContent = 'Сообщение отправлено';
+                    body.style.overflow = 'hidden';
                     form.reset();
                 } else {
                     modal.style.display = 'flex';
-                    modalText.textContent = 'что-то пошло не так, попробуйте еще раз'
+                    modalText.textContent = 'что-то пошло не так, попробуйте еще раз';
+                    body.style.overflow = 'hidden';
                 }
             })
     } else {
         modal.style.display = 'flex';
-        modalText.textContent = 'Поля "Имя","Телефон" и "Комментарий" нужно заполнить, без них доставку не оформить'
+        modalText.textContent = 'Поля "Имя","Телефон" и "Комментарий" нужно заполнить, без них доставку не оформить';
+        body.style.overflow = 'hidden';
     }
 
 
