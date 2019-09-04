@@ -283,7 +283,8 @@ button {
   width: 25%;
   height: 50vh;
   filter: grayscale(1);
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .reviews__card--girl1 {
   background: url(img/feedback/1girl.png) no-repeat;
@@ -330,7 +331,8 @@ button {
   transition: 0.3s;
   height: 100%;
   color: #fff;
-  padding: 13% 15% 0% 6%; }
+  padding: 13% 15% 0% 6%;
+  position: relative; }
   .reviews__article:hover {
     opacity: 1;
     transition: 0.3s;
@@ -347,14 +349,46 @@ button {
   margin-top: 30rem;
   margin-bottom: 17rem; }
 
-.button--reviews {
-  background-color: #2f3234; }
-
 .button__text {
   display: none; }
 
 .button__text--mobile {
   display: none; }
+
+.feedback-popup {
+  display: flex;
+  background: rgba(47, 50, 52, 0.99);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden; }
+
+.feedback-popup__window {
+  background: #fff;
+  display: flex;
+  overflow: hidden;
+  min-width: 200rem;
+  max-width: 45%;
+  min-height: 100rem;
+  border-radius: 5px;
+  position: relative;
+  padding: 10rem; }
+
+.feedback-popup__name {
+  font-family: "gagalin";
+  font-size: 14rem;
+  color: #2f3234; }
+
+.feedback-popup__text {
+  font-family: "ubuntu-light";
+  font-size: 14rem;
+  color: #2f3234;
+  line-height: 1.5em; }
 
 @media screen and (max-width: 768px) {
   .reviews__card {
@@ -736,7 +770,8 @@ button {
 .menu-accordeon__card {
   /* transform: rotate(270deg); */
   display: flex;
-  height: 100vh; }
+  height: 100vh;
+  max-width: 100%; }
 
 .menu-accordeon__button {
   background-color: rgba(20, 20, 20, 0.7); }
@@ -754,7 +789,7 @@ button {
   overflow: hidden;
   background-color: rgba(47, 50, 52, 0.9);
   height: 100%;
-  padding: 62rem 37rem 0rem 33rem;
+  padding: 62rem 37rem 10rem 33rem;
   min-width: 540rem; }
 
 .menu-accordeon__card--active .menu-accordeon__button {
@@ -799,14 +834,15 @@ button {
     width: 100%; }
 
   .menu-accordeon__about {
-    min-width: 350rem; } }
-@media screen and (max-width: 480px) {
-  .menu-accordeon__about {
-    min-width: 85vw; }
+    min-width: 85vw;
+    padding: 50rem 25rem 10rem 15rem; }
 
   .menu-accordeon__card--active {
     position: absolute;
     z-index: 2; } }
+@media screen and (max-width: 480px) {
+  .menu-accordeon__name {
+    padding: 40rem 10rem 0rem 10rem; } }
 .footer {
   position: absolute;
   bottom: 0;
@@ -1200,7 +1236,9 @@ button {
 .button--reviews {
   transition: 0.3s;
   background-color: #2f3234;
-  position: relative; }
+  position: absolute;
+  bottom: 15rem;
+  left: 33%; }
   .button--reviews:hover {
     transition: 0.3s;
     background-color: #1f2122; }
@@ -1209,9 +1247,14 @@ button {
     position: absolute;
     left: 3rem;
     display: none; }
+  @media screen and (max-width: 768px) {
+    .button--reviews {
+      left: 50%;
+      margin-left: -25%; } }
   @media screen and (max-width: 480px) {
     .button--reviews {
-      color: transparent; }
+      color: transparent;
+      bottom: 15%; }
       .button--reviews:after {
         display: inline-block;
         color: #fff; } }
@@ -1297,6 +1340,12 @@ button {
 
 .cross-pic--red {
   fill: #eb8364; }
+
+.popup__exit--feedback {
+  display: block;
+  position: absolute;
+  right: 10rem;
+  top: 10rem; }
 
 .modal {
   display: none;

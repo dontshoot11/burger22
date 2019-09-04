@@ -117,8 +117,10 @@ let modal = document.querySelector('.modal');
 let modalText = document.querySelector('.modal-window--text');
 let modalButton = document.querySelector('.modal-window--button');
 let body = document.querySelector('body');
-modalButton.addEventListener('click', function() { modal.style.display = 'none';
-    body.style.overflow = 'auto'; })
+modalButton.addEventListener('click', function() {
+    modal.style.display = 'none';
+    body.style.overflow = 'auto';
+})
 
 
 
@@ -187,3 +189,27 @@ formButton.addEventListener('click', function(e) {
 
 
 })
+
+let feedbackExit = document.querySelector(
+    '.popup__exit--feedback');
+let popupFeedback = document.querySelector('.feedback-popup');
+let feedbackButtons = document.querySelectorAll('.button--reviews');
+let reviews = document.querySelectorAll('.reviews__article');
+
+
+feedbackExit.addEventListener('click', function() { popupFeedback.style.display = 'none' });
+for (let i = 0; i < feedbackButtons.length; i++) {
+    feedbackButtons[i].addEventListener('click',
+        function() {
+            popupFeedback.style.display = 'flex';
+            let feedbackPopupName = document.querySelector('.feedback-popup__name');
+            let feedbackCardName = document.querySelectorAll('.reviews__name');
+            let feedbackPopupReview = document.querySelector('.feedback-popup__text');
+            let cardReview = document.querySelectorAll('.reviews__text');
+            feedbackPopupName.textContent = feedbackCardName[i].textContent;
+            feedbackPopupReview.textContent = cardReview[i].textContent;
+
+        })
+}
+
+//for (let i=0; i<reviews.length; i++) {}

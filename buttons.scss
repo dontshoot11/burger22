@@ -37,7 +37,9 @@ button {
 .button--reviews {
     transition: 0.3s;
     background-color: $grayblack;
-    position: relative;
+    position: absolute;
+    bottom: 15rem;
+    left: 33%;
     &:hover {
         transition: 0.3s;
         background-color: #1f2122
@@ -48,8 +50,13 @@ button {
         left: 3rem;
         display: none
     }
+    @include tablets {
+        left: 50%;
+        margin-left: -25%;
+    }
     @include phone {
         color: transparent;
+        bottom: 15%;
         &:after {
             display: inline-block;
             color: #fff
@@ -150,4 +157,11 @@ button {
 
 .cross-pic--red {
     fill: #eb8364
+}
+
+.popup__exit--feedback {
+    display: block;
+    position: absolute;
+    right: 10rem;
+    top: 10rem;
 }

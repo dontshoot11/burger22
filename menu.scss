@@ -1,4 +1,5 @@
-    @import "colors";
+    @import "colors",
+    'mixin';
     .menu-aside {
         position: absolute;
         right: 0;
@@ -17,6 +18,7 @@
         /* transform: rotate(270deg); */
         display: flex;
         height: 100vh;
+        max-width: 100%;
     }
     
     .menu-accordeon__button {
@@ -37,7 +39,7 @@
         overflow: hidden;
         background-color: rgba($color: #2f3234, $alpha: 0.9);
         height: 100%;
-        padding: 62rem 37rem 0rem 33rem;
+        padding: 62rem 37rem 10rem 33rem;
         min-width: 540rem;
     }
     
@@ -92,16 +94,17 @@
         }
         .menu-accordeon__about {
             //  width: calc(100% - 80rem);
-            min-width: 350rem;
-        }
-    }
-    
-    @media screen and (max-width:480px) {
-        .menu-accordeon__about {
             min-width: 85vw;
+            padding: 50rem 25rem 10rem 15rem;
         }
         .menu-accordeon__card--active {
             position: absolute;
             z-index: 2;
+        }
+    }
+    
+    @include phone {
+        .menu-accordeon__name {
+            padding: 40rem 10rem 0rem 10rem
         }
     }

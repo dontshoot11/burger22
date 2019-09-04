@@ -31,7 +31,9 @@ button {
 .button--reviews {
   transition: 0.3s;
   background-color: #2f3234;
-  position: relative; }
+  position: absolute;
+  bottom: 15rem;
+  left: 33%; }
   .button--reviews:hover {
     transition: 0.3s;
     background-color: #1f2122; }
@@ -40,9 +42,14 @@ button {
     position: absolute;
     left: 3rem;
     display: none; }
+  @media screen and (max-width: 768px) {
+    .button--reviews {
+      left: 50%;
+      margin-left: -25%; } }
   @media screen and (max-width: 480px) {
     .button--reviews {
-      color: transparent; }
+      color: transparent;
+      bottom: 15%; }
       .button--reviews:after {
         display: inline-block;
         color: #fff; } }
@@ -128,5 +135,11 @@ button {
 
 .cross-pic--red {
   fill: #eb8364; }
+
+.popup__exit--feedback {
+  display: block;
+  position: absolute;
+  right: 10rem;
+  top: 10rem; }
 
 /*# sourceMappingURL=buttons.css.map */
