@@ -117,7 +117,8 @@ let modal = document.querySelector('.modal');
 let modalText = document.querySelector('.modal-window--text');
 let modalButton = document.querySelector('.modal-window--button');
 let body = document.querySelector('body');
-modalButton.addEventListener('click', function() { modal.style.display = 'none' })
+modalButton.addEventListener('click', function() { modal.style.display = 'none';
+    body.style.overflow = 'auto'; })
 
 
 
