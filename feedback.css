@@ -80,7 +80,7 @@
   display: none; }
 
 .feedback-popup {
-  display: flex;
+  display: none;
   background: rgba(47, 50, 52, 0.99);
   position: fixed;
   top: 0;
