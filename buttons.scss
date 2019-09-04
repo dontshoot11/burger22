@@ -50,10 +50,6 @@ button {
         left: 3rem;
         display: none
     }
-    @include tablets {
-        left: 50%;
-        margin-left: -25%;
-    }
     @include phone {
         color: transparent;
         bottom: 15%;

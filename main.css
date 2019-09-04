@@ -1248,10 +1248,6 @@ button {
     position: absolute;
     left: 3rem;
     display: none; }
-  @media screen and (max-width: 768px) {
-    .button--reviews {
-      left: 50%;
-      margin-left: -25%; } }
   @media screen and (max-width: 480px) {
     .button--reviews {
       color: transparent;
