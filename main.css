@@ -388,7 +388,8 @@ button {
   font-family: "ubuntu-light";
   font-size: 14rem;
   color: #2f3234;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+  margin-top: 10rem; }
 
 @media screen and (max-width: 768px) {
   .reviews__card {
