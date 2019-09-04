@@ -1298,6 +1298,35 @@ button {
 .cross-pic--red {
   fill: #eb8364; }
 
+.modal {
+  display: none;
+  background: rgba(47, 50, 52, 0.99);
+  position: fixed;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden; }
+
+.modal-window {
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 1, 0.5);
+  min-width: 200rem;
+  min-height: 105rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20rem; }
+
+.modal-window--text {
+  color: black;
+  font-family: "ubuntu";
+  font-size: 14rem;
+  text-align: center;
+  margin-bottom: 10rem; }
+
 @font-face {
   font-family: 'ubuntu-b';
   src: url("fonts/ubuntu-b.woff2") format("woff2"), url("fonts/ubuntu-b.woff") format("woff");
