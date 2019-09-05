@@ -1153,7 +1153,7 @@ button {
     max-width: 80%; }
 
   .burger {
-    max-width: 90%; } }
+    max-width: 100%; } }
 .wallpaper--fullscreen {
   background: rgba(47, 50, 52, 0.99);
   position: fixed;
