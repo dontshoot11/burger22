@@ -75,8 +75,7 @@ button {
 
 .logo__pic {
   width: 100rem;
-  height: 100rem;
-  margin-right: 69rem; }
+  height: 100rem; }
 
 .navigation {
   display: flex;
@@ -93,12 +92,12 @@ button {
     color: #ffffff; }
 
 .navigation__element:last-child:after {
-  display: none; }
+  visibility: hidden; }
 
 .navigation__link {
   color: #ffffff;
   font-weight: 500;
-  padding: 13rem;
+  padding: 5rem;
   text-transform: uppercase; }
 
 @media screen and (max-width: 768px) {
@@ -910,7 +909,7 @@ button {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center; }
+  overflow: hidden; }
 
 .slider-buttons {
   position: absolute;
@@ -931,7 +930,8 @@ button {
   align-items: center;
   height: 100%;
   padding: 105rem 0rem;
-  min-width: 100%; }
+  min-width: 100%;
+  overflow: hidden; }
 
 .slider-card__graphics {
   width: 50%;

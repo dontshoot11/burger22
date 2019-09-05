@@ -14,12 +14,12 @@
     color: #ffffff; }
 
 .navigation__element:last-child:after {
-  display: none; }
+  visibility: hidden; }
 
 .navigation__link {
   color: #ffffff;
   font-weight: 500;
-  padding: 13rem;
+  padding: 5rem;
   text-transform: uppercase; }
 
 @media screen and (max-width: 768px) {

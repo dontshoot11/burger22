@@ -8,7 +8,7 @@
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: center; }
+  overflow: hidden; }
 
 .slider-buttons {
   position: absolute;
@@ -29,7 +29,8 @@
   align-items: center;
   height: 100%;
   padding: 105rem 0rem;
-  min-width: 100%; }
+  min-width: 100%;
+  overflow: hidden; }
 
 .slider-card__graphics {
   width: 50%;
