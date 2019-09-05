@@ -90,7 +90,6 @@ button {
   text-align: center; }
   .navigation__element::after {
     content: "•";
-    margin-right: 5rem;
     color: #ffffff; }
 
 .navigation__element:last-child:after {
