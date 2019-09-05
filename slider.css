@@ -67,7 +67,8 @@
 .slider-card__graphics {
   position: relative;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 .dish-composition {
   position: absolute;
@@ -180,6 +181,9 @@
   width: 20rem; }
 
 @media screen and (max-width: 768px) {
+  .burger {
+    max-width: 75%; }
+
   .popup__exit {
     height: 20rem;
     margin-left: 30rem;
@@ -198,7 +202,8 @@
     justify-content: center; }
 
   .slider-card__picture-box {
-    max-width: 70%;
+    max-width: 55%;
+    min-width: 45%;
     margin-bottom: -10%; }
 
   .slider-card__text {
@@ -241,6 +246,12 @@
     margin-top: 7rem; }
 
   .container--slider {
-    width: 95%; } }
+    width: 95%; }
+
+  .slider-card__picture-box {
+    max-width: 80%; }
+
+  .burger {
+    max-width: 90%; } }
 
 /*# sourceMappingURL=slider.css.map */

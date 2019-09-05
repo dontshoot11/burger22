@@ -83,6 +83,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .dish-composition {
@@ -217,6 +218,9 @@
 }
 
 @include tablets {
+    .burger {
+        max-width: 75%
+    }
     .popup__exit {
         height: 20rem;
         margin-left: 30rem;
@@ -235,7 +239,8 @@
         justify-content: center
     }
     .slider-card__picture-box {
-        max-width: 70%;
+        max-width: 55%;
+        min-width: 45%;
         margin-bottom: -10%;
     }
     .slider-card__text {
@@ -281,5 +286,11 @@
     }
     .container--slider {
         width: 95%
+    }
+    .slider-card__picture-box {
+        max-width: 80%
+    }
+    .burger {
+        max-width: 90%
     }
 }
