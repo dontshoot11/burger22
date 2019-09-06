@@ -2,7 +2,8 @@
   position: absolute;
   right: 0;
   top: 0;
-  bottom: 0; }
+  bottom: 0;
+  min-width: 600rem; }
 
 .menu-accordeon {
   display: flex;
@@ -70,7 +71,8 @@
 
 @media screen and (max-width: 768px) {
   .menu-aside {
-    width: 100%; }
+    width: 100%;
+    min-width: auto; }
 
   .menu-accordeon__about {
     min-width: 85vw;
