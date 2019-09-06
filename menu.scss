@@ -51,7 +51,6 @@
         text-align: left;
         white-space: nowrap;
         writing-mode: vertical-lr;
-        display: block
     }
     
     .menu-accordeon__button--myasoet {
@@ -80,6 +79,7 @@
         background-position: center center;
         background-color: rgba(20, 20, 20, 0.7);
         display: block;
+        width: 81rem;
     }
     
     @media screen and (max-width:768px) {
@@ -100,5 +100,8 @@
     @include phone {
         .menu-accordeon__name {
             padding: 40rem 10rem 0rem 10rem
+        }
+        .menu-accordeon__button {
+            width: 61rem;
         }
     }
