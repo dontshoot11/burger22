@@ -107,9 +107,3 @@
             width: 61rem;
         }
     }
-    
-    @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-        .menu-accordeon__button {
-            width: auto;
-        }
-    }
