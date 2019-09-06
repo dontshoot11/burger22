@@ -21,10 +21,6 @@
         max-width: 100%;
     }
     
-    .menu-accordeon__button {
-        background-color: rgba(20, 20, 20, 0.7)
-    }
-    
     .menu-accordeon__content {
         width: 0;
         overflow: hidden;
@@ -78,14 +74,13 @@
         font-size: 36rem;
         text-transform: uppercase;
         color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
         padding: 0;
         background-size: cover;
         background-size: cover;
         height: 100vh;
         background-position: center center;
+        background-color: rgba(20, 20, 20, 0.7);
+        display: block;
     }
     
     @media screen and (max-width:768px) {
