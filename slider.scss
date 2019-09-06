@@ -154,9 +154,8 @@
 }
 
 .slider-card__picture-box {
-    min-width: 70%;
+    max-width: 90%;
     max-height: 100%;
-    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center
@@ -239,8 +238,7 @@
         justify-content: center
     }
     .slider-card__picture-box {
-        max-width: 55%;
-        min-width: 45%;
+        max-width: 315rem;
         margin-bottom: -10%;
     }
     .slider-card__text {
@@ -288,7 +286,7 @@
         width: 95%
     }
     .slider-card__picture-box {
-        max-width: 80%
+        max-width: 300rem;
     }
     .burger {
         max-width: 100%
