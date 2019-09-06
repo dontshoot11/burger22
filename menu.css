@@ -30,7 +30,8 @@
   background-color: rgba(47, 50, 52, 0.9);
   height: 100%;
   padding: 62rem 37rem 10rem 33rem;
-  min-width: 540rem; }
+  min-width: 540rem;
+  box-sizing: border-box; }
 
 .menu-accordeon__card--active .menu-accordeon__button {
   color: #f9b43b; }
