@@ -1,0 +1,63 @@
+@charset "UTF-8";
+.wallpaper--fullscreen {
+  background: rgba(47, 50, 52, 0.99);
+  position: fixed;
+  width: 100%;
+  right: -100%;
+  z-index: 2;
+  transition: 0.3s; }
+
+.container--fullscreen {
+  flex-direction: column;
+  height: 100%; }
+
+.fullscreen__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+
+.vertical-menu-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center; }
+
+.vertical-menu-list__link {
+  color: #fff;
+  font-family: 'ubuntu-regular';
+  font-size: 24rem;
+  text-transform: uppercase; }
+
+.vertical-menu-list__element {
+  position: relative;
+  margin-top: 40rem; }
+  .vertical-menu-list__element:last-child::after {
+    display: none; }
+  .vertical-menu-list__element::after {
+    position: absolute;
+    content: "•";
+    top: 40rem;
+    right: 50%;
+    color: #ffffff; }
+  .vertical-menu-list__element:first-child {
+    margin-top: 0; }
+
+/*.cross  {
+    background: c1c2c2;
+    height: 100px; 
+    width: 20px;
+    position: relative; 
+    left: 40px;
+    }
+    .cross:after {
+    content: "";
+    height: 20px; 
+    width: 100px;
+    background: c1c2c2;
+    position: absolute; 
+    left: -40px; 
+    top: 40px;
+    } */
+
+/*# sourceMappingURL=fullscreen-menu.css.map */

@@ -47,12 +47,15 @@
     
     .menu-accordeon__name {
         transform: rotate(180deg);
-        padding: 40rem 20rem 0rem 20rem;
         background-color: rgba(20, 20, 20, 0.7);
         height: 100vh;
         text-align: left;
         white-space: nowrap;
         writing-mode: vertical-lr;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 40rem 0rem 0rem 0rem
     }
     
     .menu-accordeon__button--myasoet {
@@ -81,7 +84,7 @@
         background-position: center center;
         background-color: rgba(20, 20, 20, 0.7);
         display: block;
-        width: 81rem;
+        width: 81px;
         box-sizing: border-box
     }
     
@@ -103,10 +106,10 @@
     
     @include phone {
         .menu-accordeon__name {
-            padding: 40rem 10rem 0rem 10rem
+            padding: 20rem 0rem 0rem 0rem
         }
         .menu-accordeon__button {
-            width: 61rem;
+            width: 61px;
         }
         .menu-accordeon__about {
             padding: 50rem 10rem 10rem 15rem;
