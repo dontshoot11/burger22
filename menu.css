@@ -86,6 +86,10 @@
     padding: 40rem 10rem 0rem 10rem; }
 
   .menu-accordeon__button {
-    width: 61rem; } }
+    width: 61rem; }
+
+  .menu-accordeon__about {
+    padding: 50rem 5rem 10rem 15rem;
+    min-width: 80vw; } }
 
 /*# sourceMappingURL=menu.css.map */
