@@ -44,7 +44,9 @@ for (let i = 0; i < menuAccordeonCard.length; i++) {
         } else {
             menuAccordeonCard[i].classList.add('menu-accordeon__card--active');
 
-            menuAccordeonCard[i].childNodes[3].style.width = (asideWidth - menuAccordeonButton.clientWidth) + 'px';
+            menuAccordeonCard[i].childNodes[3].style.width = (asideWidth - menuAccordeonButton.scrollWidth) + 'px';
+
+            console.log(menuAccordeonButton.scrollWidth)
         };
     })
 };

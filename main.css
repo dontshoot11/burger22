@@ -67,7 +67,6 @@ button {
   html {
     font-size: 0.8px; } }
 .header {
-  margin-top: 13rem;
   width: 100%; }
 
 .logo__link {
@@ -827,7 +826,7 @@ button {
 
 @media screen and (max-width: 768px) {
   .menu-aside {
-    width: 100%;
+    width: 100vw;
     min-width: auto; }
 
   .menu-accordeon__about {
