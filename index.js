@@ -22,7 +22,7 @@ for (let i = 0; i < menuAccordeonCard.length; i++) {
 
         let asideWidth = menuAside.clientWidth;
         console.log(asideWidth);
-        let menuAccordeonButton = document.querySelector('.menu-accordeon__button');
+        let menuAccordeonButton = document.querySelectorAll('.menu-accordeon__button');
         let contentWidth = menuAccordeonCard[i].childNodes[3].firstElementChild.scrollWidth + "px";
 
         if (activeCard) {
@@ -44,9 +44,11 @@ for (let i = 0; i < menuAccordeonCard.length; i++) {
         } else {
             menuAccordeonCard[i].classList.add('menu-accordeon__card--active');
 
-            menuAccordeonCard[i].childNodes[3].style.width = (asideWidth - menuAccordeonButton.scrollWidth) + 'px';
+            if (window.matchMedia("(max-width: 480px)").matches) {
+                menuAccordeonCard[i].childNodes[3].style.width = (asideWidth - 61) + 'px';
+            } else { menuAccordeonCard[i].childNodes[3].style.width = (asideWidth - 81) + 'px'; }
 
-            console.log(menuAccordeonButton.scrollWidth)
+
         };
     })
 };
