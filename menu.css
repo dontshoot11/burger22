@@ -66,7 +66,7 @@
   background-position: center center;
   background-color: rgba(20, 20, 20, 0.7);
   display: block;
-  width: 81px;
+  width: 81rem;
   box-sizing: border-box; }
 
 @media screen and (max-width: 768px) {
@@ -86,7 +86,7 @@
     padding: 40rem 10rem 0rem 10rem; }
 
   .menu-accordeon__button {
-    width: 61px; }
+    width: 61rem; }
 
   .menu-accordeon__about {
     padding: 50rem 10rem 10rem 15rem;
