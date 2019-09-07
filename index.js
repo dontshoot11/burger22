@@ -42,11 +42,14 @@ for (let i = 0; i < menuAccordeonCard.length; i++) {
 
 
         } else {
-            menuAccordeonCard[i].classList.add('menu-accordeon__card--active');
+            menuAccordeonCard[i].classList.add('menu-accordeon__card--active'),
 
-            if (window.matchMedia("(max-width: 480px)").matches) {
-                menuAccordeonCard[i].childNodes[3].style.width = (asideWidth - 61) + 'px';
-            } else { menuAccordeonCard[i].childNodes[3].style.width = (asideWidth - 81) + 'px'; }
+
+                menuAccordeonCard[i].childNodes[3].style.width = contentWidth;
+
+
+
+            console.log(menuAccordeonCard[i].childNodes[3])
 
 
         };
