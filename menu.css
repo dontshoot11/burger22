@@ -75,7 +75,7 @@
     min-width: auto; }
 
   .menu-accordeon__about {
-    min-width: 85vw;
+    min-width: calc(100vw - 81px);
     padding: 50rem 25rem 10rem 15rem; }
 
   .menu-accordeon__card--active {
@@ -89,7 +89,7 @@
     width: 61rem; }
 
   .menu-accordeon__about {
-    padding: 50rem 5rem 10rem 15rem;
-    min-width: 80vw; } }
+    padding: 50rem 10rem 10rem 15rem;
+    min-width: calc(100vw - 61px); } }
 
 /*# sourceMappingURL=menu.css.map */
