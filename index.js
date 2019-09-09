@@ -309,7 +309,7 @@ if ($(window).width() > 768) {
             console.log($(document).scrollTop());
             if (reqSection.length) {
 
-                wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() {
+                wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() {
                     activeSection.removeClass('section-active'), reqSection.addClass('section-active'),
                         sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active'), console.log(activeButtonIndex + '  индекс кнопки')
                 });
@@ -329,8 +329,8 @@ if ($(window).width() > 768) {
                 console.log('идем вверх');
                 console.log($(document).scrollTop());
 
-                wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
-            } else { wrapper.animate({ 'top': 0 }, 400, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
+                wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
+            } else { wrapper.stop(true, false).animate({ 'top': 0 }, 300, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
         }
 
 
@@ -362,7 +362,7 @@ if ($(window).width() > 768) {
 
 
 
-        wrapper.animate({ 'top': -$(this).index() * 100 + 'vh' }, 400,
+        wrapper.stop(true, false).animate({ 'top': -$(this).index() * 100 + 'vh' }, 300,
             function() {
                 let sideMenuButtonActive = $('.sidemenu__button--active');
                 let activeButtonIndex = sideMenuButtonActive.index();
