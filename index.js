@@ -347,13 +347,15 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.prev();
         let reqSlideIndex = reqSection.index();
+        let windowHeight = $(window).height();
+        console.log(windowHeight);
 
 
         console.log('идем вниз');
-        console.log($(document).scrollTop());
+
         if (reqSection.length) {
 
-            wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     },
     wipeDown: function() {
@@ -361,13 +363,14 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.next();
         let reqSlideIndex = reqSection.index();
+        let windowHeight = $(window).height();
 
 
         console.log('идем вверх');
         console.log($(document).scrollTop());
         if (reqSection.length) {
 
-            wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     }
 })
