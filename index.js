@@ -156,7 +156,7 @@ let modalButton = document.querySelector('.modal-window--button');
 let body = document.querySelector('body');
 modalButton.addEventListener('click', function() {
     modal.style.display = 'none';
-    body.style.overflow = 'auto';
+
 })
 
 
@@ -204,18 +204,18 @@ formButton.addEventListener('click', function(e) {
                 if (xhr.response.status) {
                     modal.style.display = 'flex';
                     modalText.textContent = 'Сообщение отправлено';
-                    body.style.overflow = 'hidden';
+
                     form.reset();
                 } else {
                     modal.style.display = 'flex';
                     modalText.textContent = 'что-то пошло не так, попробуйте еще раз';
-                    body.style.overflow = 'hidden';
+
                 }
             })
     } else {
         modal.style.display = 'flex';
         modalText.textContent = 'Поля "Имя","Телефон" и "Комментарий" нужно заполнить, без них доставку не оформить';
-        body.style.overflow = 'hidden';
+
     }
 
 
@@ -254,25 +254,44 @@ for (let i = 0; i < feedbackButtons.length; i++) {
 
 $('body').on('wheel', function(e) {
     //e.preventDefault();
-    let sectionHeight = parseInt($('section').css('height'));
-    let scrollTop = parseInt($('document').scrollTop);
     let wrapper = $('.wrapper');
+    let activeSection = $('.section-active');
+
+
+    let sectionHeight = parseInt(activeSection.css('height'));
+
+
+
 
 
 
     console.log(e.originalEvent.wheelDelta)
     if (e.originalEvent.wheelDelta < 0) {
+        let reqSection = activeSection.next();
+        let reqSlideIndex = reqSection.index();
+
 
         console.log('идем вниз');
         console.log($(document).scrollTop());
-        console.log(sectionHeight + ' высота секции ', scrollTop + sectionHeight);
-        // wrapper.animate({ 'top': -sectionHeight }, 300)
-        // $(document).scrollTop(scrollTop + sectionHeight);
+        if (reqSection.length) {
+
+            wrapper.animate({ 'top': -reqSlideIndex * sectionHeight }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+        }
+
+
 
 
     } else {
-        console.log('идем вверх');
-        console.log($(document).scrollTop());
+        let reqSection = activeSection.prev();
+        let reqSlideIndex = reqSection.index();
+
+
+        if (reqSection.length) {
+            console.log('идем вверх');
+            console.log($(document).scrollTop());
+
+            wrapper.animate({ 'top': -reqSlideIndex * sectionHeight }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+        }
     }
 
 

@@ -6,7 +6,8 @@ body {
   font-family: 'ubuntu-medium';
   font-size: 13rem;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow: hidden; }
 
 html {
   box-sizing: border-box; }
@@ -45,7 +46,8 @@ button {
   min-width: 100%;
   min-height: 100%;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  top: 0; }
 
 .section-title {
   font-family: 'gagalin';
