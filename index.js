@@ -297,7 +297,7 @@ for (let i = 0; i < feedbackButtons.length; i++) {
 $(document).ready(function() {
     if ($(window).width() > 768) {
         $('.wrapper').css("top", "0vh");
-        let sectionHeight = parseInt($('.wallpaper').css('height'));
+        let windowHeight = $(window).height();
 
 
         $('body').on('wheel', function(e) {
@@ -315,7 +315,7 @@ $(document).ready(function() {
                 console.log($(document).scrollTop());
                 if (reqSection.length) {
 
-                    wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+                    wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
                 }
 
 
@@ -330,7 +330,7 @@ $(document).ready(function() {
                     console.log('идем вверх');
                     console.log($(document).scrollTop());
 
-                    wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+                    wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
                 }
             }
 
