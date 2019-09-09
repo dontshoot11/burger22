@@ -345,7 +345,7 @@ $('body').touchwipe({
     wipeUp: function() {
         let wrapper = $('.wrapper');
         let activeSection = $('.section-active');
-        let reqSection = activeSection.next();
+        let reqSection = activeSection.prev();
         let reqSlideIndex = reqSection.index();
 
 
@@ -359,7 +359,7 @@ $('body').touchwipe({
     wipeDown: function() {
         let wrapper = $('.wrapper');
         let activeSection = $('.section-active');
-        let reqSection = activeSection.prev();
+        let reqSection = activeSection.next();
         let reqSlideIndex = reqSection.index();
 
 
