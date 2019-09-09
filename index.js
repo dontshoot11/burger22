@@ -1,3 +1,44 @@
+/**
+ * jQuery Plugin to obtain touch gestures from iPhone, iPod Touch and iPad, should also work with Android mobile phones (not tested yet!)
+ * Common usage: wipe images (left and right to show the previous or next image)
+ * 
+ * @author Andreas Waltl, netCU Internetagentur (http://www.netcu.de)
+ * @version 1.1.1 (9th December 2010) - fix bug (older IE's had problems)
+ * @version 1.1 (1st September 2010) - support wipe up and wipe down
+ * @version 1.0 (15th July 2010)
+ */
+(function($) {
+    $.fn.touchwipe = function(settings) {
+        var config = { min_move_x: 20, min_move_y: 20, wipeLeft: function() {}, wipeRight: function() {}, wipeUp: function() {}, wipeDown: function() {}, preventDefaultEvents: true };
+        if (settings) $.extend(config, settings);
+        this.each(function() {
+            var startX;
+            var startY;
+            var isMoving = false;
+
+            function cancelTouch() {
+                this.removeEventListener('touchmove', onTouchMove);
+                startX = null;
+                isMoving = false
+            }
+
+            function onTouchMove(e) { if (config.preventDefaultEvents) { e.preventDefault() } if (isMoving) { var x = e.touches[0].pageX; var y = e.touches[0].pageY; var dx = startX - x; var dy = startY - y; if (Math.abs(dx) >= config.min_move_x) { cancelTouch(); if (dx > 0) { config.wipeLeft() } else { config.wipeRight() } } else if (Math.abs(dy) >= config.min_move_y) { cancelTouch(); if (dy > 0) { config.wipeDown() } else { config.wipeUp() } } } }
+
+            function onTouchStart(e) {
+                if (e.touches.length == 1) {
+                    startX = e.touches[0].pageX;
+                    startY = e.touches[0].pageY;
+                    isMoving = true;
+                    this.addEventListener('touchmove', onTouchMove, false)
+                }
+            }
+            if ('ontouchstart' in document.documentElement) { this.addEventListener('touchstart', onTouchStart, false) }
+        });
+        return this
+    }
+})(jQuery);
+
+
 let buttonBurger = document.querySelector('.button-burger');
 let wallpaperFullscreen = document.querySelector('.wallpaper--fullscreen')
 buttonBurger.addEventListener('click', function() { wallpaperFullscreen.style.right = '0' })
@@ -156,7 +197,7 @@ let modalButton = document.querySelector('.modal-window--button');
 let body = document.querySelector('body');
 modalButton.addEventListener('click', function() {
     modal.style.display = 'none';
-    if ($(window).width() < 768) { body.style.overflow = 'auto' }
+    // if ($(window).width() < 768) { body.style.overflow = 'auto' }
 
 })
 
@@ -205,20 +246,20 @@ formButton.addEventListener('click', function(e) {
                 if (xhr.response.status) {
                     modal.style.display = 'flex';
                     modalText.textContent = 'Сообщение отправлено';
-                    if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+                    //  if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
                     form.reset();
                 } else {
                     modal.style.display = 'flex';
                     modalText.textContent = 'что-то пошло не так, попробуйте еще раз';
-                    if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+                    // if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
                 }
             })
     } else {
         modal.style.display = 'flex';
         modalText.textContent = 'Поля "Имя","Телефон" и "Комментарий" нужно заполнить, без них доставку не оформить';
-        if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+        //  if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
     }
 
@@ -255,13 +296,13 @@ for (let i = 0; i < feedbackButtons.length; i++) {
 
 $(document).ready(function() {
     if ($(window).width() > 768) {
-        $('.wrapper').css("top", "0px");
+        $('.wrapper').css("top", "0vh");
         let sectionHeight = parseInt($('.wallpaper').css('height'));
 
 
         $('body').on('wheel', function(e) {
             //e.preventDefault();
-            e.stopPropagation();
+            // e.stopPropagation();
             let wrapper = $('.wrapper');
             let activeSection = $('.section-active');
             console.log(e.originalEvent.wheelDelta)
@@ -274,7 +315,7 @@ $(document).ready(function() {
                 console.log($(document).scrollTop());
                 if (reqSection.length) {
 
-                    wrapper.animate({ 'top': -reqSlideIndex * sectionHeight }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+                    wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
                 }
 
 
@@ -289,12 +330,44 @@ $(document).ready(function() {
                     console.log('идем вверх');
                     console.log($(document).scrollTop());
 
-                    wrapper.animate({ 'top': -reqSlideIndex * sectionHeight }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+                    wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
                 }
             }
 
 
 
         })
+    }
+
+})
+
+$('body').touchwipe({
+    wipeUp: function() {
+        let wrapper = $('.wrapper');
+        let activeSection = $('.section-active');
+        let reqSection = activeSection.next();
+        let reqSlideIndex = reqSection.index();
+
+
+        console.log('идем вниз');
+        console.log($(document).scrollTop());
+        if (reqSection.length) {
+
+            wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+        }
+    },
+    wipeDown: function() {
+        let wrapper = $('.wrapper');
+        let activeSection = $('.section-active');
+        let reqSection = activeSection.prev();
+        let reqSlideIndex = reqSection.index();
+
+
+        console.log('идем вверх');
+        console.log($(document).scrollTop());
+        if (reqSection.length) {
+
+            wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+        }
     }
 })
