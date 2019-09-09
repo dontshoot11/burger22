@@ -399,7 +399,7 @@ $('body').touchwipe({
 
         if (reqSection.length) {
 
-            wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' /*windowHeight + 'px' */ }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     },
     wipeDown: function() {
@@ -414,7 +414,7 @@ $('body').touchwipe({
         console.log($(document).scrollTop());
         if (reqSection.length) {
 
-            wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' /*windowHeight + 'px' */ }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     }
 })
