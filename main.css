@@ -44,7 +44,8 @@ button {
 .wrapper {
   min-width: 100%;
   min-height: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
 
 .section-title {
   font-family: 'gagalin';
@@ -916,7 +917,8 @@ button {
   height: 100%;
   width: 100%;
   display: flex;
-  overflow: hidden; }
+  position: relative;
+  left: 0; }
 
 .slider-buttons {
   position: absolute;

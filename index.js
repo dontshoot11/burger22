@@ -107,13 +107,43 @@ popupExit.addEventListener('click', function() {
     popup.style.opacity = '0',
         dishComposition.style.backgroundColor = '#f08c33'
 });*/
+let arrowLeft = $('.slider-button__arrow--left');
+let arrowRight = $('.slider-button__arrow--right');
+let slidersList = $('.sliders-list');
+let slides = $('.slider-card');
 
-let arrowRight = document.querySelector('.slider-button__arrow--right');
-let slidersList = document.querySelector('.sliders-list');
-let arrowLeft = document.querySelector('.slider-button__arrow--left');
+console.log(slides.length);
 
-arrowRight.addEventListener('click', function(e) { e.preventDefault(), slidersList.appendChild(slidersList.firstElementChild) });
-arrowLeft.addEventListener('click', function(e) { e.preventDefault(), slidersList.insertBefore(slidersList.lastElementChild, slidersList.firstElementChild) })
+
+
+
+
+arrowLeft.on('click', function() {
+    let activeSlide = $('.slider-card--active');
+    let reqItem = activeSlide.prev();
+    let reqIndex = reqItem.index();
+
+    if (reqItem.length) {
+
+        slidersList.animate({ "left": -reqIndex * 100 + '%' }, 300, function() { activeSlide.removeClass('slider-card--active'), reqItem.addClass('slider-card--active') })
+    }
+});
+
+arrowRight.on('click', function() {
+    let activeSlide = $('.slider-card--active');
+    let reqItem = activeSlide.next();
+    let reqIndex = reqItem.index();
+
+    if (reqItem.length) {
+
+        slidersList.animate({ "left": -reqIndex * 100 + '%' }, 300, function() { activeSlide.removeClass('slider-card--active'), reqItem.addClass('slider-card--active') })
+    }
+});
+
+
+
+//{ e.preventDefault(), slidersList.appendChild(slidersList.firstElementChild) });
+
 
 
 
@@ -219,4 +249,32 @@ for (let i = 0; i < feedbackButtons.length; i++) {
         })
 }
 
-//for (let i=0; i<reviews.length; i++) {}
+
+
+
+$('body').on('wheel', function(e) {
+    //e.preventDefault();
+    let sectionHeight = parseInt($('section').css('height'));
+    let scrollTop = parseInt($('document').scrollTop);
+    let wrapper = $('.wrapper');
+
+
+
+    console.log(e.originalEvent.wheelDelta)
+    if (e.originalEvent.wheelDelta < 0) {
+
+        console.log('идем вниз');
+        console.log($(document).scrollTop());
+        console.log(sectionHeight + ' высота секции ', scrollTop + sectionHeight);
+        // wrapper.animate({ 'top': -sectionHeight }, 300)
+        // $(document).scrollTop(scrollTop + sectionHeight);
+
+
+    } else {
+        console.log('идем вверх');
+        console.log($(document).scrollTop());
+    }
+
+
+
+})
