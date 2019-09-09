@@ -132,22 +132,7 @@ for (let i = 0; i < accordeonCard.length; i++) {
 };
 
 
-//это меню с командой
 
-//let sideMenuLink = document.querySelectorAll('.sidemenu__link');
-//for (let i = 0; i < sideMenuLink.length; i++) { sideMenuLink[i].addEventListener('focus', function() { sideMenuLink[i].classList.toggle('sidemenu__link--active') }) };
-/*
-let popupExit = document.querySelector('.popup__exit');
-let popup = document.querySelector('.popup');
-let dishComposition = document.querySelector('.dish-composition')
-dishComposition.addEventListener('click', function() {
-    popup.style.opacity = '1',
-        dishComposition.style.backgroundColor = '#e35028'
-});
-popupExit.addEventListener('click', function() {
-    popup.style.opacity = '0',
-        dishComposition.style.backgroundColor = '#f08c33'
-});*/
 let arrowLeft = $('.slider-button__arrow--left');
 let arrowRight = $('.slider-button__arrow--right');
 let slidersList = $('.sliders-list');
@@ -183,7 +168,6 @@ arrowRight.on('click', function() {
 
 
 
-//{ e.preventDefault(), slidersList.appendChild(slidersList.firstElementChild) });
 
 
 
@@ -197,7 +181,7 @@ let modalButton = document.querySelector('.modal-window--button');
 let body = document.querySelector('body');
 modalButton.addEventListener('click', function() {
     modal.style.display = 'none';
-    // if ($(window).width() < 768) { body.style.overflow = 'auto' }
+    if ($(window).width() < 768) { body.style.overflow = 'auto' }
 
 })
 
@@ -227,7 +211,7 @@ formButton.addEventListener('click', function(e) {
         if (form.elements.name.checkValidity() &&
             form.elements.phone.checkValidity() &&
             form.elements.comment.checkValidity()) { return true } else {
-            return false //form.elements.name.validationMessage
+            return false
         }
     };
 
@@ -246,20 +230,20 @@ formButton.addEventListener('click', function(e) {
                 if (xhr.response.status) {
                     modal.style.display = 'flex';
                     modalText.textContent = 'Сообщение отправлено';
-                    //  if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+                    if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
                     form.reset();
                 } else {
                     modal.style.display = 'flex';
                     modalText.textContent = 'что-то пошло не так, попробуйте еще раз';
-                    // if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+                    if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
                 }
             })
     } else {
         modal.style.display = 'flex';
         modalText.textContent = 'Поля "Имя","Телефон" и "Комментарий" нужно заполнить, без них доставку не оформить';
-        //  if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+        if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
     }
 
@@ -294,97 +278,105 @@ for (let i = 0; i < feedbackButtons.length; i++) {
         })
 }
 let wrapper = $('.wrapper');
-$(document).ready(function() {
-    if ($(window).width() > 768) {
-        $('.wrapper').css("top", "0vh");
-        let windowHeight = $(window).height();
-        let sideMenuButton = $('.sidemenuButton');
+
+if ($(window).width() > 768) {
+
+
+    $('.wrapper').css("top", "0vh");
+    let windowHeight = $(window).height();
 
 
 
 
-        $('body').on('wheel', function(e) {
-            //e.preventDefault();
-            // e.stopPropagation();
 
-            let activeSection = $('.section-active');
+    $('body').on('wheel', function(e) {
+        //e.preventDefault();
+        // e.stopPropagation();
 
-            if (e.originalEvent.deltaY < 0) {
-                let reqSection = activeSection.next();
-                let reqSlideIndex = reqSection.index();
-                let sideMenuButtonActive = $('.sidemenu__button--active');
-                let reqButton = sideMenuButtonActive.next();
-                let activeButtonIndex = sideMenuButtonActive.index();
+        let activeSection = $('.section-active');
 
-
-
-
-                console.log('идем вниз');
-                console.log($(document).scrollTop());
-                if (reqSection.length) {
-
-                    wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() {
-                        activeSection.removeClass('section-active'), reqSection.addClass('section-active'),
-                            sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active'), console.log(activeButtonIndex + '  индекс кнопки')
-                    });
-                }
+        if (e.originalEvent.deltaY < 0) {
+            let reqSection = activeSection.next();
+            let reqSlideIndex = reqSection.index();
+            let sideMenuButtonActive = $('.sidemenu__button--active');
+            let reqButton = sideMenuButtonActive.next();
+            let activeButtonIndex = sideMenuButtonActive.index();
 
 
 
 
-            } else {
-                let reqSection = activeSection.prev();
-                let reqSlideIndex = reqSection.index();
-                let sideMenuButtonActive = $('.sidemenu__button--active');
-                let reqButton = sideMenuButtonActive.prev();
+            console.log('идем вниз');
+            console.log($(document).scrollTop());
+            if (reqSection.length) {
 
-
-                if (reqSection.length) {
-                    console.log('идем вверх');
-                    console.log($(document).scrollTop());
-
-                    wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
-                } else { wrapper.animate({ 'top': 0 }, 400, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
+                wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() {
+                    activeSection.removeClass('section-active'), reqSection.addClass('section-active'),
+                        sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active'), console.log(activeButtonIndex + '  индекс кнопки')
+                });
             }
 
 
 
-        })
-    }
 
-})
-let sideMenuButton = $('.sidemenu__button');
-
-
-
-
-sideMenuButton.on('click', function(e) {
-    let sideMenuButtonActive = $('.sidemenu__button--active');
-    let activeButtonIndex = sideMenuButtonActive.index();
-
-    let windowHeight = $(window).height();
-    let activeSection = $('.section-active');
+        } else {
+            let reqSection = activeSection.prev();
+            let reqSlideIndex = reqSection.index();
+            let sideMenuButtonActive = $('.sidemenu__button--active');
+            let reqButton = sideMenuButtonActive.prev();
 
 
+            if (reqSection.length) {
+                console.log('идем вверх');
+                console.log($(document).scrollTop());
+
+                wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
+            } else { wrapper.animate({ 'top': 0 }, 400, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
+        }
 
 
-    e.preventDefault, sideMenuButtonActive.removeClass('sidemenu__button--active'),
-        $(this).addClass('sidemenu__button--active');
 
-
-    wrapper.animate({ 'top': -$(this).index() * 100 + 'vh' }, 400, function() {
-        let sideMenuButtonActive = $('.sidemenu__button--active');
-        let activeButtonIndex = sideMenuButtonActive.index();
-        let newSection = $('section:eq(' + (parseInt(activeButtonIndex)) + ')');
-        activeSection.removeClass('section-active'), newSection.addClass('section-active'), console.log(activeButtonIndex + ' индекс кнопки')
     })
 
 
-})
+
+    let sideMenuButton = $('.sidemenu__button');
 
 
 
 
+    sideMenuButton.on('click', function(e) {
+
+        e.preventDefault;
+        let sideMenuButtonActive = $('.sidemenu__button--active');
+        let activeButtonIndex = sideMenuButtonActive.index();
+
+        let windowHeight = $(window).height();
+        let activeSection = $('.section-active');
+
+
+
+
+        sideMenuButtonActive.removeClass('sidemenu__button--active');
+        $(this).addClass('sidemenu__button--active');
+
+
+
+
+        wrapper.animate({ 'top': -$(this).index() * 100 + 'vh' }, 400,
+            function() {
+                let sideMenuButtonActive = $('.sidemenu__button--active');
+                let activeButtonIndex = sideMenuButtonActive.index();
+                let newSection = $('section:eq(' + (parseInt(activeButtonIndex)) + ')');
+                activeSection.removeClass('section-active'), newSection.addClass('section-active'), console.log(activeButtonIndex + ' индекс кнопки')
+            })
+
+
+    })
+}
+
+
+
+/* экспериментальные попытки сделать ops на мобильных устройствах
 $('body').touchwipe({
     wipeUp: function() {
         let wrapper = $('.wrapper');
@@ -399,7 +391,7 @@ $('body').touchwipe({
 
         if (reqSection.length) {
 
-            wrapper.animate({ 'top': -reqSlideIndex * 110 + 'vh' /*windowHeight + 'px'*/ }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.animate({ 'top': -reqSlideIndex * 110 + 'vh' /*windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     },
     wipeDown: function() {
@@ -414,7 +406,7 @@ $('body').touchwipe({
         console.log($(document).scrollTop());
         if (reqSection.length) {
 
-            wrapper.animate({ 'top': -reqSlideIndex * 110 + 'vh' /*windowHeight + 'px'*/ }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.animate({ 'top': -reqSlideIndex * 110 + 'vh' windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     }
 });
@@ -428,4 +420,4 @@ window.addEventListener('resize', () => {
     // We execute the same script as before
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', '${vh}px');
-});
+}); */

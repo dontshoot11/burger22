@@ -5,7 +5,8 @@
   text-align: center; }
 
 .sidemenu__button {
-  margin-bottom: 12rem; }
+  margin-bottom: 12rem;
+  cursor: pointer; }
 
 .sidemenu__button--active .sidemenu__link {
   border: solid 1rem #ffffff;
