@@ -278,6 +278,7 @@ for (let i = 0; i < feedbackButtons.length; i++) {
         })
 }
 let wrapper = $('.wrapper');
+$('body').ready(function() { wrapper.css("top", "0vh") });
 
 if ($(window).width() > 768) {
 
