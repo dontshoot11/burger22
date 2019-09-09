@@ -297,7 +297,7 @@ let wrapper = $('.wrapper');
 $(document).ready(function() {
     if ($(window).width() > 768) {
         $('.wrapper').css("top", "0vh");
-        let windowHeight = $(window).innerHeight();
+        let windowHeight = $(window).height();
         let sideMenuButton = $('.sidemenuButton');
 
 
@@ -362,7 +362,7 @@ sideMenuButton.on('click', function(e) {
     let sideMenuButtonActive = $('.sidemenu__button--active');
     let activeButtonIndex = sideMenuButtonActive.index();
 
-    let windowHeight = $(window).innerHeight();
+    let windowHeight = $(window).height();
     let activeSection = $('.section-active');
 
 
@@ -391,7 +391,7 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.prev();
         let reqSlideIndex = reqSection.index();
-        let windowHeight = $(window).innerHeight();
+        let windowHeight = $(window).height();
         console.log(windowHeight);
 
 
@@ -407,7 +407,7 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.next();
         let reqSlideIndex = reqSection.index();
-        let windowHeight = $(window).innerHeight();
+        let windowHeight = $(window).height();
 
 
         console.log('идем вверх');
