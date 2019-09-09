@@ -297,7 +297,7 @@ let wrapper = $('.wrapper');
 $(document).ready(function() {
     if ($(window).width() > 768) {
         $('.wrapper').css("top", "0vh");
-        let windowHeight = $(window).height();
+        let windowHeight = $(window).innerHeight();
         let sideMenuButton = $('.sidemenuButton');
 
 
@@ -308,8 +308,8 @@ $(document).ready(function() {
             // e.stopPropagation();
 
             let activeSection = $('.section-active');
-            console.log(e.originalEvent.wheelDelta)
-            if (e.originalEvent.wheelDelta < 0) {
+
+            if (e.originalEvent.deltaY < 0) {
                 let reqSection = activeSection.next();
                 let reqSlideIndex = reqSection.index();
                 let sideMenuButtonActive = $('.sidemenu__button--active');
@@ -362,7 +362,7 @@ sideMenuButton.on('click', function(e) {
     let sideMenuButtonActive = $('.sidemenu__button--active');
     let activeButtonIndex = sideMenuButtonActive.index();
 
-    let windowHeight = $(window).height();
+    let windowHeight = $(window).innerHeight();
     let activeSection = $('.section-active');
 
 
@@ -407,7 +407,7 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.next();
         let reqSlideIndex = reqSection.index();
-        let windowHeight = $(window).height();
+        let windowHeight = $(window).innerHeight();
 
 
         console.log('идем вверх');
@@ -417,6 +417,6 @@ $('body').touchwipe({
             wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     }
-})
+});
 
 $('section').height(window.innerHeight + 'px');
