@@ -418,5 +418,3 @@ $('body').touchwipe({
         }
     }
 });
-
-$('section').height(window.innerHeight + 'px');
