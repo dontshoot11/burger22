@@ -323,7 +323,7 @@ $(document).ready(function() {
                 console.log($(document).scrollTop());
                 if (reqSection.length) {
 
-                    wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() {
+                    wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() {
                         activeSection.removeClass('section-active'), reqSection.addClass('section-active'),
                             sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active'), console.log(activeButtonIndex + '  индекс кнопки')
                     });
@@ -343,7 +343,7 @@ $(document).ready(function() {
                     console.log('идем вверх');
                     console.log($(document).scrollTop());
 
-                    wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
+                    wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
                 } else { wrapper.animate({ 'top': 0 }, 400, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
             }
 
@@ -372,7 +372,7 @@ sideMenuButton.on('click', function(e) {
         $(this).addClass('sidemenu__button--active');
 
 
-    wrapper.animate({ 'top': -$(this).index() * windowHeight + 'px' }, 400, function() {
+    wrapper.animate({ 'top': -$(this).index() * 100 + 'vh' }, 400, function() {
         let sideMenuButtonActive = $('.sidemenu__button--active');
         let activeButtonIndex = sideMenuButtonActive.index();
         let newSection = $('section:eq(' + (parseInt(activeButtonIndex)) + ')');
@@ -399,7 +399,7 @@ $('body').touchwipe({
 
         if (reqSection.length) {
 
-            wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' /*windowHeight + 'px'*/ }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     },
     wipeDown: function() {
@@ -414,7 +414,7 @@ $('body').touchwipe({
         console.log($(document).scrollTop());
         if (reqSection.length) {
 
-            wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.animate({ 'top': -reqSlideIndex * 100 + 'vh' /*windowHeight + 'px'*/ }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     }
 });
