@@ -278,7 +278,10 @@ for (let i = 0; i < feedbackButtons.length; i++) {
         })
 }
 let wrapper = $('.wrapper');
-$('body').ready(function() { wrapper.css("top", "0vh") });
+let activeSectionPosition = $('.section-active').index() * 100 + 'vh';
+console.log(activeSectionPosition);
+
+$('body').ready(function() { window.scrollTo(0, 0) });
 
 if ($(window).width() > 768) {
 
