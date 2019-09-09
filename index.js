@@ -391,7 +391,7 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.prev();
         let reqSlideIndex = reqSection.index();
-        let windowHeight = $(window).outerHeight(true);
+        let windowHeight = $(window).innerHeight();
         console.log(windowHeight);
 
 
@@ -407,7 +407,7 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.next();
         let reqSlideIndex = reqSection.index();
-        let windowHeight = $(window).outerHeight(true);
+        let windowHeight = $(window).innerHeight();
 
 
         console.log('идем вверх');
