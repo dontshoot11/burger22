@@ -60,6 +60,11 @@ button {
     top: 0px;
 }
 
+.section {
+    min-height: -webkit-fill-available
+}
+
+;
 .section-title {
     font-family: 'gagalin';
     font-size: 72rem;
