@@ -249,51 +249,54 @@ for (let i = 0; i < feedbackButtons.length; i++) {
         })
 }
 
+$(document).ready(function() {
+    if ($(window).width() > 768) {
+
+        $('body').on('wheel', function(e) {
+            //e.preventDefault();
+            e.stopPropagation();
+            let wrapper = $('.wrapper');
+            let activeSection = $('.section-active');
 
 
-
-$('body').on('wheel', function(e) {
-    //e.preventDefault();
-    let wrapper = $('.wrapper');
-    let activeSection = $('.section-active');
-
-
-    let sectionHeight = parseInt(activeSection.css('height'));
-
-
-
-
-
-
-    console.log(e.originalEvent.wheelDelta)
-    if (e.originalEvent.wheelDelta < 0) {
-        let reqSection = activeSection.next();
-        let reqSlideIndex = reqSection.index();
-
-
-        console.log('идем вниз');
-        console.log($(document).scrollTop());
-        if (reqSection.length) {
-
-            wrapper.animate({ 'top': -reqSlideIndex * sectionHeight }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
-        }
+            let sectionHeight = parseInt(activeSection.css('height'));
 
 
 
 
-    } else {
-        let reqSection = activeSection.prev();
-        let reqSlideIndex = reqSection.index();
 
 
-        if (reqSection.length) {
-            console.log('идем вверх');
-            console.log($(document).scrollTop());
+            console.log(e.originalEvent.wheelDelta)
+            if (e.originalEvent.wheelDelta < 0) {
+                let reqSection = activeSection.next();
+                let reqSlideIndex = reqSection.index();
 
-            wrapper.animate({ 'top': -reqSlideIndex * sectionHeight }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
-        }
+
+                console.log('идем вниз');
+                console.log($(document).scrollTop());
+                if (reqSection.length) {
+
+                    wrapper.animate({ 'top': -reqSlideIndex * sectionHeight }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+                }
+
+
+
+
+            } else {
+                let reqSection = activeSection.prev();
+                let reqSlideIndex = reqSection.index();
+
+
+                if (reqSection.length) {
+                    console.log('идем вверх');
+                    console.log($(document).scrollTop());
+
+                    wrapper.animate({ 'top': -reqSlideIndex * sectionHeight }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+                }
+            }
+
+
+
+        })
     }
-
-
-
 })
