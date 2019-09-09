@@ -10,6 +10,13 @@
     margin-bottom: 12rem;
 }
 
+.sidemenu__button--active {
+    .sidemenu__link {
+        border: solid 1rem #ffffff;
+        border-radius: 50%;
+    }
+}
+
 .sidemenu__button:last-child {
     margin: 0
 }
@@ -42,15 +49,6 @@
         border-radius: 50%;
         transition: 0.3s
     }
-}
-
-.sidemenu__link--active {
-    border: solid 1rem #ffffff;
-    border-radius: 50%;
-}
-
-.sidemenu__button {
-    margin-bottom: 12rem;
 }
 
 @media screen and (max-width:768px) {

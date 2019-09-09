@@ -134,8 +134,8 @@ for (let i = 0; i < accordeonCard.length; i++) {
 
 //это меню с командой
 
-let sideMenuLink = document.querySelectorAll('.sidemenu__link');
-for (let i = 0; i < sideMenuLink.length; i++) { sideMenuLink[i].addEventListener('focus', function() { sideMenuLink[i].classList.toggle('sidemenu__link--active') }) };
+//let sideMenuLink = document.querySelectorAll('.sidemenu__link');
+//for (let i = 0; i < sideMenuLink.length; i++) { sideMenuLink[i].addEventListener('focus', function() { sideMenuLink[i].classList.toggle('sidemenu__link--active') }) };
 /*
 let popupExit = document.querySelector('.popup__exit');
 let popup = document.querySelector('.popup');
@@ -293,29 +293,40 @@ for (let i = 0; i < feedbackButtons.length; i++) {
 
         })
 }
-
+let wrapper = $('.wrapper');
 $(document).ready(function() {
     if ($(window).width() > 768) {
         $('.wrapper').css("top", "0vh");
         let windowHeight = $(window).height();
+        let sideMenuButton = $('.sidemenuButton');
+
+
 
 
         $('body').on('wheel', function(e) {
             //e.preventDefault();
             // e.stopPropagation();
-            let wrapper = $('.wrapper');
+
             let activeSection = $('.section-active');
             console.log(e.originalEvent.wheelDelta)
             if (e.originalEvent.wheelDelta < 0) {
                 let reqSection = activeSection.next();
                 let reqSlideIndex = reqSection.index();
+                let sideMenuButtonActive = $('.sidemenu__button--active');
+                let reqButton = sideMenuButtonActive.next();
+                let activeButtonIndex = sideMenuButtonActive.index();
+
+
 
 
                 console.log('идем вниз');
                 console.log($(document).scrollTop());
                 if (reqSection.length) {
 
-                    wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+                    wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() {
+                        activeSection.removeClass('section-active'), reqSection.addClass('section-active'),
+                            sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active'), console.log(activeButtonIndex + '  индекс кнопки')
+                    });
                 }
 
 
@@ -324,14 +335,16 @@ $(document).ready(function() {
             } else {
                 let reqSection = activeSection.prev();
                 let reqSlideIndex = reqSection.index();
+                let sideMenuButtonActive = $('.sidemenu__button--active');
+                let reqButton = sideMenuButtonActive.prev();
 
 
                 if (reqSection.length) {
                     console.log('идем вверх');
                     console.log($(document).scrollTop());
 
-                    wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
-                }
+                    wrapper.animate({ 'top': -reqSlideIndex * windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
+                } else { wrapper.animate({ 'top': 0 }, 400, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
             }
 
 
@@ -340,6 +353,37 @@ $(document).ready(function() {
     }
 
 })
+let sideMenuButton = $('.sidemenu__button');
+
+
+
+
+sideMenuButton.on('click', function(e) {
+    let sideMenuButtonActive = $('.sidemenu__button--active');
+    let activeButtonIndex = sideMenuButtonActive.index();
+
+    let windowHeight = $(window).height();
+    let activeSection = $('.section-active');
+
+
+
+
+    e.preventDefault, sideMenuButtonActive.removeClass('sidemenu__button--active'),
+        $(this).addClass('sidemenu__button--active');
+
+
+    wrapper.animate({ 'top': -$(this).index() * windowHeight + 'px' }, 400, function() {
+        let sideMenuButtonActive = $('.sidemenu__button--active');
+        let activeButtonIndex = sideMenuButtonActive.index();
+        let newSection = $('section:eq(' + (parseInt(activeButtonIndex)) + ')');
+        activeSection.removeClass('section-active'), newSection.addClass('section-active'), console.log(activeButtonIndex + ' индекс кнопки')
+    })
+
+
+})
+
+
+
 
 $('body').touchwipe({
     wipeUp: function() {
