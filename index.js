@@ -156,6 +156,7 @@ let modalButton = document.querySelector('.modal-window--button');
 let body = document.querySelector('body');
 modalButton.addEventListener('click', function() {
     modal.style.display = 'none';
+    if ($(window).width() < 768) { body.style.overflow = 'auto' }
 
 })
 
@@ -204,17 +205,20 @@ formButton.addEventListener('click', function(e) {
                 if (xhr.response.status) {
                     modal.style.display = 'flex';
                     modalText.textContent = 'Сообщение отправлено';
+                    if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
                     form.reset();
                 } else {
                     modal.style.display = 'flex';
                     modalText.textContent = 'что-то пошло не так, попробуйте еще раз';
+                    if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
                 }
             })
     } else {
         modal.style.display = 'flex';
         modalText.textContent = 'Поля "Имя","Телефон" и "Комментарий" нужно заполнить, без них доставку не оформить';
+        if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
     }
 
@@ -251,21 +255,15 @@ for (let i = 0; i < feedbackButtons.length; i++) {
 
 $(document).ready(function() {
     if ($(window).width() > 768) {
+        $('.wrapper').css("top", "0px");
+        let sectionHeight = parseInt($('.wallpaper').css('height'));
+
 
         $('body').on('wheel', function(e) {
             //e.preventDefault();
             e.stopPropagation();
             let wrapper = $('.wrapper');
             let activeSection = $('.section-active');
-
-
-            let sectionHeight = parseInt(activeSection.css('height'));
-
-
-
-
-
-
             console.log(e.originalEvent.wheelDelta)
             if (e.originalEvent.wheelDelta < 0) {
                 let reqSection = activeSection.next();
