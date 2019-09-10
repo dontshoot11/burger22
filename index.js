@@ -181,7 +181,7 @@ let modalButton = document.querySelector('.modal-window--button');
 let body = document.querySelector('body');
 modalButton.addEventListener('click', function() {
     modal.style.display = 'none';
-    if ($(window).width() < 768) { body.style.overflow = 'auto' }
+    // if ($(window).width() < 768) { body.style.overflow = 'auto' }
 
 })
 
@@ -230,20 +230,20 @@ formButton.addEventListener('click', function(e) {
                 if (xhr.response.status) {
                     modal.style.display = 'flex';
                     modalText.textContent = 'Сообщение отправлено';
-                    if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+                    // if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
                     form.reset();
                 } else {
                     modal.style.display = 'flex';
                     modalText.textContent = 'что-то пошло не так, попробуйте еще раз';
-                    if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+                    //  if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
                 }
             })
     } else {
         modal.style.display = 'flex';
         modalText.textContent = 'Поля "Имя","Телефон" и "Комментарий" нужно заполнить, без них доставку не оформить';
-        if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+        //  if ($(window).width() < 768) { body.style.overflow = 'hidden' };
 
     }
 
@@ -283,101 +283,101 @@ console.log(activeSectionPosition);
 
 $('body').ready(function() { window.scrollTo(0, 0) });
 
-if ($(window).width() > 768) {
+//if ($(window).width() > 768) {
 
 
-    $('.wrapper').css("top", "0vh");
-    let windowHeight = $(window).height();
-
-
-
-
-
-    $('body').on('wheel', function(e) {
-        //e.preventDefault();
-        // e.stopPropagation();
-
-        let activeSection = $('.section-active');
-
-        if (e.originalEvent.deltaY < 0) {
-            let reqSection = activeSection.next();
-            let reqSlideIndex = reqSection.index();
-            let sideMenuButtonActive = $('.sidemenu__button--active');
-            let reqButton = sideMenuButtonActive.next();
-            let activeButtonIndex = sideMenuButtonActive.index();
+$('.wrapper').css("top", "0vh");
+let windowHeight = $(window).height();
 
 
 
 
-            console.log('идем вниз');
-            console.log($(document).scrollTop());
-            if (reqSection.length) {
 
-                wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() {
-                    activeSection.removeClass('section-active'), reqSection.addClass('section-active'),
-                        sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active'), console.log(activeButtonIndex + '  индекс кнопки')
-                });
-            }
+$('body').on('wheel', function(e) {
+    //e.preventDefault();
+    // e.stopPropagation();
 
+    let activeSection = $('.section-active');
 
-
-
-        } else {
-            let reqSection = activeSection.prev();
-            let reqSlideIndex = reqSection.index();
-            let sideMenuButtonActive = $('.sidemenu__button--active');
-            let reqButton = sideMenuButtonActive.prev();
+    if (e.originalEvent.deltaY < 0) {
+        let reqSection = activeSection.next();
+        let reqSlideIndex = reqSection.index();
+        let sideMenuButtonActive = $('.sidemenu__button--active');
+        let reqButton = sideMenuButtonActive.next();
+        let activeButtonIndex = sideMenuButtonActive.index();
 
 
-            if (reqSection.length) {
-                console.log('идем вверх');
-                console.log($(document).scrollTop());
 
-                wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
-            } else { wrapper.stop(true, false).animate({ 'top': 0 }, 300, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
+
+        console.log('идем вниз');
+        console.log($(document).scrollTop());
+        if (reqSection.length) {
+
+            wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() {
+                activeSection.removeClass('section-active'), reqSection.addClass('section-active'),
+                    sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active'), console.log(activeButtonIndex + '  индекс кнопки')
+            });
         }
 
 
 
-    })
 
-
-
-    let sideMenuButton = $('.sidemenu__button');
-
-
-
-
-    sideMenuButton.on('click', function(e) {
-
-        e.preventDefault;
+    } else {
+        let reqSection = activeSection.prev();
+        let reqSlideIndex = reqSection.index();
         let sideMenuButtonActive = $('.sidemenu__button--active');
-        let activeButtonIndex = sideMenuButtonActive.index();
-
-        let windowHeight = $(window).height();
-        let activeSection = $('.section-active');
+        let reqButton = sideMenuButtonActive.prev();
 
 
+        if (reqSection.length) {
+            console.log('идем вверх');
+            console.log($(document).scrollTop());
+
+            wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
+        } else { wrapper.stop(true, false).animate({ 'top': 0 }, 300, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
+    }
 
 
-        sideMenuButtonActive.removeClass('sidemenu__button--active');
-        $(this).addClass('sidemenu__button--active');
+
+})
+
+
+
+let sideMenuButton = $('.sidemenu__button');
 
 
 
 
-        wrapper.stop(true, false).animate({ 'top': -$(this).index() * 100 + 'vh' }, 300,
-            function() {
-                let sideMenuButtonActive = $('.sidemenu__button--active');
-                let activeButtonIndex = sideMenuButtonActive.index();
-                let newSection = $('section:eq(' + (parseInt(activeButtonIndex)) + ')');
-                activeSection.removeClass('section-active'), newSection.addClass('section-active'), console.log(activeButtonIndex + ' индекс кнопки')
-            })
+sideMenuButton.on('click', function(e) {
+
+    e.preventDefault;
+    let sideMenuButtonActive = $('.sidemenu__button--active');
+    let activeButtonIndex = sideMenuButtonActive.index();
+
+    let windowHeight = $(window).height();
+    let activeSection = $('.section-active');
 
 
-    })
 
-    $('.button--order').on('click',
+
+    sideMenuButtonActive.removeClass('sidemenu__button--active');
+    $(this).addClass('sidemenu__button--active');
+
+
+
+
+    wrapper.stop(true, false).animate({ 'top': -$(this).index() * 100 + 'vh' }, 300,
+        function() {
+            let sideMenuButtonActive = $('.sidemenu__button--active');
+            let activeButtonIndex = sideMenuButtonActive.index();
+            let newSection = $('section:eq(' + (parseInt(activeButtonIndex)) + ')');
+            activeSection.removeClass('section-active'), newSection.addClass('section-active'), console.log(activeButtonIndex + ' индекс кнопки')
+        })
+
+
+})
+
+$('.button--order').on('click',
         function(e) {
             e.preventDefault(),
                 wrapper.stop(true, false).animate({
@@ -397,11 +397,13 @@ if ($(window).width() > 768) {
 
                 )
         })
-}
+    //}
 
 
 
-/* экспериментальные попытки сделать ops на мобильных устройствах
+//экспериментальные попытки сделать ops на мобильных устройствах
+const innerHeight = $(window).innerHeight();
+console.log(innerHeight);
 $('body').touchwipe({
     wipeUp: function() {
         let wrapper = $('.wrapper');
@@ -416,7 +418,7 @@ $('body').touchwipe({
 
         if (reqSection.length) {
 
-            wrapper.animate({ 'top': -reqSlideIndex * 110 + 'vh' /*windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * innerHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     },
     wipeDown: function() {
@@ -431,21 +433,11 @@ $('body').touchwipe({
         console.log($(document).scrollTop());
         if (reqSection.length) {
 
-            wrapper.animate({ 'top': -reqSlideIndex * 110 + 'vh' windowHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * innerHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     }
 });
-//патч для мобильных устройств
-let vh = window.innerHeight * 0.01;
-// Then we set the value in the --vh custom property to the root of the document
-document.documentElement.style.setProperty('--vh', '${vh}px');
 
-// We listen to the resize event
-window.addEventListener('resize', () => {
-    // We execute the same script as before
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', '${vh}px');
-}); */
 
 
 ymaps.ready(init);

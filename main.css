@@ -8,9 +8,6 @@ body {
   display: flex;
   flex-direction: column;
   overflow: hidden; }
-  @media screen and (max-width: 768px) {
-    body {
-      overflow: auto; } }
 
 html {
   box-sizing: border-box; }

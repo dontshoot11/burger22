@@ -10,9 +10,9 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    @include tablets {
-        overflow: auto;
-    }
+    //  @include tablets {
+    //     overflow: auto;
+    // }
 }
 
 html {
