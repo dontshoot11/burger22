@@ -17,7 +17,7 @@
 }
 
 @mixin short-screen() {
-    @media screen and (max-height: 540px) {
+    @media screen and (max-height: 620px) {
         @content;
     }
 }
