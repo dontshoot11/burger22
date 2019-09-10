@@ -627,6 +627,25 @@ button {
 
   .form__fakeradio {
     top: 3rem; } }
+@media screen and (max-height: 480px) {
+  .form {
+    margin-top: 0; }
+
+  .form__row {
+    margin-top: 3rem; }
+
+  .form__column:last-child {
+    margin-top: 3rem; }
+
+  .section-title {
+    font-size: 50rem;
+    line-height: 0.8em; }
+
+  .form__input--textarea {
+    margin-bottom: 0; }
+
+  .form__block-title {
+    margin-bottom: 3rem; } }
 .team-aside {
   position: absolute;
   right: 0;

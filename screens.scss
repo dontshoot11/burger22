@@ -1,4 +1,5 @@
-@import "colors";
+@import "colors",
+'mixin';
 .firstscreen {
     display: flex;
     flex-direction: column;

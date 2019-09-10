@@ -15,3 +15,9 @@
         @content;
     }
 }
+
+@mixin short-screen() {
+    @media screen and (max-height: 480px) {
+        @content;
+    }
+}
