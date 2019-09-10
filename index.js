@@ -465,18 +465,38 @@ function init() {
         zoom: 10
     });
 
-    var placemarkA = new ymaps.Placemark([59.953198673530146, 30.393466336020953], {});
+    var placemarkA = new ymaps.Placemark([59.953198673530146, 30.393466336020953], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+    });
     myMap.geoObjects.add(placemarkA);
 
 
-    var placemarkB = new ymaps.Placemark([60.06179348690544, 30.315511972036752], {});
+    var placemarkB = new ymaps.Placemark([60.06179348690544, 30.315511972036752], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+    });
     myMap.geoObjects.add(placemarkB);
 
 
-    var placemarkC = new ymaps.Placemark([59.90158991123217, 30.501454044039573], {});
+    var placemarkC = new ymaps.Placemark([59.90158991123217, 30.501454044039573], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+    });
     myMap.geoObjects.add(placemarkC);
 
 
-    var placemarkD = new ymaps.Placemark([59.83427718228793, 30.321805167353265], {});
+    var placemarkD = new ymaps.Placemark([59.83427718228793, 30.321805167353265], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+    });
     myMap.geoObjects.add(placemarkD);
 };
