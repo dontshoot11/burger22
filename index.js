@@ -379,7 +379,7 @@ if ($(window).width() > 768) {
 
     $('.button--order').on('click',
         function(e) {
-            e.preventDefault,
+            e.preventDefault(),
                 wrapper.stop(true, false).animate({
 
                         'top': -$('.order').index() * 100 + 'vh'
