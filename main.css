@@ -627,7 +627,7 @@ button {
 
   .form__fakeradio {
     top: 3rem; } }
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 600px) {
   .form {
     margin-top: 0; }
 
