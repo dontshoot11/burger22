@@ -379,22 +379,23 @@ if ($(window).width() > 768) {
 
     $('.button--order').on('click',
         function(e) {
-            wrapper.stop(true, false).animate({
+            e.preventDefault,
+                wrapper.stop(true, false).animate({
 
-                    'top': -$('.order').index() * 100 + 'vh'
-                }, 300,
-                function() {
-                    let orderIndex = $('.order').index();
+                        'top': -$('.order').index() * 100 + 'vh'
+                    }, 300,
+                    function() {
+                        let orderIndex = $('.order').index();
 
-                    $('.order').siblings().removeClass('section-active');
-                    $('.order').addClass('section-active');
-                    $('.sidemenu__button:eq(' + orderIndex + ')').addClass('sidemenu__button--active');
-                    $('.sidemenu__button:eq(' + orderIndex + ')').siblings().removeClass('sidemenu__button--active');
+                        $('.order').siblings().removeClass('section-active');
+                        $('.order').addClass('section-active');
+                        $('.sidemenu__button:eq(' + orderIndex + ')').addClass('sidemenu__button--active');
+                        $('.sidemenu__button:eq(' + orderIndex + ')').siblings().removeClass('sidemenu__button--active');
 
-                }
+                    }
 
 
-            )
+                )
         })
 }
 
