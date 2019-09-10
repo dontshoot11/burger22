@@ -1410,6 +1410,10 @@ button {
   text-align: center;
   margin-bottom: 10rem; }
 
+.map-container {
+  height: 100%;
+  width: 100%; }
+
 @font-face {
   font-family: 'ubuntu-b';
   src: url("fonts/ubuntu-b.woff2") format("woff2"), url("fonts/ubuntu-b.woff") format("woff");

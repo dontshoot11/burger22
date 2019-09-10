@@ -446,3 +446,37 @@ window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', '${vh}px');
 }); */
+
+
+ymaps.ready(init);
+
+function init() {
+    // Создание карты.    
+    var myMap = new ymaps.Map("yandexmap", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [59.93511328687912, 30.307292324790485],
+        controls: ["zoomControl"],
+        behaviors: ["drag"],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 10
+    });
+
+    var placemarkA = new ymaps.Placemark([59.953198673530146, 30.393466336020953], {});
+    myMap.geoObjects.add(placemarkA);
+
+
+    var placemarkB = new ymaps.Placemark([60.06179348690544, 30.315511972036752], {});
+    myMap.geoObjects.add(placemarkB);
+
+
+    var placemarkC = new ymaps.Placemark([59.90158991123217, 30.501454044039573], {});
+    myMap.geoObjects.add(placemarkC);
+
+
+    var placemarkD = new ymaps.Placemark([59.83427718228793, 30.321805167353265], {});
+    myMap.geoObjects.add(placemarkD);
+};
