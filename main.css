@@ -482,7 +482,7 @@ button {
   flex-direction: column; }
 
 .form {
-  margin-top: 44rem; }
+  margin-top: 7%; }
 
 .form__elem {
   display: flex; }
@@ -1133,8 +1133,7 @@ button {
     justify-content: center; }
 
   .slider-card__picture-box {
-    max-width: 315rem;
-    margin-bottom: -10%; }
+    max-width: 315rem; }
 
   .slider-card__text {
     width: 90%;
