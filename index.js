@@ -39,6 +39,8 @@
 })(jQuery);
 
 
+
+
 let buttonBurger = document.querySelector('.button-burger');
 let wallpaperFullscreen = document.querySelector('.wallpaper--fullscreen')
 buttonBurger.addEventListener('click', function() { wallpaperFullscreen.style.right = '0' })
@@ -502,3 +504,4 @@ function init() {
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
 document.documentElement.style.setProperty('--vh', `${vh}px`);
+$(body).ready(function() { wrapper.stop(true, false).animate({ 'top': 10 }, 1), wrapper.stop(true, false).animate({ 'top': 0 }, 1) });
