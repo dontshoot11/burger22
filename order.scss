@@ -182,7 +182,7 @@
 
 @include short-screen {
     .form {
-        margin-top: 0;
+        margin-top: -30rem;
     }
     .form__row {
         margin-top: 3rem;
@@ -199,7 +199,4 @@
     .form__block-title {
         margin-bottom: 3rem
     }
-    /*.order {
-        justify-content: flex-start
-    } */
 }

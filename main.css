@@ -629,7 +629,7 @@ button {
     top: 3rem; } }
 @media screen and (max-height: 620px) {
   .form {
-    margin-top: 0; }
+    margin-top: -30rem; }
 
   .form__row {
     margin-top: 3rem; }
@@ -644,11 +644,7 @@ button {
     margin-bottom: 0; }
 
   .form__block-title {
-    margin-bottom: 3rem; }
-
-  /*.order {
-      justify-content: flex-start
-  } */ }
+    margin-bottom: 3rem; } }
 .team-aside {
   position: absolute;
   right: 0;
