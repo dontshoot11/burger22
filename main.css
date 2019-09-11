@@ -1300,7 +1300,7 @@ button {
         color: #fff; } }
 
 .nextscreen {
-  position: fixed;
+  position: absolute;
   bottom: 40rem;
   left: 50%; }
   @media screen and (max-width: 768px) {
