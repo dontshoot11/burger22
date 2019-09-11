@@ -65,6 +65,9 @@ button {
     width: 29rem;
     margin-bottom: 40rem;
     display: inline-block;
+    @include tablets {
+        margin-bottom: 120rem;
+    }
 }
 
 .nextscreen__sprite {
