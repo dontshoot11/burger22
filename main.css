@@ -636,8 +636,7 @@ button {
     margin-top: 3rem; }
 
   .section-title {
-    font-size: 50rem;
-    line-height: 0.8em; }
+    display: none; }
 
   .form__input--textarea {
     margin-bottom: 0; }
