@@ -414,7 +414,7 @@ $('body').touchwipe({
         let reqSection = activeSection.prev();
         let reqSlideIndex = reqSection.index();
         const sectionHeight = $('.wallpaper').innerHeight();
-        console.log(sectionHeight + ' высота секции');
+        console.log(sectionHeight + ' высота секции', window.innerHeight + ' высота окна');
 
 
         console.log('идем вниз');
@@ -422,7 +422,7 @@ $('body').touchwipe({
         if (reqSection.length) {
 
             wrapper.stop(true, false).animate({
-                'top': -reqSlideIndex * sectionHeight + 'px'
+                'top': -reqSlideIndex * window.innerHeight + 'px'
             }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     },
@@ -440,7 +440,7 @@ $('body').touchwipe({
         if (reqSection.length) {
 
             wrapper.stop(true, false).animate({
-                'top': -reqSlideIndex * sectionHeight + 'px'
+                'top': -reqSlideIndex * window.innerHeight + 'px'
             }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     }
