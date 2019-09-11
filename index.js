@@ -200,9 +200,20 @@ let body = document.querySelector('body');
 
 
 //$('.form__input').each(function(){})
-modalButton.addEventListener('click', function() {
-    modal.style.display = 'none';
-    // if ($(window).width() < 768) { body.style.overflow = 'auto' }
+//modalButton.addEventListener('click', function() {
+// modal.style.display = 'none';
+// if ($(window).width() < 768) { body.style.overflow = 'auto' }
+
+//})
+
+$('.modal-window--button').on('click', function() {
+    let sectionHeight = $('section').innerHeight();
+    let orderIndex = $('.order').index();
+    let orderPosition = orderIndex * -sectionHeight;
+
+
+    $('.modal').css("display", "none");
+    wrapper.css("top", orderPosition + "px")
 
 })
 
