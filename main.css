@@ -605,8 +605,8 @@ button {
   height: 50rem;
   width: 50rem;
   position: absolute;
-  left: 5%;
-  top: 5%;
+  left: 1%;
+  top: 1%;
   display: none; }
 
 .lock__picture {
