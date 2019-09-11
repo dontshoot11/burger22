@@ -402,23 +402,22 @@ $('.button--order').on('click',
 
 
 //экспериментальные попытки сделать ops на мобильных устройствах
-const innerHeight = $(window).innerHeight();
-console.log(innerHeight);
+
 $('body').touchwipe({
     wipeUp: function() {
         let wrapper = $('.wrapper');
         let activeSection = $('.section-active');
         let reqSection = activeSection.prev();
         let reqSlideIndex = reqSection.index();
-        let windowHeight = $(window).innerHeight();
-        console.log(windowHeight);
+        let sectionHeight = $('section').height();
+        console.log(sectionHeight + ' высота секции');
 
 
         console.log('идем вниз');
 
         if (reqSection.length) {
 
-            wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * innerHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * sectionHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     },
     wipeDown: function() {
@@ -426,14 +425,15 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.next();
         let reqSlideIndex = reqSection.index();
-        let windowHeight = $(window).innerHeight();
+        let sectionHeight = $('section').height();
+
 
 
         console.log('идем вверх');
-        console.log($(document).scrollTop());
+
         if (reqSection.length) {
 
-            wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * innerHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * sectionHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     }
 });
