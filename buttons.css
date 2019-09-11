@@ -18,7 +18,8 @@ button {
   text-transform: uppercase;
   border-radius: 5px;
   color: #ffffff;
-  max-width: max-content; }
+  max-width: max-content;
+  cursor: pointer; }
 
 .button--orange {
   background-color: #e45028;

@@ -1,5 +1,10 @@
 @import "colors";
 @import "mixin";
+.order {
+    z-index: 2;
+    position: relative;
+}
+
 .form {
     margin-top: 7%
 }

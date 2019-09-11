@@ -23,6 +23,7 @@ button {
     border-radius: 5px;
     color: #ffffff;
     max-width: max-content;
+    cursor: pointer;
 }
 
 .button--orange {
@@ -138,7 +139,7 @@ button {
         display: block;
     }
     .button--order {
-        margin-right: 50rem
+        margin-right: 50rem;
     }
 }
 

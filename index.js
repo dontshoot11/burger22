@@ -215,7 +215,7 @@ $('.modal-window--button').on('click', function() {
 
 
     $('.modal').css("display", "none");
-    wrapper.css("top", orderPosition + "px")
+    $('.content').css("top", orderPosition + "px")
 
 })
 
@@ -311,7 +311,7 @@ for (let i = 0; i < feedbackButtons.length; i++) {
 
         })
 }
-let wrapper = $('.wrapper');
+let content = $('.content');
 let activeSectionPosition = $('.section-active').index() * 100 + 'vh';
 console.log(activeSectionPosition);
 
@@ -320,7 +320,7 @@ console.log(activeSectionPosition);
 //if ($(window).width() > 768) {
 
 
-$('.wrapper').css("top", "0vh");
+
 let windowHeight = $(window).height();
 window.scrollTo(0, 1);
 
@@ -351,7 +351,7 @@ function wheelScroll() {
             console.log($(document).scrollTop());
             if (reqSection.length) {
 
-                wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() {
+                content.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() {
                     activeSection.removeClass('section-active'), reqSection.addClass('section-active'),
                         sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active'), console.log(activeButtonIndex + '  индекс кнопки')
                 });
@@ -371,8 +371,8 @@ function wheelScroll() {
                 console.log('идем вверх');
                 console.log($(document).scrollTop());
 
-                wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
-            } else { wrapper.stop(true, false).animate({ 'top': 0 }, 300, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
+                content.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
+            } else { content.stop(true, false).animate({ 'top': 0 }, 300, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
         }
 
 
@@ -392,6 +392,7 @@ function swipeScroll() {
     $('body').touchwipe({
         passive: false,
         wipeUp: function() {
+            console.log('идем вниз');
 
             let activeSection = $('.section-active');
             let reqSection = activeSection.prev();
@@ -400,18 +401,18 @@ function swipeScroll() {
             console.log(sectionHeight + ' высота секции', window.innerHeight + ' высота окна');
 
 
-            console.log('идем вниз');
+
 
             if (reqSection.length) {
 
-                wrapper.stop(true, false).animate({
+                content.stop(true, false).animate({
                     'top': -reqSlideIndex * sectionHeight + 'px'
                 }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
             }
         },
         wipeDown: function() {
 
-            let wrapper = $('.wrapper');
+            let content = $('.content');
             let activeSection = $('.section-active');
             let reqSection = activeSection.next();
             let reqSlideIndex = reqSection.index();
@@ -423,7 +424,7 @@ function swipeScroll() {
 
             if (reqSection.length) {
 
-                wrapper.stop(true, false).animate({
+                content.stop(true, false).animate({
                     'top': -reqSlideIndex * sectionHeight + 'px'
                 }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
             }
@@ -446,7 +447,7 @@ verticalItem.on('click', function(e) {
     console.log(thisIndex + ' thisIndex')
 
     e.preventDefault();
-    wrapper.stop(true, false).animate({ 'top': -thisIndex * sectionHeight + 'px' }, 300)
+    content.stop(true, false).animate({ 'top': -thisIndex * sectionHeight + 'px' }, 300)
 
 
 
@@ -457,7 +458,7 @@ verticalItem.on('click', function(e) {
 
 let logo = $('.logo')
 
-logo.on('click', function(e) { wrapper.stop(true, false).animate({ 'top': 0 }, 300) })
+logo.on('click', function(e) { content.stop(true, false).animate({ 'top': 0 }, 300) })
 
 
 
@@ -487,7 +488,7 @@ sideMenuButton.on('click', function(e) {
 
 
 
-    wrapper.stop(true, false).animate({ 'top': -$(this).index() * 100 + 'vh' }, 300,
+    content.stop(true, false).animate({ 'top': -$(this).index() * 100 + 'vh' }, 300,
         function() {
             let sideMenuButtonActive = $('.sidemenu__button--active');
             let activeButtonIndex = sideMenuButtonActive.index();
@@ -502,7 +503,7 @@ $('.button--order').on('click',
         function(e) {
             const sectionHeight = $('section').innerHeight();
             e.preventDefault();
-            wrapper.stop(true, false).animate({
+            content.stop(true, false).animate({
 
                     'top': -$('.order').index() * sectionHeight + 'px'
                 }, 300,
@@ -533,7 +534,7 @@ $('.form__input').focus(function() {
 
     console.log(orderPosition);
     console.log('куку');
-    $('.order').css({ "position": "fixed", "top": "0", "left": "0", "right": "0", "z-index": "2" });
+    $('.order').css({ "position": "fixed", "left": "0", "right": "0" });
 
 
 
@@ -547,7 +548,7 @@ $('.form__input').blur(function() {
     $('.order').css({ "position": "relative" });
     $('.order').addClass('section-active');
     $('.order').siblings().removeClass('section-active');
-    wrapper.css("top", orderPosition + "px")
+    content.css("top", orderPosition + "px")
 });
 
 
@@ -613,10 +614,3 @@ function init() {
     });
     myMap.geoObjects.add(placemarkD);
 };
-
-
-/*$(body).ready(function() {
-    wrapper.stop(true, false).animate({ 'top': 1000 }, 1, function() {
-        { wrapper.stop(true, false).animate({ 'top': 0 }, 1) }
-    })
-}); */
