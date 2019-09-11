@@ -510,16 +510,19 @@ $('.form__input').focus(function() {
     console.log('куку');
     $('.order').css({ "position": "fixed", "top": "0px", "z-index": "2" });
 
-    $('.wrapper').css({ "position": "fixed", "top": orderPosition + 'px' });
-    return (wheelScroll());
-    return (swipeScroll());
+
+
 });
 
 $('.form__input').blur(function() {
+    let sectionHeight = $('section').innerHeight();
     let orderIndex = $('.order').index();
+    let orderPosition = orderIndex * -sectionHeight;
     console.log('куку');
     $('.order').css({ "position": "relative" });
-    $('.wrapper').css({ "position": "relative" });
+    $('.order').addClass('section-active');
+    $('.order').siblings().removeClass('section-active');
+    wrapper.css("top", orderPosition + "px")
 });
 
 
