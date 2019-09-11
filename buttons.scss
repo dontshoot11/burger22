@@ -61,12 +61,13 @@ button {
 }
 
 .nextscreen {
+    position: fixed;
     // height: 14rem;
     // width: 29rem;
-    margin-bottom: 40rem;
-    display: inline-block;
+    bottom: 40rem;
+    left: 50%;
     @include tablets {
-        margin-bottom: 80rem;
+        bottom: 80rem;
     }
 }
 

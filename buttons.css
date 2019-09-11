@@ -51,11 +51,12 @@ button {
         color: #fff; } }
 
 .nextscreen {
-  margin-bottom: 40rem;
-  display: inline-block; }
+  position: fixed;
+  bottom: 40rem;
+  left: 50%; }
   @media screen and (max-width: 768px) {
     .nextscreen {
-      margin-bottom: 80rem; } }
+      bottom: 80rem; } }
 
 .nextscreen__sprite {
   max-height: 20rem;
