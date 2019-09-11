@@ -422,7 +422,7 @@ $('body').touchwipe({
         if (reqSection.length) {
 
             wrapper.stop(true, false).animate({
-                'top': -reqSlideIndex * sectionHeight + 'px'
+                'top': -reqSlideIndex * window.innerHeight + 'px'
             }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     },
