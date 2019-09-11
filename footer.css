@@ -49,7 +49,7 @@
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding-bottom: 120rem; } }
+    padding-bottom: 80rem; } }
 @media screen and (max-width: 480px) {
   .сontainer--contacts {
     flex-direction: column;

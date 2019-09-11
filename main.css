@@ -824,6 +824,9 @@ button {
   display: flex;
   align-items: center;
   padding: 40rem 0rem 0rem 0rem; }
+  @media screen and (max-width: 768px) {
+    .menu-accordeon__name {
+      padding: 80rem 0rem 0rem 0rem; } }
 
 .menu-accordeon__button--myasoet {
   background: url(img/menu/myasoet.png) no-repeat; }
@@ -861,9 +864,6 @@ button {
     position: absolute;
     z-index: 2; } }
 @media screen and (max-width: 480px) {
-  .menu-accordeon__name {
-    padding: 120rem 0rem 0rem 0rem; }
-
   .menu-accordeon__button {
     width: 61px; }
 
@@ -920,7 +920,7 @@ button {
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding-bottom: 120rem; } }
+    padding-bottom: 80rem; } }
 @media screen and (max-width: 480px) {
   .сontainer--contacts {
     flex-direction: column;
@@ -1254,7 +1254,7 @@ button {
     outline: none; }
 
 .arrow-sprite {
-  width: 20rem; }
+  width: 30rem; }
 
 .button {
   font-weight: 500;
@@ -1295,8 +1295,6 @@ button {
         color: #fff; } }
 
 .nextscreen {
-  height: 14rem;
-  width: 29rem;
   margin-bottom: 40rem;
   display: inline-block; }
   @media screen and (max-width: 768px) {

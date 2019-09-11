@@ -48,6 +48,9 @@
   display: flex;
   align-items: center;
   padding: 40rem 0rem 0rem 0rem; }
+  @media screen and (max-width: 768px) {
+    .menu-accordeon__name {
+      padding: 80rem 0rem 0rem 0rem; } }
 
 .menu-accordeon__button--myasoet {
   background: url(img/menu/myasoet.png) no-repeat; }
@@ -85,9 +88,6 @@
     position: absolute;
     z-index: 2; } }
 @media screen and (max-width: 480px) {
-  .menu-accordeon__name {
-    padding: 120rem 0rem 0rem 0rem; }
-
   .menu-accordeon__button {
     width: 61px; }
 

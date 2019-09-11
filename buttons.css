@@ -10,7 +10,7 @@ button {
     outline: none; }
 
 .arrow-sprite {
-  width: 20rem; }
+  width: 30rem; }
 
 .button {
   font-weight: 500;
@@ -51,8 +51,6 @@ button {
         color: #fff; } }
 
 .nextscreen {
-  height: 14rem;
-  width: 29rem;
   margin-bottom: 40rem;
   display: inline-block; }
   @media screen and (max-width: 768px) {
