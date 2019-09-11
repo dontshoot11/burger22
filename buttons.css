@@ -55,6 +55,9 @@ button {
   width: 29rem;
   margin-bottom: 40rem;
   display: inline-block; }
+  @media screen and (max-width: 768px) {
+    .nextscreen {
+      margin-bottom: 120rem; } }
 
 .nextscreen__sprite {
   max-height: 20rem;

@@ -862,7 +862,7 @@ button {
     z-index: 2; } }
 @media screen and (max-width: 480px) {
   .menu-accordeon__name {
-    padding: 20rem 0rem 0rem 0rem; }
+    padding: 120rem 0rem 0rem 0rem; }
 
   .menu-accordeon__button {
     width: 61px; }
@@ -920,7 +920,7 @@ button {
 
 @media screen and (max-width: 768px) {
   .footer {
-    padding-bottom: 40rem; } }
+    padding-bottom: 120rem; } }
 @media screen and (max-width: 480px) {
   .сontainer--contacts {
     flex-direction: column;
@@ -1299,6 +1299,9 @@ button {
   width: 29rem;
   margin-bottom: 40rem;
   display: inline-block; }
+  @media screen and (max-width: 768px) {
+    .nextscreen {
+      margin-bottom: 120rem; } }
 
 .nextscreen__sprite {
   max-height: 20rem;
