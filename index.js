@@ -413,7 +413,7 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.prev();
         let reqSlideIndex = reqSection.index();
-        const sectionHeight = $('.wallpaper').innerHeight();
+        const sectionHeight = $('section').innerHeight();
         console.log(sectionHeight + ' высота секции', sectionHeight + ' высота окна');
 
 
@@ -431,7 +431,7 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.next();
         let reqSlideIndex = reqSection.index();
-        const sectionHeight = $('.wallpaper').innerHeight();
+        const sectionHeight = $('section').innerHeight();
 
 
 
