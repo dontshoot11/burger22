@@ -146,9 +146,7 @@
     top: 3rem; } }
 @media screen and (max-height: 620px) {
   .form {
-    margin-top: 0;
-    position: relative;
-    top: 5px; }
+    margin-top: 0; }
 
   .form__row {
     margin-top: 3rem; }
