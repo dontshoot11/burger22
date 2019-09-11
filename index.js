@@ -41,6 +41,8 @@
 
 
 $(document).ready(function() {
+    var defaultSectionHeight = $('section').innerHeight();
+    console.log(defaultSectionHeight + ' дефолтная высота секции');
     wheelScroll();
     swipeScroll();
 })

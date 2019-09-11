@@ -644,8 +644,9 @@ button {
   .form__block-title {
     margin-bottom: 3rem; }
 
-  .order {
-    justify-content: flex-start; } }
+  /*.order {
+      justify-content: flex-start
+  } */ }
 .team-aside {
   position: absolute;
   right: 0;
@@ -1301,7 +1302,7 @@ button {
   display: inline-block; }
   @media screen and (max-width: 768px) {
     .nextscreen {
-      margin-bottom: 120rem; } }
+      margin-bottom: 80rem; } }
 
 .nextscreen__sprite {
   max-height: 20rem;
