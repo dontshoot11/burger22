@@ -181,6 +181,25 @@ let modal = document.querySelector('.modal');
 let modalText = document.querySelector('.modal-window--text');
 let modalButton = document.querySelector('.modal-window--button');
 let body = document.querySelector('body');
+
+$('.form__input').focus(function() {
+    console.log('куку');
+    $('.order').css({ "position": "fixed", "top": "0px", "z-index": "2" })
+});
+
+$('.form__input').blur(function() {
+    console.log('куку');
+    $('.order').css({ "position": "relative" })
+});
+
+
+
+
+
+
+
+
+//$('.form__input').each(function(){})
 modalButton.addEventListener('click', function() {
     modal.style.display = 'none';
     // if ($(window).width() < 768) { body.style.overflow = 'auto' }
