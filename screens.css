@@ -42,7 +42,7 @@
   height: 100vh;
   background-position: center center;
   position: relative;
-  overflow: auto; }
+  overflow: hidden; }
 
 .container {
   width: calc(100% - 50rem);

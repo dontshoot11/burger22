@@ -38,10 +38,10 @@
     }
 })(jQuery);
 
-
+const defaultSectionHeight = $('section').innerHeight();
 
 $(document).ready(function() {
-    var defaultSectionHeight = $('section').innerHeight();
+
     console.log(defaultSectionHeight + ' дефолтная высота секции');
     wheelScroll();
     swipeScroll();
@@ -510,7 +510,7 @@ $('.form__input').focus(function() {
 
     console.log(orderPosition);
     console.log('куку');
-    $('.order').css({ "position": "fixed", "top": "0px", "z-index": "2" });
+    $('.order').css({ "position": "fixed", "top": "0", "left": "0", "right": "0", "z-index": "2" });
 
 
 
@@ -519,7 +519,7 @@ $('.form__input').focus(function() {
 $('.form__input').blur(function() {
     let sectionHeight = $('section').innerHeight();
     let orderIndex = $('.order').index();
-    let orderPosition = orderIndex * -sectionHeight;
+    let orderPosition = orderIndex * -defaultSectionHeight;
     console.log('куку');
     $('.order').css({ "position": "relative" });
     $('.order').addClass('section-active');
