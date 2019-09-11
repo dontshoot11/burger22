@@ -379,23 +379,24 @@ sideMenuButton.on('click', function(e) {
 
 $('.button--order').on('click',
         function(e) {
-            e.preventDefault(),
-                wrapper.stop(true, false).animate({
+            const sectionHeight = $('.wallpaper').innerHeight();
+            e.preventDefault();
+            wrapper.stop(true, false).animate({
 
-                        'top': -$('.order').index() * 100 + 'vh'
-                    }, 300,
-                    function() {
-                        let orderIndex = $('.order').index();
+                    'top': -$('.order').index() * sectionHeight + 'px'
+                }, 300,
+                function() {
+                    let orderIndex = $('.order').index();
 
-                        $('.order').siblings().removeClass('section-active');
-                        $('.order').addClass('section-active');
-                        $('.sidemenu__button:eq(' + orderIndex + ')').addClass('sidemenu__button--active');
-                        $('.sidemenu__button:eq(' + orderIndex + ')').siblings().removeClass('sidemenu__button--active');
+                    $('.order').siblings().removeClass('section-active');
+                    $('.order').addClass('section-active');
+                    $('.sidemenu__button:eq(' + orderIndex + ')').addClass('sidemenu__button--active');
+                    $('.sidemenu__button:eq(' + orderIndex + ')').siblings().removeClass('sidemenu__button--active');
 
-                    }
+                }
 
 
-                )
+            )
         })
     //}
 
@@ -404,97 +405,99 @@ $('.button--order').on('click',
 //экспериментальные попытки сделать ops на мобильных устройствах
 
 $('body').touchwipe({
-            wipeUp: function() {
-                    let wrapper = $('.wrapper');
-                    let activeSection = $('.section-active');
-                    let reqSection = activeSection.prev();
-                    let reqSlideIndex = reqSection.index();
-                    const sectionHeight = $('.wallpaper').innerHeight();
-                    console.log(sectionHeight + ' высота секции');
+    wipeUp: function() {
+        let wrapper = $('.wrapper');
+        let activeSection = $('.section-active');
+        let reqSection = activeSection.prev();
+        let reqSlideIndex = reqSection.index();
+        const sectionHeight = $('.wallpaper').innerHeight();
+        console.log(sectionHeight + ' высота секции');
 
 
-                    console.log('идем вниз');
+        console.log('идем вниз');
 
-                    if (reqSection.length) {
+        if (reqSection.length) {
 
-                        wrapper.stop(true, false).animate({
-                                    'top': -reqSlideIndex * 100 + 'vh' //sectionHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
-                                }
-                            },
-                            wipeDown: function() {
-                                let wrapper = $('.wrapper');
-                                let activeSection = $('.section-active');
-                                let reqSection = activeSection.next();
-                                let reqSlideIndex = reqSection.index();
-                                const sectionHeight = $('.wallpaper').innerHeight();
-
-
-
-                                console.log('идем вверх');
-
-                                if (reqSection.length) {
-
-                                    wrapper.stop(true, false).animate({
-                                            'top': -reqSlideIndex * 100 + 'vh' // sectionHeight + 'px' }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
-                                        }
-                                    }
-                                });
+            wrapper.stop(true, false).animate({
+                'top': -reqSlideIndex * sectionHeight + 'px'
+            }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+        }
+    },
+    wipeDown: function() {
+        let wrapper = $('.wrapper');
+        let activeSection = $('.section-active');
+        let reqSection = activeSection.next();
+        let reqSlideIndex = reqSection.index();
+        const sectionHeight = $('.wallpaper').innerHeight();
 
 
 
-                        ymaps.ready(init);
+        console.log('идем вверх');
 
-                        function init() {
-                            // Создание карты.    
-                            var myMap = new ymaps.Map("yandexmap", {
-                                // Координаты центра карты.
-                                // Порядок по умолчанию: «широта, долгота».
-                                // Чтобы не определять координаты центра карты вручную,
-                                // воспользуйтесь инструментом Определение координат.
-                                center: [59.93511328687912, 30.307292324790485],
-                                controls: ["zoomControl"],
-                                behaviors: ["drag"],
-                                // Уровень масштабирования. Допустимые значения:
-                                // от 0 (весь мир) до 19.
-                                zoom: 10
-                            });
+        if (reqSection.length) {
 
-                            var placemarkA = new ymaps.Placemark([59.953198673530146, 30.393466336020953], {}, {
-                                iconLayout: 'default#image',
-                                iconImageHref: 'img/map/map-marker.png',
-                                iconImageSize: [46, 57],
-                                iconImageOffset: [-23, -57]
-                            });
-                            myMap.geoObjects.add(placemarkA);
+            wrapper.stop(true, false).animate({
+                'top': -reqSlideIndex * sectionHeight + 'px'
+            }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+        }
+    }
+});
 
 
-                            var placemarkB = new ymaps.Placemark([60.06179348690544, 30.315511972036752], {}, {
-                                iconLayout: 'default#image',
-                                iconImageHref: 'img/map/map-marker.png',
-                                iconImageSize: [46, 57],
-                                iconImageOffset: [-23, -57]
-                            });
-                            myMap.geoObjects.add(placemarkB);
+
+ymaps.ready(init);
+
+function init() {
+    // Создание карты.    
+    var myMap = new ymaps.Map("yandexmap", {
+        // Координаты центра карты.
+        // Порядок по умолчанию: «широта, долгота».
+        // Чтобы не определять координаты центра карты вручную,
+        // воспользуйтесь инструментом Определение координат.
+        center: [59.93511328687912, 30.307292324790485],
+        controls: ["zoomControl"],
+        behaviors: ["drag"],
+        // Уровень масштабирования. Допустимые значения:
+        // от 0 (весь мир) до 19.
+        zoom: 10
+    });
+
+    var placemarkA = new ymaps.Placemark([59.953198673530146, 30.393466336020953], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+    });
+    myMap.geoObjects.add(placemarkA);
 
 
-                            var placemarkC = new ymaps.Placemark([59.90158991123217, 30.501454044039573], {}, {
-                                iconLayout: 'default#image',
-                                iconImageHref: 'img/map/map-marker.png',
-                                iconImageSize: [46, 57],
-                                iconImageOffset: [-23, -57]
-                            });
-                            myMap.geoObjects.add(placemarkC);
+    var placemarkB = new ymaps.Placemark([60.06179348690544, 30.315511972036752], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+    });
+    myMap.geoObjects.add(placemarkB);
 
 
-                            var placemarkD = new ymaps.Placemark([59.83427718228793, 30.321805167353265], {}, {
-                                iconLayout: 'default#image',
-                                iconImageHref: 'img/map/map-marker.png',
-                                iconImageSize: [46, 57],
-                                iconImageOffset: [-23, -57]
-                            });
-                            myMap.geoObjects.add(placemarkD);
-                        };
+    var placemarkC = new ymaps.Placemark([59.90158991123217, 30.501454044039573], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+    });
+    myMap.geoObjects.add(placemarkC);
 
-                        let vh = window.innerHeight * 0.01;
-                        // Then we set the value in the --vh custom property to the root of the document
-                        document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    var placemarkD = new ymaps.Placemark([59.83427718228793, 30.321805167353265], {}, {
+        iconLayout: 'default#image',
+        iconImageHref: 'img/map/map-marker.png',
+        iconImageSize: [46, 57],
+        iconImageOffset: [-23, -57]
+    });
+    myMap.geoObjects.add(placemarkD);
+};
+
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
