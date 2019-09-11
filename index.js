@@ -534,7 +534,7 @@ $('.form__input').focus(function() {
 
     console.log(orderPosition);
     console.log('куку');
-    $('.order').css({ "position": "fixed", "left": "0", "right": "0" });
+    $('.order').css({ "position": "fixed", "left": "0", "top": "0", "bottom": "0", "right": "0" });
 
 
 
