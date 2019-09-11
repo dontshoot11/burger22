@@ -399,11 +399,11 @@ function swipeScroll() {
     $('body').touchwipe({
         passive: false,
         wipeUp: function() {
-            goingUp()
+            goingDown()
 
         },
         wipeDown: function() {
-            goingDown()
+            goingUp()
         },
 
     });
