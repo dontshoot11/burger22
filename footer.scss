@@ -60,6 +60,12 @@
     }
 }
 
+@include tablets {
+    .footer {
+        padding-bottom: 40rem;
+    }
+}
+
 @include phone {
     .сontainer--contacts {
         flex-direction: column;

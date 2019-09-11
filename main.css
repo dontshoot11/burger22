@@ -918,6 +918,9 @@ button {
   .social-logo:hover {
     fill: #fff; }
 
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-bottom: 40rem; } }
 @media screen and (max-width: 480px) {
   .сontainer--contacts {
     flex-direction: column;
