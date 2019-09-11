@@ -231,6 +231,23 @@ $('.modal-window--button').on('click', function() {
 
 formButton.addEventListener('click', function(e) {
     e.preventDefault();
+    content.stop(true, false).animate({
+
+            'top': -$('.order').index() * defaultSectionHeight + 'px'
+        }, 300,
+        function() {
+            let orderIndex = $('.order').index();
+
+            $('.order').siblings().removeClass('section-active');
+            $('.order').addClass('section-active');
+            $('.sidemenu__button:eq(' + orderIndex + ')').addClass('sidemenu__button--active');
+            $('.sidemenu__button:eq(' + orderIndex + ')').siblings().removeClass('sidemenu__button--active');
+
+        }
+
+
+    )
+
     const data = { name: form.elements.name.value, phone: form.elements.phone.value, comment: form.elements.comment.value };
     const formData = new FormData(form);
     formData.append("name", form.elements.name.value);
@@ -491,7 +508,7 @@ $('.button--order').on('click',
             e.preventDefault();
             content.stop(true, false).animate({
 
-                    'top': -$('.order').index() * sectionHeight + 'px'
+                    'top': -$('.order').index() * defaultSectionHeight + 'px'
                 }, 300,
                 function() {
                     let orderIndex = $('.order').index();
