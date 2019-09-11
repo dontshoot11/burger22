@@ -281,7 +281,7 @@ let wrapper = $('.wrapper');
 let activeSectionPosition = $('.section-active').index() * 100 + 'vh';
 console.log(activeSectionPosition);
 
-$('body').ready(function() { const sectionHeight = $('section').outerHeight() })
+
 
 //if ($(window).width() > 768) {
 
@@ -409,7 +409,7 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.prev();
         let reqSlideIndex = reqSection.index();
-        const sectionHeight = $('section').outerHeight();
+        const sectionHeight = $('.wallpaper').innerHeight();
         console.log(sectionHeight + ' высота секции');
 
 
@@ -425,7 +425,7 @@ $('body').touchwipe({
         let activeSection = $('.section-active');
         let reqSection = activeSection.next();
         let reqSlideIndex = reqSection.index();
-        const sectionHeight = $('section').outerHeight();
+        const sectionHeight = $('.wallpaper').innerHeight();
 
 
 
