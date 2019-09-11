@@ -382,11 +382,11 @@ sideMenuButton.on('click', function(e) {
 
 $('.button--order').on('click',
         function(e) {
-            const sectionHeight = $('.wallpaper').innerHeight();
+            const sectionHeight = $('section').innerHeight();
             e.preventDefault();
             wrapper.stop(true, false).animate({
 
-                    'top': -$('.order').index() * window.innerHeight + 'px'
+                    'top': -$('.order').index() * sectionHeight + 'px'
                 }, 300,
                 function() {
                     let orderIndex = $('.order').index();
@@ -422,7 +422,7 @@ $('body').touchwipe({
         if (reqSection.length) {
 
             wrapper.stop(true, false).animate({
-                'top': -reqSlideIndex * window.innerHeight + 'px'
+                'top': -reqSlideIndex * sectionHeight + 'px'
             }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     },
@@ -440,7 +440,7 @@ $('body').touchwipe({
         if (reqSection.length) {
 
             wrapper.stop(true, false).animate({
-                'top': -reqSlideIndex * window.innerHeight + 'px'
+                'top': -reqSlideIndex * sectionHeight + 'px'
             }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     }
