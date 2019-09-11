@@ -407,6 +407,26 @@ $('.button--order').on('click',
 
 //экспериментальные попытки сделать ops на мобильных устройствах
 
+let verticalItem = $('.vertical-menu-list__element')
+verticalItem.on('click', function(e) {
+    const sectionHeight = $('section').innerHeight();
+    let thisIndex = $(this).index() + 1;
+    console.log(thisIndex + ' thisIndex')
+
+    e.preventDefault();
+    wrapper.stop(true, false).animate({ 'top': -thisIndex * sectionHeight + 'px' }, 300)
+
+
+
+
+
+
+})
+
+let logo = $('.logo')
+
+logo.on('click', function(e) { wrapper.stop(true, false).animate({ 'top': 0 }, 300) })
+
 $('body').touchwipe({
     wipeUp: function() {
         let wrapper = $('.wrapper');
