@@ -386,7 +386,7 @@ $('.button--order').on('click',
             e.preventDefault();
             wrapper.stop(true, false).animate({
 
-                    'top': -$('.order').index() * sectionHeight + 'px'
+                    'top': -$('.order').index() * window.innerHeight + 'px'
                 }, 300,
                 function() {
                     let orderIndex = $('.order').index();
