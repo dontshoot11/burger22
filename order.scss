@@ -183,7 +183,7 @@
 @include short-screen {
     .form {
         margin-top: 0;
-        position: absolute;
+        position: relative;
         top: 5px;
     }
     .form__row {

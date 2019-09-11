@@ -628,7 +628,7 @@ button {
 @media screen and (max-height: 620px) {
   .form {
     margin-top: 0;
-    position: absolute;
+    position: relative;
     top: 5px; }
 
   .form__row {
