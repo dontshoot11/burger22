@@ -281,7 +281,7 @@ let wrapper = $('.wrapper');
 let activeSectionPosition = $('.section-active').index() * 100 + 'vh';
 console.log(activeSectionPosition);
 
-$('body').ready(function() { window.scrollTo(0, 0) });
+$('body').ready(function() { const sectionHeight = $('section').outerHeight() })
 
 //if ($(window).width() > 768) {
 
@@ -492,3 +492,7 @@ function init() {
     });
     myMap.geoObjects.add(placemarkD);
 };
+
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty('--vh', `${vh}px`);
