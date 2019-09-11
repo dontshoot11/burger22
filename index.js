@@ -40,10 +40,16 @@
 
 
 
+$(document).ready(function() {
+    wheelScroll();
+    swipeScroll();
+})
+
+
 
 let buttonBurger = document.querySelector('.button-burger');
 let wallpaperFullscreen = document.querySelector('.wallpaper--fullscreen')
-buttonBurger.addEventListener('click', function() { wallpaperFullscreen.style.right = '0' })
+buttonBurger.addEventListener('click', function() { wallpaperFullscreen.style.right = '0' });
 let fullscreenExit = document.querySelector('.fullscreen__exit');
 fullscreenExit.addEventListener('click', function() { wallpaperFullscreen.style.right = '-100%' });
 let a = document.querySelectorAll('a');
@@ -182,15 +188,7 @@ let modalText = document.querySelector('.modal-window--text');
 let modalButton = document.querySelector('.modal-window--button');
 let body = document.querySelector('body');
 
-$('.form__input').focus(function() {
-    console.log('куку');
-    $('.order').css({ "position": "fixed", "top": "0px", "z-index": "2" })
-});
 
-$('.form__input').blur(function() {
-    console.log('куку');
-    $('.order').css({ "position": "relative" })
-});
 
 
 
@@ -315,53 +313,129 @@ window.scrollTo(0, 1);
 
 
 
-$('body').on('wheel', function(e) {
-    //e.preventDefault();
-    // e.stopPropagation();
-
-    let activeSection = $('.section-active');
-
-    if (e.originalEvent.deltaY < 0) {
-        let reqSection = activeSection.next();
-        let reqSlideIndex = reqSection.index();
-        let sideMenuButtonActive = $('.sidemenu__button--active');
-        let reqButton = sideMenuButtonActive.next();
-        let activeButtonIndex = sideMenuButtonActive.index();
 
 
+function wheelScroll() {
+    $('body').on('wheel', function(e) {
+        //e.preventDefault();
+        // e.stopPropagation();
+
+        let activeSection = $('.section-active');
+
+        if (e.originalEvent.deltaY < 0) {
+            let reqSection = activeSection.next();
+            let reqSlideIndex = reqSection.index();
+            let sideMenuButtonActive = $('.sidemenu__button--active');
+            let reqButton = sideMenuButtonActive.next();
+            let activeButtonIndex = sideMenuButtonActive.index();
 
 
-        console.log('идем вниз');
-        console.log($(document).scrollTop());
-        if (reqSection.length) {
 
-            wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() {
-                activeSection.removeClass('section-active'), reqSection.addClass('section-active'),
-                    sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active'), console.log(activeButtonIndex + '  индекс кнопки')
-            });
+
+            console.log('идем вниз');
+            console.log($(document).scrollTop());
+            if (reqSection.length) {
+
+                wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() {
+                    activeSection.removeClass('section-active'), reqSection.addClass('section-active'),
+                        sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active'), console.log(activeButtonIndex + '  индекс кнопки')
+                });
+            }
+
+
+
+
+        } else {
+            let reqSection = activeSection.prev();
+            let reqSlideIndex = reqSection.index();
+            let sideMenuButtonActive = $('.sidemenu__button--active');
+            let reqButton = sideMenuButtonActive.prev();
+
+
+            if (reqSection.length) {
+                console.log('идем вверх');
+                console.log($(document).scrollTop());
+
+                wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
+            } else { wrapper.stop(true, false).animate({ 'top': 0 }, 300, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
         }
 
 
 
-
-    } else {
-        let reqSection = activeSection.prev();
-        let reqSlideIndex = reqSection.index();
-        let sideMenuButtonActive = $('.sidemenu__button--active');
-        let reqButton = sideMenuButtonActive.prev();
+    });
+}
 
 
-        if (reqSection.length) {
+function swipeScroll() {
+    $('body').touchwipe({
+        wipeUp: function() {
+            let wrapper = $('.wrapper');
+            let activeSection = $('.section-active');
+            let reqSection = activeSection.prev();
+            let reqSlideIndex = reqSection.index();
+            const sectionHeight = $('section').innerHeight();
+            console.log(sectionHeight + ' высота секции', window.innerHeight + ' высота окна');
+
+
+            console.log('идем вниз');
+
+            if (reqSection.length) {
+
+                wrapper.stop(true, false).animate({
+                    'top': -reqSlideIndex * sectionHeight + 'px'
+                }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            }
+        },
+        wipeDown: function() {
+            let wrapper = $('.wrapper');
+            let activeSection = $('.section-active');
+            let reqSection = activeSection.next();
+            let reqSlideIndex = reqSection.index();
+            const sectionHeight = $('section').innerHeight();
+
+
+
             console.log('идем вверх');
-            console.log($(document).scrollTop());
 
-            wrapper.stop(true, false).animate({ 'top': -reqSlideIndex * 100 + 'vh' }, 300, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
-        } else { wrapper.stop(true, false).animate({ 'top': 0 }, 300, function() { activeSection.removeClass('section-active'), $('section').first().addClass('section-active') }) }
-    }
+            if (reqSection.length) {
+
+                wrapper.stop(true, false).animate({
+                    'top': -reqSlideIndex * sectionHeight + 'px'
+                }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
+            }
+        }
+    });
+}
+
+
+
+
+
+
+
+
+let verticalItem = $('.vertical-menu-list__element')
+verticalItem.on('click', function(e) {
+    const sectionHeight = $('section').innerHeight();
+    let thisIndex = $(this).index() + 1;
+    console.log(thisIndex + ' thisIndex')
+
+    e.preventDefault();
+    wrapper.stop(true, false).animate({ 'top': -thisIndex * sectionHeight + 'px' }, 300)
+
+
+
 
 
 
 })
+
+let logo = $('.logo')
+
+logo.on('click', function(e) { wrapper.stop(true, false).animate({ 'top': 0 }, 300) })
+
+
+
 
 
 
@@ -424,66 +498,38 @@ $('.button--order').on('click',
 
 
 
-//экспериментальные попытки сделать ops на мобильных устройствах
-
-let verticalItem = $('.vertical-menu-list__element')
-verticalItem.on('click', function(e) {
-    const sectionHeight = $('section').innerHeight();
-    let thisIndex = $(this).index() + 1;
-    console.log(thisIndex + ' thisIndex')
-
-    e.preventDefault();
-    wrapper.stop(true, false).animate({ 'top': -thisIndex * sectionHeight + 'px' }, 300)
+$('.form__input').focus(function() {
+    let sectionHeight = $('section').innerHeight();
+    let orderIndex = $('.order').index();
+    let orderPosition = orderIndex * -sectionHeight;
 
 
+    //'top': -$('.order').index() * sectionHeight + 'px'
 
+    console.log(orderPosition);
+    console.log('куку');
+    $('.order').css({ "position": "fixed", "top": "0px", "z-index": "2" });
 
-
-
-})
-
-let logo = $('.logo')
-
-logo.on('click', function(e) { wrapper.stop(true, false).animate({ 'top': 0 }, 300) })
-
-$('body').touchwipe({
-    wipeUp: function() {
-        let wrapper = $('.wrapper');
-        let activeSection = $('.section-active');
-        let reqSection = activeSection.prev();
-        let reqSlideIndex = reqSection.index();
-        const sectionHeight = $('section').innerHeight();
-        console.log(sectionHeight + ' высота секции', window.innerHeight + ' высота окна');
-
-
-        console.log('идем вниз');
-
-        if (reqSection.length) {
-
-            wrapper.stop(true, false).animate({
-                'top': -reqSlideIndex * sectionHeight + 'px'
-            }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
-        }
-    },
-    wipeDown: function() {
-        let wrapper = $('.wrapper');
-        let activeSection = $('.section-active');
-        let reqSection = activeSection.next();
-        let reqSlideIndex = reqSection.index();
-        const sectionHeight = $('section').innerHeight();
-
-
-
-        console.log('идем вверх');
-
-        if (reqSection.length) {
-
-            wrapper.stop(true, false).animate({
-                'top': -reqSlideIndex * sectionHeight + 'px'
-            }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
-        }
-    }
+    $('.wrapper').css({ "position": "fixed", "top": orderPosition + 'px' });
+    return (wheelScroll());
+    return (swipeScroll());
 });
+
+$('.form__input').blur(function() {
+    let orderIndex = $('.order').index();
+    console.log('куку');
+    $('.order').css({ "position": "relative" });
+    $('.wrapper').css({ "position": "relative" });
+});
+
+
+
+
+//})
+
+
+
+
 
 
 
