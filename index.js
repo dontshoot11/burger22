@@ -440,7 +440,7 @@ $('body').touchwipe({
         if (reqSection.length) {
 
             wrapper.stop(true, false).animate({
-                'top': -reqSlideIndex * window.innerHeight + 'px'
+                'top': -reqSlideIndex * sectionHeight + 'px'
             }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
         }
     }
