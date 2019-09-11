@@ -6,7 +6,8 @@ body {
   font-size: 13rem;
   display: flex;
   flex-direction: column;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%; }
 
 html {
   box-sizing: border-box; }
