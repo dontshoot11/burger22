@@ -22,9 +22,10 @@
                 isMoving = false
             }
 
-            function onTouchMove(e) { if (config.preventDefaultEvents) { e.preventDefault() } if (isMoving) { var x = e.touches[0].pageX; var y = e.touches[0].pageY; var dx = startX - x; var dy = startY - y; if (Math.abs(dx) >= config.min_move_x) { cancelTouch(); if (dx > 0) { config.wipeLeft() } else { config.wipeRight() } } else if (Math.abs(dy) >= config.min_move_y) { cancelTouch(); if (dy > 0) { config.wipeDown() } else { config.wipeUp() } } } }
+            function onTouchMove(e) { passive: false; if (config.preventDefaultEvents) { e.preventDefault() } if (isMoving) { var x = e.touches[0].pageX; var y = e.touches[0].pageY; var dx = startX - x; var dy = startY - y; if (Math.abs(dx) >= config.min_move_x) { cancelTouch(); if (dx > 0) { config.wipeLeft() } else { config.wipeRight() } } else if (Math.abs(dy) >= config.min_move_y) { cancelTouch(); if (dy > 0) { config.wipeDown() } else { config.wipeUp() } } } }
 
             function onTouchStart(e) {
+                passive: false;
                 if (e.touches.length == 1) {
                     startX = e.touches[0].pageX;
                     startY = e.touches[0].pageY;
@@ -43,6 +44,7 @@ const defaultSectionHeight = $('section').innerHeight();
 $(document).ready(function() {
 
     console.log(defaultSectionHeight + ' дефолтная высота секции');
+    //  $('document').bind('touchMove', function(e) { e.preventDefault() });
     wheelScroll();
     swipeScroll();
 })
@@ -379,10 +381,18 @@ function wheelScroll() {
 }
 
 
+
+
+
+
+
+
+
 function swipeScroll() {
     $('body').touchwipe({
+        passive: false,
         wipeUp: function() {
-            let wrapper = $('.wrapper');
+
             let activeSection = $('.section-active');
             let reqSection = activeSection.prev();
             let reqSlideIndex = reqSection.index();
@@ -400,6 +410,7 @@ function swipeScroll() {
             }
         },
         wipeDown: function() {
+
             let wrapper = $('.wrapper');
             let activeSection = $('.section-active');
             let reqSection = activeSection.next();
@@ -416,7 +427,8 @@ function swipeScroll() {
                     'top': -reqSlideIndex * sectionHeight + 'px'
                 }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active') });
             }
-        }
+        },
+        preventDefaultEvents: true,
     });
 }
 
