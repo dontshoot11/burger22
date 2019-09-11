@@ -535,6 +535,7 @@ $('.form__input').focus(function() {
     console.log(orderPosition);
     console.log('куку');
     $('.order').css({ "position": "fixed", "left": "0", "top": "0", "bottom": "0", "right": "0" });
+    $('.lock').css({ "display": "block" });
 
 
 
@@ -548,7 +549,8 @@ $('.form__input').blur(function() {
     $('.order').css({ "position": "relative" });
     $('.order').addClass('section-active');
     $('.order').siblings().removeClass('section-active');
-    content.css("top", orderPosition + "px")
+    content.css("top", orderPosition + "px");
+    $('.lock').css({ "display": "none" });
 });
 
 

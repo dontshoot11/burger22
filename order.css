@@ -111,6 +111,17 @@
 .form__trueradio:checked ~ .form__fakeradio:before {
   visibility: visible; }
 
+.lock {
+  height: 50rem;
+  width: 50rem;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  display: none; }
+
+.lock__picture {
+  max-width: 100%; }
+
 @media screen and (max-width: 768px) {
   .order {
     text-align: center; }
