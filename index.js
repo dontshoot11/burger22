@@ -288,6 +288,7 @@ console.log(activeSectionPosition);
 
 $('.wrapper').css("top", "0vh");
 let windowHeight = $(window).height();
+window.scrollTo(0, 1);
 
 
 
