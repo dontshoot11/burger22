@@ -90,7 +90,8 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  overflow: hidden; }
+  overflow: hidden;
+  z-index: 3; }
 
 .feedback-popup__window {
   background: #fff;
@@ -101,7 +102,8 @@
   min-height: 100rem;
   border-radius: 5px;
   position: relative;
-  padding: 13rem; }
+  padding: 13rem;
+  z-index: 3; }
 
 .feedback-popup__name {
   font-family: "gagalin";

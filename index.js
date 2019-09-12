@@ -37,21 +37,311 @@
         });
         return this
     }
-})(jQuery);
+})(jQuery); //это сторонний плагин для работы тача
 
-const defaultSectionHeight = $('section').innerHeight();
+const defaultSectionHeight = $('section').innerHeight(); //измеряем высоту секции после загрузки экрана (чтобы зафиксировать ее до того,
+//как мобильные браузеры начнут менять)
 
-$(document).ready(function() {
+$(document).ready(function() { //запускаем прокрутку по колесу, свайпу, стрелочкам
 
     console.log(defaultSectionHeight + ' дефолтная высота секции');
-    //  $('document').bind('touchMove', function(e) { e.preventDefault() });
+
     wheelScroll();
     swipeScroll();
     keyScroll();
 })
 
 
+function goingUp() { //функция, которая крутит content наверх
+    console.log('идем вверх');
+    let content = $('.content');
+    let activeSection = $('.section-active');
+    let reqSection = activeSection.prev();
+    let reqSlideIndex = reqSection.index();
+    const sectionHeight = $('section').innerHeight();
+    let sideMenuButtonActive = $('.sidemenu__button--active');
+    let reqButton = sideMenuButtonActive.prev();
+    let activeButtonIndex = sideMenuButtonActive.prev();
 
+    if (reqSection.length) {
+
+        content.stop(true, false).animate({
+            'top': -reqSlideIndex * sectionHeight + 'px'
+        }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
+    }
+}
+
+function goingDown() { //функция, которая крутит вниз
+
+    console.log('идем вниз');
+    let content = $('.content');
+    let activeSection = $('.section-active');
+    let reqSection = activeSection.next();
+    let reqSlideIndex = reqSection.index();
+    const sectionHeight = $('section').innerHeight();
+    let sideMenuButtonActive = $('.sidemenu__button--active');
+    let reqButton = sideMenuButtonActive.next();
+    let activeButtonIndex = sideMenuButtonActive.index();
+
+
+
+
+    if (reqSection.length) {
+
+        content.stop(true, false).animate({
+            'top': -reqSlideIndex * sectionHeight + 'px'
+        }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
+    }
+
+
+}
+
+//прокрутка по колесу
+function wheelScroll() {
+    $('body').on('wheel', function(e) {
+        if (e.originalEvent.deltaY < 0) {
+            goingDown()
+        } else { goingUp() }
+    })
+}
+
+
+
+
+
+
+
+//по свайпам
+
+function swipeScroll() {
+    $('body').touchwipe({
+        passive: false,
+        wipeUp: function() {
+            goingUp()
+
+        },
+        wipeDown: function() {
+            goingDown()
+        },
+
+    });
+}
+//по стрелочкам
+function keyScroll() {
+    $('body').keydown(function(e) {
+        console.log('нажал ' + e.which);
+        if (e.which === 38) { goingUp() };
+        if (e.which === 40) { goingDown() }
+
+
+
+    })
+}
+
+let verticalItem = $('.vertical-menu-list__element') //вертикальное меню (бутерброд мобильной версии)
+verticalItem.on('click', function(e) {
+    const sectionHeight = $('section').innerHeight();
+    let thisIndex = $(this).index() + 1;
+    console.log(thisIndex + ' thisIndex')
+
+    e.preventDefault();
+    content.stop(true, false).animate({ 'top': -thisIndex * sectionHeight + 'px' }, 300, function() {
+        $('section:eq(' + thisIndex + ')').addClass('section-active');
+        $('section:eq(' + thisIndex + ')').siblings().removeClass('section-active');
+
+
+    })
+
+
+
+
+
+
+})
+
+let sideMenuButton = $('.sidemenu__button'); //боковое меню (кружочки справа в дексктопной версии)
+
+
+
+
+sideMenuButton.on('click', function(e) {
+
+    e.preventDefault;
+    let sideMenuButtonActive = $('.sidemenu__button--active');
+    let activeButtonIndex = sideMenuButtonActive.index();
+
+    let windowHeight = $(window).height();
+    let activeSection = $('.section-active');
+
+
+
+
+    sideMenuButtonActive.removeClass('sidemenu__button--active');
+    $(this).addClass('sidemenu__button--active');
+
+
+
+
+    content.stop(true, false).animate({ 'top': -$(this).index() * 100 + 'vh' }, 300,
+        function() {
+            let sideMenuButtonActive = $('.sidemenu__button--active');
+            let activeButtonIndex = sideMenuButtonActive.index();
+            let newSection = $('section:eq(' + (parseInt(activeButtonIndex)) + ')');
+            activeSection.removeClass('section-active'), newSection.addClass('section-active'), console.log(activeButtonIndex + ' индекс кнопки')
+        })
+
+
+})
+
+
+//РАБОТА ФОРМЫ С ЗАКАЗОМ
+
+$('.form__input').focus(function() { //фиксируем секцию с импутом во время ввода (чтобы ее не толкала виртуальная клавиатура)
+    let sectionHeight = $('section').innerHeight();
+    let orderIndex = $('.order').index();
+    let orderPosition = orderIndex * -sectionHeight;
+
+
+
+
+    console.log(orderPosition);
+    console.log('куку');
+    $('.order').css({ "position": "fixed", "left": "0", "top": "0", "bottom": "0", "right": "0" });
+    $('.lock').css({ "display": "block" });
+
+
+
+});
+
+
+$('.form__input').blur(function() { //отпускаем секцию с формой заказа
+    let sectionHeight = $('section').innerHeight();
+    let orderIndex = $('.order').index();
+    let orderPosition = orderIndex * -defaultSectionHeight;
+    console.log('куку');
+    $('.order').css({ "position": "relative" });
+    $('.order').addClass('section-active');
+    $('.order').siblings().removeClass('section-active');
+    content.css("top", orderPosition + "px");
+    $('.lock').css({ "display": "none" });
+});
+
+let form = document.querySelector('.form__elem');
+let formButton = document.querySelector('.button--form');
+let fields = document.querySelectorAll('.form__input');
+let modal = document.querySelector('.modal');
+let modalText = document.querySelector('.modal-window--text');
+let modalButton = document.querySelector('.modal-window--button');
+let body = document.querySelector('body');
+
+formButton.addEventListener('click', function(e) { //после нажатия кнопки отправить секция с формой возвращается на свое место
+    e.preventDefault();
+    content.stop(true, false).animate({
+
+            'top': -$('.order').index() * defaultSectionHeight + 'px'
+        }, 300,
+        function() {
+            let orderIndex = $('.order').index();
+
+            $('.order').siblings().removeClass('section-active');
+            $('.order').addClass('section-active');
+            $('.sidemenu__button:eq(' + orderIndex + ')').addClass('sidemenu__button--active');
+            $('.sidemenu__button:eq(' + orderIndex + ')').siblings().removeClass('sidemenu__button--active');
+
+        }
+
+
+    )
+
+    const data = { name: form.elements.name.value, phone: form.elements.phone.value, comment: form.elements.comment.value };
+    const formData = new FormData(form);
+    formData.append("name", form.elements.name.value);
+    formData.append("phone", form.elements.phone.value);
+    formData.append("comment", form.elements.comment.value);
+    formData.append("to", "my@gmail.com");
+    console.log(formData);
+    console.log(data);
+
+    var xhr = new XMLHttpRequest();
+
+    function validation() {
+        if (form.elements.name.checkValidity() &&
+            form.elements.phone.checkValidity() &&
+            form.elements.comment.checkValidity()) { return true } else {
+            return false
+        }
+    };
+
+
+    console.log(validation());
+
+    if (validation()) {
+
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(formData);
+        xhr.responseType = "json";
+
+
+        xhr.addEventListener('load',
+            function() {
+                if (xhr.response.status) {
+                    modal.style.display = 'flex';
+                    modalText.textContent = 'Сообщение отправлено';
+                    // if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+
+                    form.reset();
+                } else {
+                    modal.style.display = 'flex';
+                    modalText.textContent = 'что-то пошло не так, попробуйте еще раз';
+                    //  if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+
+                }
+            })
+    } else {
+        modal.style.display = 'flex';
+        modalText.textContent = 'Поля "Имя","Телефон" и "Комментарий" нужно заполнить, без них доставку не оформить';
+        //  if ($(window).width() < 768) { body.style.overflow = 'hidden' };
+
+    }
+
+})
+
+$('.modal-window--button').on('click', function() { //работа кнопки модального окна формы
+    let sectionHeight = $('section').innerHeight();
+    let orderIndex = $('.order').index();
+    let orderPosition = orderIndex * -sectionHeight;
+
+
+    $('.modal').css("display", "none");
+    $('.content').css("top", orderPosition + "px")
+
+})
+
+$('.button--order').on('click', //кнопка заказать вверху страницы перематывает ее до секции с заказом
+    function(e) {
+        const sectionHeight = $('section').innerHeight();
+        e.preventDefault();
+        content.stop(true, false).animate({
+
+                'top': -$('.order').index() * defaultSectionHeight + 'px'
+            }, 300,
+            function() {
+                let orderIndex = $('.order').index();
+
+                $('.order').siblings().removeClass('section-active');
+                $('.order').addClass('section-active');
+                $('.sidemenu__button:eq(' + orderIndex + ')').addClass('sidemenu__button--active');
+                $('.sidemenu__button:eq(' + orderIndex + ')').siblings().removeClass('sidemenu__button--active');
+
+            }
+
+
+        )
+    })
+
+
+
+//РАБОТА АККОРДЕОНОВ
 let buttonBurger = document.querySelector('.button-burger');
 let wallpaperFullscreen = document.querySelector('.wallpaper--fullscreen')
 buttonBurger.addEventListener('click', function() { wallpaperFullscreen.style.right = '0' });
@@ -145,6 +435,7 @@ for (let i = 0; i < accordeonCard.length; i++) {
 };
 
 
+//СЛАЙДЕР 
 
 let arrowLeft = $('.slider-button__arrow--left');
 let arrowRight = $('.slider-button__arrow--right');
@@ -185,129 +476,10 @@ arrowRight.on('click', function() {
 
 
 
-let form = document.querySelector('.form__elem');
-let formButton = document.querySelector('.button--form');
-let fields = document.querySelectorAll('.form__input');
-let modal = document.querySelector('.modal');
-let modalText = document.querySelector('.modal-window--text');
-let modalButton = document.querySelector('.modal-window--button');
-let body = document.querySelector('body');
 
 
 
-
-
-
-
-
-
-
-//$('.form__input').each(function(){})
-//modalButton.addEventListener('click', function() {
-// modal.style.display = 'none';
-// if ($(window).width() < 768) { body.style.overflow = 'auto' }
-
-//})
-
-$('.modal-window--button').on('click', function() {
-    let sectionHeight = $('section').innerHeight();
-    let orderIndex = $('.order').index();
-    let orderPosition = orderIndex * -sectionHeight;
-
-
-    $('.modal').css("display", "none");
-    $('.content').css("top", orderPosition + "px")
-
-})
-
-
-
-
-
-
-
-
-
-
-formButton.addEventListener('click', function(e) {
-    e.preventDefault();
-    content.stop(true, false).animate({
-
-            'top': -$('.order').index() * defaultSectionHeight + 'px'
-        }, 300,
-        function() {
-            let orderIndex = $('.order').index();
-
-            $('.order').siblings().removeClass('section-active');
-            $('.order').addClass('section-active');
-            $('.sidemenu__button:eq(' + orderIndex + ')').addClass('sidemenu__button--active');
-            $('.sidemenu__button:eq(' + orderIndex + ')').siblings().removeClass('sidemenu__button--active');
-
-        }
-
-
-    )
-
-    const data = { name: form.elements.name.value, phone: form.elements.phone.value, comment: form.elements.comment.value };
-    const formData = new FormData(form);
-    formData.append("name", form.elements.name.value);
-    formData.append("phone", form.elements.phone.value);
-    formData.append("comment", form.elements.comment.value);
-    formData.append("to", "my@gmail.com");
-    console.log(formData);
-    console.log(data);
-
-    var xhr = new XMLHttpRequest();
-
-    function validation() {
-        if (form.elements.name.checkValidity() &&
-            form.elements.phone.checkValidity() &&
-            form.elements.comment.checkValidity()) { return true } else {
-            return false
-        }
-    };
-
-
-    console.log(validation());
-
-    if (validation()) {
-
-        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-        xhr.send(formData);
-        xhr.responseType = "json";
-
-
-        xhr.addEventListener('load',
-            function() {
-                if (xhr.response.status) {
-                    modal.style.display = 'flex';
-                    modalText.textContent = 'Сообщение отправлено';
-                    // if ($(window).width() < 768) { body.style.overflow = 'hidden' };
-
-                    form.reset();
-                } else {
-                    modal.style.display = 'flex';
-                    modalText.textContent = 'что-то пошло не так, попробуйте еще раз';
-                    //  if ($(window).width() < 768) { body.style.overflow = 'hidden' };
-
-                }
-            })
-    } else {
-        modal.style.display = 'flex';
-        modalText.textContent = 'Поля "Имя","Телефон" и "Комментарий" нужно заполнить, без них доставку не оформить';
-        //  if ($(window).width() < 768) { body.style.overflow = 'hidden' };
-
-    }
-
-
-
-
-
-
-
-
-})
-
+//СЕКЦИЯ С ОТЗЫВАМ
 let feedbackExit = document.querySelector(
     '.popup__exit--feedback');
 let popupFeedback = document.querySelector('.feedback-popup');
@@ -339,125 +511,7 @@ console.log(activeSectionPosition);
 
 
 
-let windowHeight = $(window).height();
-window.scrollTo(0, 1);
 
-
-function goingUp() {
-    console.log('идем вверх');
-
-    let activeSection = $('.section-active');
-    let reqSection = activeSection.prev();
-    let reqSlideIndex = reqSection.index();
-    const sectionHeight = $('section').innerHeight();
-    let sideMenuButtonActive = $('.sidemenu__button--active');
-    let reqButton = sideMenuButtonActive.prev();
-    let activeButtonIndex = sideMenuButtonActive.prev();
-
-
-
-
-
-    if (reqSection.length) {
-
-        content.stop(true, false).animate({
-            'top': -reqSlideIndex * sectionHeight + 'px'
-        }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
-    }
-}
-
-function goingDown() {
-
-    console.log('идем вниз');
-    let content = $('.content');
-    let activeSection = $('.section-active');
-    let reqSection = activeSection.next();
-    let reqSlideIndex = reqSection.index();
-    const sectionHeight = $('section').innerHeight();
-    let sideMenuButtonActive = $('.sidemenu__button--active');
-    let reqButton = sideMenuButtonActive.next();
-    let activeButtonIndex = sideMenuButtonActive.index();
-
-
-
-
-    if (reqSection.length) {
-
-        content.stop(true, false).animate({
-            'top': -reqSlideIndex * sectionHeight + 'px'
-        }, 400, function() { activeSection.removeClass('section-active'), reqSection.addClass('section-active'), sideMenuButtonActive.removeClass('sidemenu__button--active'), reqButton.addClass('sidemenu__button--active') });
-    }
-
-
-}
-
-
-
-
-
-
-function wheelScroll() {
-    $('body').on('wheel', function(e) {
-        if (e.originalEvent.deltaY < 0) {
-            goingDown()
-        } else { goingUp() }
-    })
-}
-
-
-
-
-
-
-
-
-
-function swipeScroll() {
-    $('body').touchwipe({
-        passive: false,
-        wipeUp: function() {
-            goingUp()
-
-        },
-        wipeDown: function() {
-            goingDown()
-        },
-
-    });
-}
-
-function keyScroll() {
-    $('body').keydown(function(e) {
-        console.log('нажал ' + e.which);
-        if (e.which === 38) { goingUp() };
-        if (e.which === 40) { goingDown() }
-
-
-
-    })
-}
-
-
-
-
-
-
-
-let verticalItem = $('.vertical-menu-list__element')
-verticalItem.on('click', function(e) {
-    const sectionHeight = $('section').innerHeight();
-    let thisIndex = $(this).index() + 1;
-    console.log(thisIndex + ' thisIndex')
-
-    e.preventDefault();
-    content.stop(true, false).animate({ 'top': -thisIndex * sectionHeight + 'px' }, 300)
-
-
-
-
-
-
-})
 
 let logo = $('.logo')
 
@@ -468,98 +522,19 @@ logo.on('click', function(e) { content.stop(true, false).animate({ 'top': 0 }, 3
 
 
 
-let sideMenuButton = $('.sidemenu__button');
 
 
 
 
-sideMenuButton.on('click', function(e) {
-
-    e.preventDefault;
-    let sideMenuButtonActive = $('.sidemenu__button--active');
-    let activeButtonIndex = sideMenuButtonActive.index();
-
-    let windowHeight = $(window).height();
-    let activeSection = $('.section-active');
 
 
 
 
-    sideMenuButtonActive.removeClass('sidemenu__button--active');
-    $(this).addClass('sidemenu__button--active');
 
 
 
 
-    content.stop(true, false).animate({ 'top': -$(this).index() * 100 + 'vh' }, 300,
-        function() {
-            let sideMenuButtonActive = $('.sidemenu__button--active');
-            let activeButtonIndex = sideMenuButtonActive.index();
-            let newSection = $('section:eq(' + (parseInt(activeButtonIndex)) + ')');
-            activeSection.removeClass('section-active'), newSection.addClass('section-active'), console.log(activeButtonIndex + ' индекс кнопки')
-        })
 
-
-})
-
-$('.button--order').on('click',
-        function(e) {
-            const sectionHeight = $('section').innerHeight();
-            e.preventDefault();
-            content.stop(true, false).animate({
-
-                    'top': -$('.order').index() * defaultSectionHeight + 'px'
-                }, 300,
-                function() {
-                    let orderIndex = $('.order').index();
-
-                    $('.order').siblings().removeClass('section-active');
-                    $('.order').addClass('section-active');
-                    $('.sidemenu__button:eq(' + orderIndex + ')').addClass('sidemenu__button--active');
-                    $('.sidemenu__button:eq(' + orderIndex + ')').siblings().removeClass('sidemenu__button--active');
-
-                }
-
-
-            )
-        })
-    //}
-
-
-
-$('.form__input').focus(function() {
-    let sectionHeight = $('section').innerHeight();
-    let orderIndex = $('.order').index();
-    let orderPosition = orderIndex * -sectionHeight;
-
-
-    //'top': -$('.order').index() * sectionHeight + 'px'
-
-    console.log(orderPosition);
-    console.log('куку');
-    $('.order').css({ "position": "fixed", "left": "0", "top": "0", "bottom": "0", "right": "0" });
-    $('.lock').css({ "display": "block" });
-
-
-
-});
-
-$('.form__input').blur(function() {
-    let sectionHeight = $('section').innerHeight();
-    let orderIndex = $('.order').index();
-    let orderPosition = orderIndex * -defaultSectionHeight;
-    console.log('куку');
-    $('.order').css({ "position": "relative" });
-    $('.order').addClass('section-active');
-    $('.order').siblings().removeClass('section-active');
-    content.css("top", orderPosition + "px");
-    $('.lock').css({ "display": "none" });
-});
-
-
-
-
-//})
 
 
 
