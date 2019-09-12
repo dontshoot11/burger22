@@ -97,7 +97,8 @@ button {
   align-items: center; }
 
 .navigation__element {
-  text-align: center; }
+  text-align: center;
+  cursor: pointer; }
   .navigation__element::after {
     content: "•";
     color: #ffffff; }
@@ -109,7 +110,8 @@ button {
   color: #ffffff;
   font-weight: 500;
   padding: 5rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  cursor: pointer; }
 
 @media screen and (max-width: 768px) {
   .navigation {
@@ -469,6 +471,9 @@ button {
 .wallpaper--map {
   background: url(img/contacts/map.png) no-repeat; }
 
+.wallpaper--video {
+  background: url(img/how_work/wallpaper.png) no-repeat; }
+
 .wallpaper--slider {
   background: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%); }
 
@@ -482,13 +487,17 @@ button {
 .container {
   width: calc(100% - 50rem);
   max-width: 960rem;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: center; }
 
-.container__column {
+.container--column {
   flex-direction: column; }
+
+.container--header {
+  justify-content: space-between; }
 
 .order {
   z-index: 2;
@@ -1444,6 +1453,85 @@ button {
 .map-container {
   height: 100%;
   width: 100%; }
+
+.video__container {
+  width: 75%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 60rem; }
+  @media screen and (max-width: 768px) {
+    .video__container {
+      width: 95%; } }
+
+.video__player {
+  position: relative; }
+
+#video {
+  max-height: 100%;
+  max-width: 100%; }
+
+.video__play {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  max-width: 17%; }
+
+.video__play--active {
+  display: none; }
+
+.video__toolbar {
+  background: #3e3e3e;
+  height: 30rem;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  bottom: 0; }
+
+.duration {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  margin-right: 10rem;
+  margin-left: 10rem; }
+
+.duration__length::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #626262;
+  cursor: pointer;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%; }
+
+.duration__length {
+  width: 100%;
+  height: 4px;
+  border-radius: 1px;
+  background: #626262;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none; }
+
+.sound {
+  display: flex;
+  margin-right: 10rem;
+  align-items: center;
+  width: 25%; }
+
+.sound__volume {
+  margin-top: -5rem;
+  width: 100%; }
+
+.duration__length--sound {
+  height: 4px; }
+
+.video__toolbar-icon {
+  margin-right: 3rem; }
+
+.duration,
+.sound,
+.duration__length {
+  cursor: pointer; }
 
 @font-face {
   font-family: 'ubuntu-b';

@@ -34,6 +34,9 @@
 .wallpaper--map {
   background: url(img/contacts/map.png) no-repeat; }
 
+.wallpaper--video {
+  background: url(img/how_work/wallpaper.png) no-repeat; }
+
 .wallpaper--slider {
   background: linear-gradient(to top, #f9b43b, #eb8c38 48%, #f9b43b 74%); }
 
@@ -47,12 +50,16 @@
 .container {
   width: calc(100% - 50rem);
   max-width: 960rem;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: center; }
 
-.container__column {
+.container--column {
   flex-direction: column; }
+
+.container--header {
+  justify-content: space-between; }
 
 /*# sourceMappingURL=screens.css.map */

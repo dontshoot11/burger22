@@ -16,6 +16,7 @@
         //margin-right: 5rem;
         color: #ffffff
     }
+    cursor: pointer;
 }
 
 .navigation__element:last-child:after {
@@ -27,6 +28,7 @@
     font-weight: 500;
     padding: 5rem;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 @media screen and (max-width:768px) {
