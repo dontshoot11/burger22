@@ -145,9 +145,9 @@ verticalItem.on('click', function(e) {
     console.log(thisIndex + ' thisIndex')
 
     e.preventDefault();
-    content.stop(true, false).animate({ 'top': -thisIndex * sectionHeight + 'px' }, 300, function() {
-        $('section:eq(' + thisIndex + ')').addClass('section-active');
-        $('section:eq(' + thisIndex + ')').siblings().removeClass('section-active');
+    content.stop(true, false).animate({ 'top': -$('section:not(.order):eq(' + thisIndex + ')').index() * sectionHeight + 'px' }, 300, function() {
+        $('section:not(.order):eq(' + thisIndex + ')').addClass('section-active');
+        $('section:not(.order):eq(' + thisIndex + ')').siblings().removeClass('section-active');
 
 
     })
@@ -156,6 +156,31 @@ verticalItem.on('click', function(e) {
 
 
 
+
+
+
+})
+
+let horizontalItem = $('.navigation__element') //горизотальное меню 
+horizontalItem.on('click', function(e) {
+    let sections = $('section:not(.order)');
+
+    const sectionHeight = $('section').innerHeight();
+    let thisIndex = $(this).index() + 1;
+
+    console.log($('section:not(.order):eq(' + thisIndex + ')').index())
+
+
+    e.preventDefault();
+    content.stop(true, false).animate({ 'top': -$('section:not(.order):eq(' + thisIndex + ')').index() * sectionHeight + 'px' }, 300, function() {
+        $('section:not(.order):eq(' + thisIndex + ')').addClass('section-active');
+        $('section:not(.order):eq(' + thisIndex + ')').siblings().removeClass('section-active');
+        let activeIndex = $('.section-active').index()
+        $('.sidemenu__button:eq(' + activeIndex + ')').addClass('sidemenu__button--active');
+        $('.sidemenu__button:eq(' + activeIndex + ')').siblings().removeClass('sidemenu__button--active');
+
+
+    })
 
 })
 
@@ -537,7 +562,7 @@ logo.on('click', function(e) { content.stop(true, false).animate({ 'top': 0 }, 3
 
 
 
-//честно признаюсь, я скопировал этот код подчистую, но перед этим внимательно изучил
+//я скопировал код, но честно разобрался в нем сначала
 
 let video;
 let durationControl;
