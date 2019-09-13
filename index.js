@@ -69,22 +69,24 @@ function wheelScroll() {
 //прокрутка по свайпам
 function swipeScroll() {
 
+    let ts;
+    $(document).bind('touchstart', function(e) {
+        ts = e.originalEvent.touches[0].clientY;
+    });
 
-    let lastY;
-    $(document).bind('touchmove', function(e) {
-        let currentY = e.originalEvent.touches[0].clientY;
-        if (currentY > lastY) {
-            // moved down
-            console.log('идём вниз');
-            goingUp()
+    $(document).bind('touchend', function(e) {
+        var te = e.originalEvent.changedTouches[0].clientY;
+        if (ts > te + 5) {
 
-        } else {
-            // moved up
-            console.log('идём вверх');
             goingDown();
+        } else if (ts < te - 5) {
+            goingUp();
         }
-        lastY = currentY;
-    })
+    });
+
+
+
+
 }
 
 
