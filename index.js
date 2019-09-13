@@ -9,6 +9,8 @@ $(document).ready(function() { //запускаем прокрутку по ко
     swipeScroll();
 
     keyScroll();
+
+
 })
 
 
