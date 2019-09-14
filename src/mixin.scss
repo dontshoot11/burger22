@@ -1,0 +1,23 @@
+@function rem($px) {
+    @return $px/16px+0rem
+}
+
+;
+@mixin tablets() {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+;
+@mixin phone() {
+    @media screen and (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin short-screen() {
+    @media screen and (max-height: 580px) {
+        @content;
+    }
+}

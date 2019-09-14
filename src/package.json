@@ -1,0 +1,36 @@
+{
+    "name": "burger",
+    "version": "1.0.0",
+    "description": "текстовый сайт бургерной",
+    "main": "index.js",
+    "scripts": {
+        "gulp": "cross-env NODE_ENV=dev gulp",
+        "build": "cross-env NODE_ENV=prod gulp build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dontshoot11/burger22.git"
+    },
+    "author": "Tema Nikitin",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dontshoot11/burger22/issues"
+    },
+    "homepage": "https://github.com/dontshoot11/burger22#readme",
+    "devDependencies": {
+        "@babel/core": "^7.6.0",
+        "@babel/preset-env": "^7.6.0",
+        "cross-env": "^5.2.1",
+        "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-group-css-media-queries": "^1.2.2",
+        "gulp-if": "^3.0.0",
+        "gulp-rm": "^2.0.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-uglify": "^3.0.2",
+        "node-sass": "^4.12.0"
+    }
+}

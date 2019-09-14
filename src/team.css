@@ -1,0 +1,132 @@
+.team-aside {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background: rgba(49, 52, 54, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%; }
+
+.team-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.accordeon {
+  margin-top: 35rem; }
+
+.accordeon__content {
+  height: 0rem;
+  overflow: hidden;
+  transition: 0.3s; }
+
+.accordeon__card {
+  margin-top: 35rem; }
+  .accordeon__card:first-child {
+    margin-top: 0; }
+
+.accordeon__about {
+  overflow: hidden;
+  font-family: "ubuntu";
+  font-size: 14rem;
+  color: #fff;
+  display: flex;
+  transition: 0.3s;
+  padding-left: 17rem;
+  padding-top: 17rem; }
+
+.accordeon__card--active .accordeon__name {
+  color: #f9b43b; }
+  .accordeon__card--active .accordeon__name:before {
+    border-bottom: 6rem solid #f9b43b;
+    border-top: 0; }
+
+.accordeon__name {
+  font-family: "gagalin";
+  color: #fff;
+  font-size: 14rem;
+  text-transform: uppercase;
+  position: relative; }
+  .accordeon__name:before {
+    content: url(img/team/arrow_down.png);
+    height: 7rem;
+    width: 9rem;
+    margin-right: 9rem;
+    content: ".";
+    color: transparent;
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 4rem solid transparent;
+    border-right: 4rem solid transparent;
+    border-top: 6rem solid #f9b43b;
+    right: 100%;
+    top: 8rem; }
+
+.accordeon__position {
+  font-weight: bold; }
+
+.accordeon__picture {
+  overflow: hidden;
+  height: 100rem;
+  width: 100rem;
+  border-radius: 50%;
+  text-align: center;
+  position: relative; }
+
+.accordeon__memberpic {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; }
+
+.accordeon__description {
+  max-width: 208rem;
+  margin-left: 17rem; }
+
+.accordeon__skill {
+  margin-top: 17rem;
+  line-height: 1.6em; }
+
+@media screen and (max-width: 768px) {
+  .team-aside {
+    width: 100%;
+    padding-top: 20%; }
+
+  .accordeon {
+    text-align: center;
+    margin-top: 49rem; }
+
+  .accordeon__card {
+    margin-top: 20rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0rem;
+    padding-top: 7rem;
+    transition: 0.3s; }
+
+  .accordeon__picture {
+    overflow: hidden;
+    height: 100rem;
+    width: 100rem;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    margin-bottom: 22rem; }
+
+  .accordeon__name {
+    font-size: 25rem; }
+
+  .accordeon__about {
+    padding-left: 0; }
+
+  .accordeon__description {
+    margin-left: 0; } }
+@media screen and (max-width: 480px) {
+  .team-aside {
+    padding-top: 37%; } }
+
+/*# sourceMappingURL=team.css.map */

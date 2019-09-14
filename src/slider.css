@@ -1,0 +1,256 @@
+@charset "UTF-8";
+.container--slider {
+  height: 100%;
+  justify-content: center;
+  overflow: hidden; }
+
+.sliders-list {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: relative;
+  left: 0; }
+
+.slider-buttons {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1100rem; }
+
+.slider-button__arrow--left {
+  transform: rotate(90deg); }
+
+.slider-button__arrow--right {
+  transform: rotate(270deg); }
+
+.slider-card {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 105rem 0rem;
+  min-width: 100%;
+  overflow: hidden; }
+
+.slider-card__graphics {
+  width: 50%;
+  height: 100%; }
+
+.slider-card__text {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.slider-card__name {
+  color: #fff; }
+
+.slider-card__about {
+  font-family: "ubuntu-light";
+  font-size: 14rem;
+  margin-top: 20rem;
+  line-height: 1.8em;
+  color: #fff; }
+
+.slider-card__price {
+  color: #e45028;
+  font-family: "gagalin"; }
+
+.slider-card__price--big {
+  font-size: 72rem; }
+
+.slider-card__price--small {
+  font-size: 30rem;
+  margin-right: 29rem; }
+
+.slider-card__graphics {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.dish-composition {
+  position: absolute;
+  left: 0rem;
+  top: 0rem;
+  width: 90rem;
+  height: 90rem;
+  border-radius: 5rem;
+  background-color: #f08c33;
+  transition: 0.3s;
+  cursor: pointer; }
+  .dish-composition:hover {
+    background-color: #e35028;
+    transition: 0.3s; }
+    .dish-composition:hover .popup {
+      opacity: 1;
+      transition: 0.3s; }
+
+.dish-composition__sprite {
+  height: 44rem;
+  width: 46rem;
+  position: absolute;
+  left: 22rem;
+  bottom: 32rem; }
+
+.dish-composition__text {
+  position: absolute;
+  font-family: 'gagalin';
+  font-size: 14rem;
+  color: #fff;
+  bottom: 13rem;
+  left: 23rem; }
+
+.dish-calories {
+  position: absolute;
+  left: 0rem;
+  bottom: 0rem;
+  opacity: 0.6; }
+
+.dish-calories__sprite {
+  height: 60rem;
+  width: 60rem;
+  fill: #ffffff; }
+
+.dish-calories__text {
+  position: absolute;
+  font-family: 'gagalin';
+  font-size: 14rem;
+  color: #fff; }
+
+.dish-calories__text--numbers {
+  top: 50%;
+  left: 18rem; }
+
+.dish-calories__text--letters {
+  left: 13rem;
+  top: 62rem; }
+
+.slider-card__picture-box {
+  max-width: 90%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.slider-card__picture {
+  max-width: 100%; }
+
+.popup {
+  position: absolute;
+  background: rgba(232, 233, 235, 0.9);
+  border-radius: 5rem;
+  left: 90rem;
+  top: 0;
+  opacity: 0;
+  transition: 0.3s;
+  padding: 20rem;
+  min-width: 300%;
+  display: flex; }
+
+.popup__exit {
+  height: 20rem;
+  margin-left: 30rem;
+  display: none; }
+
+.popup__list {
+  width: 100%; }
+
+.popup__item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: 155rem; }
+
+.popup__sprite {
+  height: 50rem;
+  width: 50rem; }
+
+.popup__name {
+  padding: 15rem; }
+
+.popup__count {
+  position: absolute;
+  right: 0rem;
+  font-family: 'ubuntu-light'; }
+
+.dish-composition .dish-composition__cross {
+  height: 20rem;
+  width: 20rem; }
+
+@media screen and (max-width: 768px) {
+  .burger {
+    max-width: 75%; }
+
+  .popup__exit {
+    height: 20rem;
+    margin-left: 30rem;
+    display: block; }
+
+  .slider-card {
+    flex-direction: column;
+    max-width: 79%;
+    padding: 7% 0; }
+
+  .slider-card__name {
+    line-height: 0.9em; }
+
+  .slider-card__graphics {
+    width: 100%;
+    justify-content: center; }
+
+  .slider-card__picture-box {
+    max-width: 315rem;
+    margin-bottom: -10%; }
+
+  .slider-card__text {
+    width: 90%;
+    text-align: center;
+    justify-content: flex-start; }
+
+  .dish-calories {
+    right: 0rem;
+    top: 0rem;
+    bottom: auto;
+    left: auto; }
+
+  /* позже допилю
+  .dish-composition {
+      &:hover {
+          background-color: #f08c33;
+          .popup {
+              opacity: 0;
+          }
+      }
+  } */ }
+@media screen and (max-width: 480px) {
+  .popup {
+    min-width: 250%;
+    padding: 10rem; }
+
+  .popup__exit {
+    margin-left: 15rem; }
+
+  .slider-card {
+    max-width: 100%;
+    padding: 20% 0; }
+
+  .slider-card__name {
+    font-size: 50rem; }
+
+  .slider-card__about {
+    line-height: 1.5em;
+    margin-top: 7rem; }
+
+  .container--slider {
+    width: 95%; }
+
+  .slider-card__picture-box {
+    max-width: 300rem; }
+
+  .burger {
+    max-width: 100%; } }
+
+/*# sourceMappingURL=slider.css.map */

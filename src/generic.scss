@@ -1,0 +1,101 @@
+@import "colors";
+@import "mixin";
+html {
+    font-size: 1px;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'ubuntu-medium';
+    font-size: 13rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    //  @include tablets {
+    //     overflow: auto;
+    // }
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-decoration: none;
+    margin: 0 0
+}
+
+li {
+    list-style: none
+}
+
+ul {
+    margin: 0;
+    padding-inline-start: 0;
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+a {
+    text-decoration: none
+}
+
+button {
+    cursor: pointer;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.content {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    top: 0px;
+}
+
+.section-title {
+    font-family: 'gagalin';
+    font-size: 72rem;
+    color: $orange-y;
+    font-weight: 200
+}
+
+.section-title--black {
+    color: $grayblack;
+}
+
+.section-title--menu {
+    color: #fff;
+    margin: 111rem 0px 0px 102rem;
+    position: absolute;
+}
+
+@include tablets {
+    html {
+        font-size: 0.9px
+    }
+}
+
+@include phone {
+    html {
+        font-size: 0.8px
+    }
+}

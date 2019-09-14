@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0; }
+
+.logo__link {
+  display: block; }
+
+.logo__pic {
+  width: 100rem;
+  height: 100rem; }
+
+/*# sourceMappingURL=header.css.map */
