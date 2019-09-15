@@ -8,6 +8,6 @@
 
 Вёрстка адаптивная, корректно работает на устройствах вплоть до iPhone 5.
 
-Работающая версия тут https://dontshoot11.github.io/burger22/
+Работающая версия тут https://dontshoot11.github.io/burger22/, собрана и оптимизирована при помощи gulp
 
 Исходники лежат тут https://github.com/dontshoot11/burger22/tree/master/src
