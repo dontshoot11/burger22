@@ -68,7 +68,7 @@ button {
     bottom: 40rem;
     left: 50%;
     @include tablets {
-        bottom: 80rem;
+        display: none
     }
 }
 

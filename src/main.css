@@ -1335,7 +1335,7 @@ button {
   left: 50%; }
   @media screen and (max-width: 768px) {
     .nextscreen {
-      bottom: 80rem; } }
+      display: none; } }
 
 .nextscreen__sprite {
   max-height: 20rem;

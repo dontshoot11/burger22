@@ -6,7 +6,7 @@ $(document).ready(function() { //запускаем прокрутку по ко
     console.log(defaultSectionHeight + ' дефолтная высота секции');
 
     wheelScroll();
-    swipeScroll();
+    //работает не очень стабильно, временно отключено swipeScroll();
 
     keyScroll();
 
@@ -653,7 +653,7 @@ function init() {
         // Чтобы не определять координаты центра карты вручную,
         // воспользуйтесь инструментом Определение координат.
         center: [59.93511328687912, 30.307292324790485],
-        controls: ["zoomControl", "geolocationControl", "fullscreenControl"],
+        controls: ["zoomControl", "geolocationControl"],
         behaviors: ["drag"],
         // Уровень масштабирования. Допустимые значения:
         // от 0 (весь мир) до 19.
