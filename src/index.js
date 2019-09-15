@@ -514,7 +514,12 @@ console.log(activeSectionPosition);
 
 let logo = $('.logo')
 
-logo.on('click', function(e) { content.stop(true, false).animate({ 'top': 0 }, 300) })
+logo.on('click', function(e) {
+    content.stop(true, false).animate({ 'top': 0 }, 300, function() {
+        $('.firstscreen').addClass('section-active');
+        $('.firstscreen').siblings().removeClass('section-active');
+    })
+})
 
 
 
