@@ -1,9 +1,16 @@
 const defaultSectionHeight = $('section').innerHeight(); //измеряем высоту секции после загрузки экрана (чтобы зафиксировать ее до того,
 //как мобильные браузеры начнут менять)
+let content = $('.content');
+
 
 $(document).ready(function() { //запускаем прокрутку по колесу, свайпу, стрелочкам
 
     console.log(defaultSectionHeight + ' дефолтная высота секции');
+
+
+
+
+
 
     wheelScroll();
     //работает не очень стабильно, временно отключено swipeScroll();
@@ -16,7 +23,7 @@ $(document).ready(function() { //запускаем прокрутку по ко
 
 function goingUp() { //функция, которая крутит content наверх
     console.log('идем вверх');
-    let content = $('.content');
+    //let content = $('.content');
     let activeSection = $('.section-active');
     let reqSection = activeSection.prev();
     let reqSlideIndex = reqSection.index();
@@ -36,7 +43,7 @@ function goingUp() { //функция, которая крутит content на�
 function goingDown() { //функция, которая крутит вниз
 
     console.log('идем вниз');
-    let content = $('.content');
+    // let content = $('.content');
     let activeSection = $('.section-active');
     let reqSection = activeSection.next();
     let reqSlideIndex = reqSection.index();
@@ -493,7 +500,7 @@ for (let i = 0; i < feedbackButtons.length; i++) {
 
         })
 }
-let content = $('.content');
+//let content = $('.content');
 let activeSectionPosition = $('.section-active').index() * 100 + 'vh';
 console.log(activeSectionPosition);
 
