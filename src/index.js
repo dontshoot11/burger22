@@ -69,8 +69,8 @@ function goingDown() { //функция, которая крутит вниз
 function wheelScroll() {
     $('body').on('wheel', function(e) {
         if (e.originalEvent.deltaY < 0) {
-            goingDown()
-        } else { goingUp() }
+            goingUp()
+        } else { goingDown() }
     })
 }
 
